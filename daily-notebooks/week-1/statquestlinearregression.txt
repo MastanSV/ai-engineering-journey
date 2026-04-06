@@ -1,3 +1,7 @@
+The following notes written from the source (YT-video):
+https://www.youtube.com/watch?v=nk2CQITm_eo
+
+
 data - (x, y)
 drw line through the data
 calculate distance from line to the data, square
