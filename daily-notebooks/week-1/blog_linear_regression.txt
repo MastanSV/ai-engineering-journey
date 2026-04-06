@@ -1,0 +1,36 @@
+The following notes were written from the following source:
+https://towardsdatascience.com/linear-regression-explained-1b36f97b7572/
+
+relationship between data.(can be two or more variables)
+height and weight of peoples data.
+types:
+	Simple linear regression
+	Multi linear regression
+	
+Ordinary Least squares:
+best fit line
+straight line formula : y = mx + c where m is the slope, c is the intercept
+
+dependent var
+independent var
+slope m (angle of the line)
+intercept c (where function crosses y - axis)
+
+questions: 
+	how do you calculate 
+		mean of x
+		mean of y
+		
+Deep analogy of y = mx + c
+Lets consider two kids A and B are in climbing magic slide,
+then if kid-A climbs 2 steps he would reach height 5,
+			if kid-B climbs 5 steps he would reach height 11,
+			
+then kid-B climbs 3-extra steps, so he reached height 6 extra, that means 
+1 extra step is equals to height 2,
+
+this means slops is 2,
+slops is nothing but rate of change w.r.t x 
+		
+		
+
