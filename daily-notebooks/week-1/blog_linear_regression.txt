@@ -11,9 +11,10 @@ Ordinary Least squares:
 best fit line
 straight line formula : y = mx + c where m is the slope, c is the intercept
 
+
 dependent var
 independent var
-slope m (angle of the line)
+slope m (angle of the line) and also refers the rate of change of y w.r.t x or x is increased by 1unit then y increased by n units
 intercept c (where function crosses y - axis)
 
 questions: 
