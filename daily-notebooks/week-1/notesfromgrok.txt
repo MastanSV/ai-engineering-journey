@@ -1,0 +1,36 @@
+Core idea:
+	data --> x-axis input --> y-axis output
+	
+How the best fit line choosen:
+	MSE (Mean Squared Error): 
+	refer below diagram.
+	[calculate residue, square it, take average]
+	[once you do this n times, so which ever smalledst number you get that is best 
+	fit.]
+Basic numbers mean:
+	m -> if x changes by 1unit then y changes to n units
+	c -> predicted Y when x becomes 0
+	R**2 -> formula :
+		R**2 = (SS(mean) - SS(fit)) / SS(mean)
+		
+		If R**2 = 90% it means 90% is explained by model ---> great model
+		If R882 == 40% it means 40% is explained by model ---> weak model
+		
+Assumptions for Linear Regression:
+	Linearity: The line should be straight
+	Independence : Every data point is independent
+	Homoscedasticity : The residuals same spread across the line
+	Normality : Residuals should be bell shaped.
+	
+What can go wrong:
+	Outliers can pull the line badly.
+	If X and Y not linear, R**2 will affect badly.
+	
+
+Evaluation metrics:
+	R**2 value
+	Mean Square Error(MSE) or Root Mean Squared Error -> In the units of Y
+	Mean Absolute Error -> if you dont want to penalize big errors harshly
+	
+
+	
