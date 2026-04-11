@@ -6,7 +6,7 @@ This repository contains all my ML projects as I learn and grow in the field.
 
 ## 📂 Projects
 
-### 1. [House Price Prediction using Linear Regression](./Projects/Linear_Regression_House_Price/)
+### 1. [House Price Prediction using Linear Regression](https://github.com/MastanSV/ai-engineering-journey/tree/main/projects/Linear_Regression_House_Price)
 
 Simple Linear Regression project to predict house prices based on size.
 
