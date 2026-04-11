@@ -1,0 +1,96 @@
+LINEAR REGRESSION - HANDS-ON SUMMARY
+====================================
+
+Project: House Size vs House Price Prediction
+
+Dataset Used:
+- X (House Size in sq ft)  : 800, 1000, 1200, 1500, 1800, 2000, 2500, 3000
+- y (House Price in lakhs) : 25, 30, 35, 45, 55, 60, 75, 90
+
+Final Model Results:
+- Slope (m)     : 0.0299   → ₹2,990 per additional sq ft
+- Intercept (c) : 0.265 lakhs
+- R² Score      : 0.9992  (99.92% - Excellent fit)
+- RMSE          : 0.597 lakhs  (≈ ₹59,700 average error)
+- MAE           : 0.420 lakhs  (≈ ₹42,000 average error)
+
+================================================================
+KEY TERMS & EXPLANATIONS
+================================================================
+
+1. Linear Regression
+   → Finds the best straight line to predict a continuous target.
+   Example: Predict house price based on house size.
+
+2. Independent Variable (X) / Feature
+   → Input variable we use to predict.
+   House Size vs Price Example: House size in sq ft
+   Other Example: Years of experience (to predict salary)
+
+3. Dependent Variable (Y) / Target
+   → Output variable we want to predict.
+   House Size vs Price Example: House price in lakhs
+   Other Example: Monthly salary in rupees
+
+4. Slope (m)
+   → How much Y changes when X increases by 1 unit (on average).
+   House Example: For every 1 extra sq ft, price increases by ₹2,990 on average.
+   Other Example: For every 1 extra year of experience, salary increases by ₹8,000 on average.
+
+5. Intercept (c)
+   → Predicted value of Y when X = 0.
+   House Example: When house size = 0 sq ft, predicted price = ₹26,500 (not realistic).
+   Other Example: When experience = 0 years, predicted starting salary = ₹30,000 (meaningful).
+
+6. R² (R-Squared)
+   → Tells what percentage of variation in Y is explained by X.
+   House Example: 0.9992 means 99.92% of price variation is explained by size.
+   Other Example: R² = 0.75 means 75% of salary variation is explained by experience.
+
+7. Residual
+   → Difference between actual value and predicted value.
+   House Example: Actual price 45 lakhs, predicted 44.5 lakhs → Residual = 0.5 lakhs
+
+8. MSE (Mean Squared Error)
+   → Average of squared residuals. Penalizes big errors heavily.
+
+9. RMSE (Root Mean Squared Error)
+   → Square root of MSE. Error in same unit as target (most commonly used).
+   House Example: RMSE = 0.597 lakhs means average prediction error is about ₹59,700.
+
+10. MAE (Mean Absolute Error)
+    → Average of absolute residuals. Treats all errors equally, better with outliers.
+
+11. Best Fit Line
+    → The straight line that minimizes the total error (the red line we plotted).
+
+12. Overfitting
+    → Model performs very well on training data but poorly on new/unseen data.
+
+================================================================
+IMPORTANT INTERPRETATION POINTS
+================================================================
+
+When explaining Slope:
+- "On average"
+- "Holding other factors constant"
+- "Shows correlation, not necessarily causation"
+
+Full Interpretation Example:
+"The slope of 0.0299 means that, on average, for every additional 1 sq ft in house size, 
+the price increases by ₹2,990, holding other factors constant. 
+The intercept of 0.265 lakhs is the predicted price when size = 0 sq ft. 
+Since zero size is not realistic, it mainly acts as a mathematical baseline."
+
+================================================================
+KEY TAKEAWAYS / NOTES TO REMEMBER
+================================================================
+
+1. Always visualize data first with scatter plot.
+2. Slope is usually more important than intercept for interpretation.
+3. R² close to 1 = Strong model, but still check residuals.
+4. Use RMSE for reporting because it is in the same unit as target.
+5. Linear Regression shows correlation, not causation.
+6. Always say "on average" when interpreting slope.
+
+================================================================
