@@ -1,0 +1,22 @@
+14/04/2026
+
+Questions:
+* Imagine 10 students got these marks in an exam: 5, 7, 8, 9, 11, 12, 13, 15, 18, 25
+	The median is 11 (middle value). --->Explain me how?
+	The sample size is even (10), so median will be average of 5th and 6th number divide 
+	by 2 are even so median. (11 + 12)/2 ===> 11.5 not 11(its mistake)
+	If the sample size is odd, then median will be the middle number.
+* What do you mean by EDA? What will be the output if you do EDA?
+* What is the main reason behind using seaborn?
+* Why matplotlib is used?
+
+Today's learning:
+	Intro duction to seaborn
+	Introduction to matplotlib
+  The data which will be given- common in business standard that, values by default
+  will be given in 1000.
+
+What's tomorrow:
+* I personally wanted to do projects on following things without depending on LLM
+    * Project on Linear Regression
+    * Project on Multiple Linear Regression

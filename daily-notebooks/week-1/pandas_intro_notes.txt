@@ -1,0 +1,28 @@
+Purpose of Pandas library:
+	For data manipulation and analysis.
+	
+The exactly in my mind followup question was: What is the difference in NumPy and Pandas
+Library?
+	Numpy: Is used mostly for Numbers.
+	Pandas: Is used mostly for tabular data.
+	
+Median : if you put the data in order, the middle value will be considered as Median.
+					In other terms, 50% value will be considered as Median.
+					
+Standard deviation: Std. deviation is nothing how data is spread from the median,
+				If the value is low, The values are near to median
+				If the value is high, The values are far (widely spread.)
+				
+	Question ablut Standard deviation:
+		1. On what basis, do you considered the Std. deviation value as low or high? 
+				Will it be started from 0 ?
+		2. How does it help in the real-world analysis?
+
+
+
+Learning for today:
+1. Got to know why we are using the pandas library?
+2. Introduced to basics statistics concepts - Mean, Median, Standard deviation
+3. Got to know what is correlation(its nothing but co-relation between two variables.)
+   It's like one variable changes how its affecting another variable. how they are
+   co-related to each other.
