@@ -12,7 +12,16 @@ Simple Linear Regression project to predict house prices based on size.
 
 ---
 
-**Status**: In Progress  
+**Status**: Completed
 **Learning Goal**: Master fundamentals of Linear Regression
+
+### 2. [Sales Prdiction using Multiple Linear Regression](https://github.com/MastanSV/ai-engineering-journey/tree/main/projects/02_Multiple_Linear_Regression_Advertising)
+
+Simple Multiple Linear Regression project to sales based on TV, Newspaper and Radio.
+
+---
+
+**Status**: Completed
+**Learning Goal**: Master fundamentals of Multiple Linear Regression.
 
 Last Updated: April 2026
