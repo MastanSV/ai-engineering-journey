@@ -8,7 +8,7 @@ Dataset Used:
 - y (House Price in lakhs) : 25, 30, 35, 45, 55, 60, 75, 90
 
 Final Model Results:
-- Slope (m)     : 0.0299   → ₹2,990 per additional sq ft
+- Slope (m)     : 0.0299   → ₹2,990 per additional sq ft [ (2.99/100) * 100000] (Take 0.0299 divide by 100 and then multiple with 1 lakh (as sq.ft is in lakhs))
 - Intercept (c) : 0.265 lakhs
 - R² Score      : 0.9992  (99.92% - Excellent fit)
 - RMSE          : 0.597 lakhs  (≈ ₹59,700 average error)
