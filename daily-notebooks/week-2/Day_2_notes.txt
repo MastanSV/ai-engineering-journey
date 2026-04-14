@@ -20,3 +20,65 @@ What's tomorrow:
 * I personally wanted to do projects on following things without depending on LLM
     * Project on Linear Regression
     * Project on Multiple Linear Regression
+
+ActionItems for 15/04/2026:
+	AI1:
+		# Dataset - Student Study Hours vs Exam Score
+		data = {
+		    'Study_Hours': [1.5, 2.0, 3.0, 4.5, 5.0, 6.0, 7.5, 8.0, 9.0, 10.0, 
+		                    1.0, 2.5, 3.5, 4.0, 5.5, 6.5, 7.0, 8.5, 9.5, 11.0],
+		    'Exam_Score': [45, 50, 55, 65, 70, 75, 80, 82, 88, 92, 
+		                   40, 52, 58, 63, 72, 78, 79, 85, 90, 95]
+		}
+		
+		Tasks:
+			Build a complete Linear Regression project with the following sections:
+		
+			Data Loading & Exploration
+			EDA (Scatter plot + basic statistics)
+			Model Training (Simple Linear Regression)
+			Model Evaluation (R², RMSE, MAE)
+			Visualization (Scatter plot + Best Fit Line)
+			Interpretation (Slope, Intercept, Business/Real-world meaning)
+		
+		Rules:
+		
+			Do not ask me for code while building.
+			You can refer to your previous House Price notebook for structure.
+			Try to do it cleanly.
+	AI2:
+		data = {
+		    'Size_sqft': [1200, 1500, 1800, 2000, 2200, 2500, 2800, 3000, 3200, 3500],
+		    'Bedrooms': [2, 3, 3, 4, 3, 4, 5, 4, 5, 5],
+		    'Age_years': [10, 5, 15, 8, 20, 12, 7, 25, 3, 18],
+		    'Location_Score': [7, 8, 6, 9, 5, 8, 9, 4, 9, 7],
+		    'Price_lakhs': [45, 60, 65, 85, 70, 95, 110, 90, 125, 130]
+		}	
+		Tasks:
+			Build a clean notebook with:
+			
+			Problem Statement
+			Data Exploration
+			EDA (pairplot, correlation heatmap)
+			Multiple Linear Regression Model
+			Model Evaluation
+			Coefficient Interpretation (very important)
+			Conclusion & Business Insights
+	AI3:
+		# Simple Linear Regression Dataset
+		data = {
+		    'Study_Hours': [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 1, 3.5, 4.5, 5.5, 6.5, 7.5, 8.5, 9.5, 10.5],
+		    'Exam_Score':  [55, 60, 65, 70, 78, 82, 85, 88, 92, 94, 96, 50, 63, 68, 74, 80, 83, 87, 91, 95]
+		}
+		
+		Tasks:
+			Build a complete, clean Jupyter Notebook with these sections:
+			
+			Problem Statement
+			Data Loading & Exploration (df.describe(), info, etc.)
+			EDA (Scatter plot)
+			Model Building (Simple Linear Regression)
+			Model Evaluation (R², RMSE, MAE)
+			Visualization (Best Fit Line)
+			Interpretation (Slope & Intercept in real words)
+			Conclusion
