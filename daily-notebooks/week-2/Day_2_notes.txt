@@ -22,6 +22,11 @@ What's tomorrow:
     * Project on Multiple Linear Regression
 
 ActionItems for 15/04/2026:
+Rules:
+	Do not ask AI for code while building.
+	You can refer to your previous House Price notebook for structure.
+	Try to do it cleanly.
+
 	AI1:
 		# Dataset - Student Study Hours vs Exam Score
 		data = {
@@ -41,11 +46,7 @@ ActionItems for 15/04/2026:
 			Visualization (Scatter plot + Best Fit Line)
 			Interpretation (Slope, Intercept, Business/Real-world meaning)
 		
-		Rules:
-		
-			Do not ask me for code while building.
-			You can refer to your previous House Price notebook for structure.
-			Try to do it cleanly.
+
 	AI2:
 		data = {
 		    'Size_sqft': [1200, 1500, 1800, 2000, 2200, 2500, 2800, 3000, 3200, 3500],
