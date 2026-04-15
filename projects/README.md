@@ -24,4 +24,13 @@ Simple Multiple Linear Regression project to sales based on TV, Newspaper and Ra
 **Status**: Completed
 **Learning Goal**: Master fundamentals of Multiple Linear Regression.
 
+### 3. [Students performance prediction using Linear Regression](https://github.com/MastanSV/ai-engineering-journey/tree/main/projects/03_Linear_Regression_Students_Performance)
+
+Simple Linear Regression project to predict the performances of students
+
+---
+
+**Status**: Completed
+**Learning Goal**: To get more understanding on fundamentals.
+
 Last Updated: April 2026
