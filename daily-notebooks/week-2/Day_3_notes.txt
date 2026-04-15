@@ -50,51 +50,28 @@ as Root Mean Squared Error is : 2.2 means the predictions are off approximately 
 marks.
 and Mean Absolute Error says that predictions are off by 1.75marks on an average.
 
-=============================================
 
-INTERPRETATION & CONCLUSION
-============================
 
-Model Results:
-- Slope (m)      : 5.4348
-- Intercept (c)  : 39.3137
-- R² Score       : 0.9806 (98.06%)
+What's next ?
 
-Detailed Interpretation:
+There is left out project on multi linear regression which has to be completed.
 
-1. Slope (m = 5.4348):
-   For every 1 additional hour the student spends studying, 
-   their Exam Score is expected to increase by approximately 5.43 marks, 
-   on average, holding other factors constant.
+AI2:
+		data = {
+		    'Size_sqft': [1200, 1500, 1800, 2000, 2200, 2500, 2800, 3000, 3200, 3500],
+		    'Bedrooms': [2, 3, 3, 4, 3, 4, 5, 4, 5, 5],
+		    'Age_years': [10, 5, 15, 8, 20, 12, 7, 25, 3, 18],
+		    'Location_Score': [7, 8, 6, 9, 5, 8, 9, 4, 9, 7],
+		    'Price_lakhs': [45, 60, 65, 85, 70, 95, 110, 90, 125, 130]
+		}	
+		Tasks:
+			Build a clean notebook with:
+			
+			Problem Statement
+			Data Exploration
+			EDA (pairplot, correlation heatmap)
+			Multiple Linear Regression Model
+			Model Evaluation
+			Coefficient Interpretation (very important)
+			Conclusion & Business Insights
 
-2. Intercept (c = 39.3137):
-   If a student studies 0 hours, the model predicts they would score 
-   around 39.31 marks. However, since 0 study hours is outside the 
-   range of our data, this value has limited practical meaning.
-
-3. R² Score (0.9806):
-   98.06% of the variation in students' Exam Scores can be explained 
-   by the number of hours they studied. Only 1.94% of the variation 
-   is due to other factors (such as exam difficulty, teaching quality, 
-   student health, etc.).
-
-Model Performance:
-- RMSE : 2.2389 marks → On average, the model's predictions are off by 
-  approximately 2.24 marks.
-- MAE  : 1.7562 marks → The typical prediction error is about 1.76 marks.
-
-Overall Conclusion:
-This is a very strong linear model. Study Hours is a powerful predictor 
-of Exam Score in this dataset. The high R² value (98.06%) indicates 
-that most of the differences in students' performance can be attributed 
-to how much time they spend studying.
-
-However, we should be careful while interpreting the results because:
-- The dataset is quite small (only 20 records).
-- There may be other important factors affecting exam scores that 
-  are not included in this model.
-- A high R² on a small dataset can sometimes indicate overfitting.
-
-Business / Academic Insight:
-Encouraging students to increase their study time by even 1–2 hours 
-per day could lead to noticeable improvement in their exam performance.
