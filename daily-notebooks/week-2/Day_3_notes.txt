@@ -1,0 +1,52 @@
+Input Data:
+data = {
+		    'Study_Hours': [1.5, 2.0, 3.0, 4.5, 5.0, 6.0, 7.5, 8.0, 9.0, 10.0, 
+		                    1.0, 2.5, 3.5, 4.0, 5.5, 6.5, 7.0, 8.5, 9.5, 11.0],
+		    'Exam_Score': [45, 50, 55, 65, 70, 75, 80, 82, 88, 92, 
+		                   40, 52, 58, 63, 72, 78, 79, 85, 90, 95]
+		}
+
+======Basic statistical data=====
+       Study_Hours  Exam_Score
+count    20.000000   20.000000
+mean      5.775000   70.700000
+std       3.002083   16.476778
+min       1.000000   40.000000
+25%       3.375000   57.250000
+50%       5.750000   73.500000
+75%       8.125000   82.750000
+max      11.000000   95.000000
+
+From the above data, i can say the following things:
+* There are 20 entries are there in the dataset.
+* On an avergae, If the student spends 5.77hrs, The average score will be 70.77
+* Median for: (50th Percentile value)
+	* Study_Hours 5.75hrs
+	* Exam_Score 73.7
+* Standard deviation for:
+	* Study_Hours 3, it's less so deviation is closer to median
+	* Exam_Score 16.47, its quite high so score is not closer to average.
+
+====================================
+Slope           : 5.4348
+intercept       : 39.3137
+R2 score        : 0.980563464571653
+
+From the above data i can say that,
+For every one hour extra spent by the student can score 5.43 marks on average.
+intercept says that, If the student spent 0 hours in studying then 
+he will score 39.31 marks on average.
+R2 score says that 98% of times the model will predict correctly
+
+
+======Model Performance======
+mse            : 5.0129
+rmse           : 2.2389
+mae            : 1.7562
+
+From the above performance factors, i can say the following things:
+
+as Root Mean Squared Error is : 2.2 means the predictions are off approximately by 2.23
+marks.
+and Mean Absolute Error says that predictions are off by 1.75marks on an average.
+
