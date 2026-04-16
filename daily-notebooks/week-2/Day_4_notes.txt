@@ -1,0 +1,35 @@
+		data = {
+		    'Size_sqft': [1200, 1500, 1800, 2000, 2200, 2500, 2800, 3000, 3200, 3500],
+		    'Bedrooms': [2, 3, 3, 4, 3, 4, 5, 4, 5, 5],
+		    'Age_years': [10, 5, 15, 8, 20, 12, 7, 25, 3, 18],
+		    'Location_Score': [7, 8, 6, 9, 5, 8, 9, 4, 9, 7],
+		    'Price_lakhs': [45, 60, 65, 85, 70, 95, 110, 90, 125, 130]
+		}	
+		Tasks:
+			Build a clean notebook with:
+			
+			Problem Statement
+			Data Exploration
+			EDA (pairplot, correlation heatmap)
+			Multiple Linear Regression Model
+			Model Evaluation
+			Coefficient Interpretation (very important)
+			Conclusion & Business Insights
+			
+			-----------------------------------------------------------------------------------
+			
+			From the above given data, I understood that, size_sqft, Bedrooms, Age_years,
+			Location_Score are independent factors and Price_Lakhs will be dependent on all
+			these factors so i have to pedict the price.
+			
+			So i want to do the following things,
+			visualize data,
+			visualize basic statistics i.e., description what it does,
+			perform linear regression,
+			evaluate model
+			Coef. interpretation [slope]
+			Logical conclusion. 
+			
+			r2_score is 99% in which, we can say that 99% variance of price is explained by
+			w.r.t the features like [size_sqft, Bedrooms, Age_years]
+			
