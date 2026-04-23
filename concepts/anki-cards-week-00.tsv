@@ -1,0 +1,3 @@
+Why does torch.version.cuda (12.4) differ from nvidia-smi CUDA (13.1)?	nvidia-smi shows the max CUDA version the DRIVER supports (backward compatible). torch.version.cuda shows the CUDA RUNTIME bundled with the PyTorch wheel. They are independent — you do NOT need to install CUDA toolkit separately.
+What does pip install --index-url <url> do?	Overrides the default PyPI index. pip fetches packages ONLY from that URL. Used for PyTorch CUDA channels, private corp mirrors (NVIDIA NGC, HF), etc. Use --extra-index-url if you want PyPI as a fallback.
+How much VRAM does full fine-tuning a 7B model need vs QLoRA?	Full fine-tune: ~80+ GB (multi-GPU). QLoRA (4-bit via bitsandbytes + peft): ~6–8 GB. On a 4 GB T1000 → fine-tune 1B–3B locally; 7B goes to free Colab/Kaggle T4/P100.
