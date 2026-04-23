@@ -17,3 +17,16 @@ if torch.cuda.is_available():
     print("\n✅ GPU READY. Green light to proceed.")
 else:
     print("\n CUDA NOT AVAILABLE - STOP AND DEBUG.")
+
+
+'''
+Output:
+pyTorch version: 2.6.0+cu124
+CUDA available: True
+CUDA version: 12.4
+GPU:                 Quadro T1000
+VRAM:    4.29 GB
+Matmul on GPU: OK (result shape: (1000, 1000))
+
+✅ GPU READY. Green light to proceed.
+'''
