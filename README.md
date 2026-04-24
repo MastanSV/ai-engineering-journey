@@ -12,7 +12,7 @@
 
 ## 🎯 The Goal
 
-Land an **AI / LLM Engineer** role by **December 2026** by shipping **6 production-grade portfolio projects**, learning in public on [Twitter/X](https://twitter.com/MuNnA11318), and mastering the full stack from **transformers-from-scratch → RAG → agents → fine-tuning → LLMOps**.
+Land an **AI / LLM Engineer** role by **December 2026** by shipping **6 production-grade portfolio projects**, learning in public on [Twitter/X](https://twitter.com/mastan_ai), and mastering the full stack from **transformers-from-scratch → RAG → agents → fine-tuning → LLMOps**.
 
 **Capstone theme:** Compliance Document QA System (enterprise-grade RAG with audit trails, citations, PII handling, hallucination guardrails).
 
@@ -190,7 +190,7 @@ ai-engineering-journey/
 
 ## 🔗 Follow Along
 
-- 🐦 **Twitter/X:** [@MuNnA11318](https://twitter.com/MuNnA11318) — weekly threads every Friday
+- 🐦 **Twitter/X:** [@mastan_ai](https://twitter.com/mastan_ai) — weekly threads every Friday
 - ✍️ **Blog:** _coming soon_
 - 💼 **LinkedIn:** [linkedin.com/in/mastan-vali-02a102197](https://linkedin.com/in/mastan-vali-02a102197)
 - ⭐ **Star this repo** to follow the journey
