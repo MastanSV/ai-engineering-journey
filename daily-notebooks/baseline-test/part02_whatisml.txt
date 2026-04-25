@@ -1,0 +1,38 @@
+Machine learning (ML) is nothing but meachine or computer will learn from data, by observing the patterns, machine will predict 
+what is coming next.
+What it seperates from the regular programming is that, in regular programming explicitely human has to everything
+from planning to execution. In regular programming there are only several commands and languages which computer understands,
+we have to tell in that language and it understands. But in ML, this barrier is removed, you dont have to speak in the language which
+computer understands, plain english is enough, from the plain english it will understands draw the conclusions from the data, it
+will present it you, in human understadable language.
+
+In regualr day to day life, suppose you are watching netflix, from the past serveral months you are watching movies and that is
+recorded by machine, what it will do with that data is, it will do the analysis, like which languare are watching, which genre you
+are watching more, what is the length of movie you usually wathc etc... it will do the analysis and it will recommend the such 
+movies in your feed. this is called Machine Learning means machine is learning from the data and predicting what is most occurance
+next.
+
+While developement also the machine will be trained on certain type of data. training is nothing the sample data is collected first
+in which model will be tained or machine first learn from that data. and the data we are feeding can be supervise or unsupervised.
+the difference between this is, in supervised learning the will be in numbers, but in unsupervised learning the data will be in any
+form in can be in images, documents, pdfs etc.
+
+while training the data we will split the data into two types, trained vs test data, in training data, we will give certain type of 
+data and in test data will give the different which is related to same test data to see how the model performs.
+it can be seen as studying vs exam analogy, in studying, there are total 10 chapters, but you considered only 3chapters and learned
+and you are in a thinking that you good enough to pass the exam, but in exam the questions came from other 7 chapters which you did
+not sutdy so you will fail, in the same way, the model has to be trained on the data which has to be sufficient enough the answer
+the data, so the model wont fail in the testing data.
+
+There is term called over fitting, what it means is that when you are training the model,your model is performing well on the training
+data but when it comes to testing data, it fails to answer or it fails the exam, so this is called overfitting, there are certain
+techniques which will be used to correct these types of errors.
+
+ML is everywhere now because it has become so powerful that it can work on its own except that human has to evaluate the output
+generated from the model. We are the reason for this to happen, because from last 3-5 decades we have fed the good amount data
+to the internet, now that data becoming good enough to do the work on its own.
+
+On the current evalutions of LLMs if i see is that using it in correct, legal and accountable way. the technology has to be used
+for the good cause, because if i see there is no limitation from this llm evolution except how we are going to use. and the scary
+thing for me is what if the usage goes out of our hands and the intellignece becomes more than human intelligence. this is most
+scary thing for me.
