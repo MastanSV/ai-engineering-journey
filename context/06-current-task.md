@@ -24,14 +24,14 @@ Mentor graded Part 1 at **6.5/10**. Three bug fixes shipped:
 
 Mentor graded Part 2 at **4/10**. Essay preserved as Week 0 reference point. Will rewrite Week 4.
 
-- [ ] Append `## Errata (added Apr 26)` section to `part02_whatisml.txt` listing the 5 errors **in your own words**:
+- ✅ Append `## Errata (added Apr 26)` section to `part02_whatisml.txt` listing the 5 errors **in your own words**:
   1. Plain English ≠ ML in general (only LLMs)
   2. Supervised vs unsupervised = labels vs no labels (NOT data type)
   3. Train/test split = held-out unseen exam, not "study more chapters"
   4. Overfitting = memorizing noise, not just "fails on test"
   5. ML doesn't "work on its own" — humans in every loop
-- [ ] Add 4 Anki cards (see Part 2 grading notes in chat) → `00-Setup` deck
-- [ ] Commit + push: `baseline part 2: errata + lessons learned`
+- ✅ Add 4 Anki cards (see Part 2 grading notes in chat) → `00-Setup` deck
+- ✅ Commit + push: `baseline part 2: errata + lessons learned`
 
 ---
 
