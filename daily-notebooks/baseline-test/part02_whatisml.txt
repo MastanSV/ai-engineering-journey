@@ -36,3 +36,36 @@ On the current evalutions of LLMs if i see is that using it in correct, legal an
 for the good cause, because if i see there is no limitation from this llm evolution except how we are going to use. and the scary
 thing for me is what if the usage goes out of our hands and the intellignece becomes more than human intelligence. this is most
 scary thing for me.
+
+
+## Errata
+1. Plain English ≠ ML in general (only LLMs)
+   Here i have confused between LLM's and natural language interface, Machine learning is nothing but human provides the data
+   and machine learns the rules, in traditional programming - human provides the rules and machine executes them.
+   Hierarchy :
+    Machine learning models trained on the data using python code, math and tensors. based on the tained data machine learns
+    the rules.
+
+2. Wrong interpretation of supervised and unsupervised learning.
+    Supervised learning is like data will have labels, ex: 1000 emails, each tagged spam/not-spam
+    Unsupervised learning - data does not have labels, ex: having 1000 customers data, and grouping them into certain types
+                            without telling that group exists.
+
+3. Train/test split
+    Here, Train data which is used to test the data, test data is something which can not be seen during the training,
+    But when you give the test data, real working behavior of model comes out.
+
+4. Overfitting
+    Over fitting means, while you training the model, model remembers/memorizes the training data instead of learning the 
+    patterns so when you test with test data, the model fails.
+    Real-world analogoy: 
+     The student who learns the concept instead of just memorizing answers.
+     The student who learns the concepts will the perform well on the exam.
+     The student who just memorizes the answers will fail if the new question is asked on the same concept.
+
+5. ML works on its own except human evaluates output
+    ML systems require humans in every step like collecting data, labelling, feature engineering, model selection,
+    evaluation, deployment, monitoring, retraining. The statement dangeroulsy wrong.
+
+
+The same essay will be rewritten in week-4
