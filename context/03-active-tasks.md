@@ -15,40 +15,45 @@ Setup + baseline calibration done. By Sunday night I am Week-1-ready: GPU verifi
 - [x] **Apr 24 (Fri)** — Tweet #1 posted: https://x.com/mastan_ai/status/2047744175601582565
 - [x] **Apr 24 (Fri)** — Accounts: HF, Kaggle, Colab, Langfuse, OpenRouter — all active
 - [x] **Apr 24 (Fri)** — `.env` set up + gitignored, `.env.example` committed
+- [x] **Apr 25 (Sat)** — CONTEXT/ system created (7 files)
+- [x] **Apr 25 (Sat)** — Baseline Part 1 EDA Q1–Q9 shipped → graded **6.5/10**
+- [x] **Apr 25 (Sat)** — Baseline Part 2 Feynman essay shipped → graded **4/10**
+- [x] **Apr 26 (Sun)** — EDA fixes: Q3 denominator, Q12 correlation heatmap, Q17 self-assessment
 
 ---
 
-## 🟡 IN PROGRESS — Today (Apr 25, Sat)
+## 🟡 IN PROGRESS — Today (Apr 26, Sun)
 
 ### 🔴 Must
 
-- [ ] **Baseline Test Part 1** — Titanic numpy/pandas EDA notebook (17 questions, 2hr cap)
-  - Path: `daily-notebooks/baseline-test/part1_eda.ipynb`
-  - Reference brief: `CONTEXT/06-current-task.md`
-- [ ] **Baseline Test Part 2** — Feynman essay "What is ML?" (500 words, 1hr cap, no Google/AI)
-  - Path: `concepts/baseline-feynman-what-is-ml.md`
+- [ ] Push EDA fixes commit: `baseline part 1: Q3 fix + Q12 heatmap + Q17 self-assessment`
+- [ ] Append errata section to `part02_whatisml.txt` (5 errors in own words) + commit
+- [ ] Add 4 ML-concept Anki cards (supervised vs unsup, train/test split purpose, overfitting, programming vs ML)
+- [ ] **MLflow hello-world** notebook → `daily-notebooks/mlflow-hello/01_first_run.ipynb` + UI screenshot
+- [ ] **Week 1 pre-reading** notes → `concepts/week-01-prereading.md` (3B1B 1–3, StatQuest bias-var + linreg)
+- [ ] **Weekly retro** → `weekly-logs/week-00-setup.md`
+- [ ] **🎤 Sunday retro with mentor** — paste retro, receive Week 1 sprint plan
 
 ### 🟡 Should
 
+- [ ] Twitter thread #2 (Week 0 wrap) → `twitter-posts/week-00-thread.md`
 - [ ] Pre-commit hooks (`ruff`, `ruff-format`, `detect-private-key`, `nbqa-ruff`)
+- [ ] 3 Anki reviews due today
+
+### ⬜ Deferred to Week 1 buffer
+
 - [ ] HF Hub dummy model push: `mastanai/journey-week-0-dummy`
-- [ ] Add 3 Anki cards on Langfuse / OpenRouter / gateway pattern → `05-LLM-Engineering` subdeck
-- [ ] Do 3 Anki reviews (yesterday's cards)
-
----
-
-## ⬜ Sunday (Apr 26)
-
-- [ ] MLflow hello-world notebook
-- [ ] Week 1 light pre-reading (3B1B linalg 1-3, StatQuest bias-variance + linear regression)
-- [ ] Write `weekly-logs/week-00-setup.md` — full retro
-- [ ] Draft Twitter thread #2 — Week 0 wrap → save to `twitter-posts/week-00-thread.md`
-- [ ] **🎤 SUNDAY RETRO with mentor** (NN scorecard, blockers, Week 1 sprint plan)
 
 ---
 
 ## Definition of Done — Week 0
 
-- [ ] All ✅ items above plus Sunday section
-- [ ] Baseline test graded with score in `weekly-logs/week-00-setup.md`
-- [ ] Mentor has delivered Week 1 sprint plan in `CONTEXT/03-active-tasks.md` (overwritten Monday)
+- [x] GPU + env verified
+- [x] Public repo + Twitter live
+- [x] All accounts active
+- [x] Baseline test shipped + graded
+- [ ] EDA fixes + essay errata pushed
+- [ ] MLflow first run logged
+- [ ] Week 1 pre-reading notes saved
+- [ ] `weekly-logs/week-00-setup.md` written
+- [ ] Sunday mentor retro complete → Week 1 sprint plan delivered → this file overwritten Monday
