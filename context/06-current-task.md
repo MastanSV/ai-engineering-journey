@@ -1,110 +1,47 @@
-# Current Task — Sunday April 26, 2026
+# Current Task — Week 1 Day 1 (Monday April 27, 2026)
 
 > **Replace this file at the start of every new chat session/topic.**
 
-## Today's Goal
+## This week's mission
 
-Close out Week 0. Ship Sunday deliverables (MLflow hello-world, weekly retro, Twitter thread #2). Walk into Monday with a graded baseline + Week 1 sprint plan locked.
+**Master linear regression end-to-end.** From numpy scratch implementation to sklearn one-liner to real California housing dataset, all logged in MLflow. By Sunday I can teach linreg to a non-technical friend in 800 words.
 
----
+## Today's block (Monday, 9:00–10:30 PM)
 
-## Carryover from Saturday (close these FIRST, ~30 min)
+### 🌅 Warmup (15 min)
 
-### Part 1 EDA — Verdict & Next Step
+- Watch: 3Blue1Brown — Linear Algebra Essence **Episode 1: Vectors** (https://www.youtube.com/watch?v=fNk_zzaMoSs)
+- Open `concepts/week-01-prereading.md`
+- Add a section `## Ep 1: Vectors`
+- Write **5 sentences in your own words** answering:
+  1. What is a vector (in ML/data context)?
+  2. What does it mean to "add" two vectors?
+  3. What does scalar multiplication do geometrically?
+  4. Where will I use this in AI engineering?
+  5. One question I still have
 
-Mentor graded Part 1 at **6.5/10**. Three bug fixes shipped:
+### 💻 Numpy refresher (45 min)
 
-- ✅ Q3 denominator fix (`/df.shape[1]`)
-- ✅ Q12 correlation heatmap added
-- ✅ Q17 self-assessment markdown cell added
+Create: `daily-notebooks/week-01/01-numpy-refresher.ipynb`
 
-- [ ] Final commit + push: `baseline part 1: Q3 fix + Q12 heatmap + Q17 self-assessment`
+Build these cells (no Googling syntax — use `np.array?` in Jupyter):
 
-### Part 2 Essay — Errata Action (DO NOT REWRITE BODY)
+1. **Markdown:** title + "why numpy matters for ML" (2 sentences)
+2. **Vectors:** create 1D arrays of length 5; check `.shape`, `.dtype`, `.ndim`
+3. **Matrices:** create a 3×4 matrix; reshape it to 2×6; transpose it
+4. **Element-wise vs matrix mult:** demonstrate `*` (Hadamard) vs `@` (matmul)
+5. **Broadcasting:** add a (3,1) column vector to a (3,4) matrix — explain what happened
+6. **Dot product:** two vectors `a, b` of length 4 → compute `a @ b`. What does the result mean geometrically?
+7. **Random data:** generate 100 samples from a normal distribution (mean=0, std=1). Plot histogram.
+8. **Markdown reflection:** 3 things you didn't know about numpy before today
 
-Mentor graded Part 2 at **4/10**. Essay preserved as Week 0 reference point. Will rewrite Week 4.
+### 📝 Anki (20 min)
 
-- ✅ Append `## Errata (added Apr 26)` section to `part02_whatisml.txt` listing the 5 errors **in your own words**:
-  1. Plain English ≠ ML in general (only LLMs)
-  2. Supervised vs unsupervised = labels vs no labels (NOT data type)
-  3. Train/test split = held-out unseen exam, not "study more chapters"
-  4. Overfitting = memorizing noise, not just "fails on test"
-  5. ML doesn't "work on its own" — humans in every loop
-- ✅ Add 4 Anki cards (see Part 2 grading notes in chat) → `00-Setup` deck
-- ✅ Commit + push: `baseline part 2: errata + lessons learned`
+- Review all due cards in `00-Setup` deck
+- Create new deck: `01-Math-Foundations`
+- Add 3 cards:
+  - "Define a vector in ML context" / "ordered list of numbers; e.g. an embedding"
+  - "Difference between `*` and `@` in numpy" / "`*` is element-wise; `@` is matrix multiplication"
+  - "What is broadcasting?" / "numpy auto-expanding smaller arrays to match larger array shape during ops"
 
----
-
-## Sunday primary work
-
-### 🔴 Must
-
-- [ ] **MLflow hello-world** — `daily-notebooks/mlflow-hello/01_first_run.ipynb`
-  - Install: `uv pip install mlflow`
-  - Log a dummy sklearn LogisticRegression on iris: params, metrics (accuracy), model artifact
-  - Launch UI: `mlflow ui` — screenshot the run page → save to repo
-  - Commit: `mlflow: first tracked run`
-
-- [ ] **Week 1 pre-reading** (~90 min, take notes in `concepts/week-01-prereading.md`)
-  - 3Blue1Brown — Linear Algebra Essence, episodes 1, 2, 3
-  - StatQuest — Bias-Variance Tradeoff
-  - StatQuest — Linear Regression (main video)
-  - For each: 3 bullets in your own words + 1 question you still have
-
-- [ ] **Weekly retro** — `weekly-logs/week-00-setup.md`
-  - Use template (see below)
-  - Honest scores, actual hours logged, what slipped, what worked
-
-- [ ] **🎤 Sunday retro with mentor** — paste retro file in chat, get Week 1 sprint plan back
-
-### 🟡 Should
-
-- [ ] Twitter thread #2 — Week 0 wrap → draft in `twitter-posts/week-00-thread.md`
-  - Hook: "Week 0 of becoming an AI Engineer in 8 months. Here's what brutally honest baseline grading looks like 🧵"
-  - 5–7 tweets. Include the 6.5/10 and 4/10 scores. Vulnerability = engagement.
-- [ ] Pre-commit hooks (`ruff`, `ruff-format`, `detect-private-key`, `nbqa-ruff`)
-- [ ] 3 Anki reviews due today
-
----
-
-## Weekly retro template (paste into `weekly-logs/week-00-setup.md`)
-
-```markdown
-# Week 00 — Setup & Baseline (Apr 23–26, 2026)
-
-## Hours logged
-
-- Thu: ** / Fri: ** / Sat: ** / Sun: **
-- **Total: \_\_ hrs** (target was 18–22)
-
-## NN scorecard
-
-- NN1 GitHub commits: \_\_ / 4 days
-- NN2 Twitter: \_\_ / 1 thread
-- NN3 Teach-back: ✅ Feynman essay (graded 4/10)
-- NN4 Anki: ** cards added, ** reviews completed
-- NN5 Sunday retro: ✅ this doc
-
-## Baseline scores
-
-- Part 1 EDA: 6.5/10
-- Part 2 Essay: 4/10
-
-## What worked
-
--
-
-## What slipped
-
--
-
-## Top 3 gaps for Week 1
-
-1.
-2.
-3.
-
-## Mood/energy (1–10): \_\_
-
-## Confidence I'll hit Dec 2026 offer (1–10): \_\_
-```
+### 🚀 Commit (10 min)
