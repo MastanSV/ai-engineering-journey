@@ -5,7 +5,8 @@ What is a vector (in ML/data context)?
 
 What does it mean to "add" two vectors?
 
-- adding two vectors will be like finding out the result vector how far it is from origin
+- adding two vectors will be like finding out the result vector how far it is from origin. when you have two vectors, both starting from origin, when you want do addition, then you move the second vector to the tip of the first vector, then addition of the two vectors will be, draw the vector from tail of the first vector to the tip of the second vector
+  will be their sum.
 
 What does scalar multiplication do geometrically?
 

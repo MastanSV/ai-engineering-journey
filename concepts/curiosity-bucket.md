@@ -1,0 +1,2 @@
+- How is vector add/mul applied in real-world decisions?
+- Why always add and multiply, nothing else?

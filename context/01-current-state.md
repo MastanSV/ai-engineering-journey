@@ -91,3 +91,4 @@
 - Anki review = daily, before commit
 - Every video paired with artifact (≥ 5 sentences or code)
 - Videos ≤ 15 min each (no 90-min marathons)
+- **Profile sync rule:** Every Monday morning, update `MastanSV/MastanSV/README.md` with current week number + theme. (Or set up GitHub Actions auto-sync — Saturday curiosity task.)
