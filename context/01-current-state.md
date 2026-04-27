@@ -1,13 +1,14 @@
 # Current State — Snapshot
 
-> **Updated:** 2026-04-26 (Sunday — Week 0 close-out)
+> **Updated:** 2026-04-28 (Tuesday — Week 1 Day 2)
 > _Update this file at the end of every working session._
 
 ## Calendar
 
-- **Current date:** April 26, 2026 (Week 0 closes tonight)
-- **Tomorrow starts:** Week **1 of 32**
+- **Current date:** April 28, 2026
+- **Current week:** **1 of 32** (Day 2 of 7)
 - **Current phase:** Phase 1 — Math + ML Foundations (Weeks 1–4)
+- **Theme this week:** _From line to model_
 - **Target offer date:** December 2026
 
 ## Hardware
@@ -20,7 +21,8 @@
 
 - `C:\Temp\Learnings\ai-engineering-journey`
 - Python 3.11 via uv, `.venv` active
-- MLflow installed ✅
+- MLflow ✅ (used in Week 0)
+- numpy + matplotlib ✅ (active in Week 1)
 - Pre-commit hooks: ⬜ deferred to Week 1 buffer
 - Ollama + llama3.2:3b ✅
 
@@ -30,6 +32,7 @@
 - Twitter/X: @mastan_ai (Tweet #1 + thread #2 done)
 - HF Hub: mastanai
 - Kaggle: valismastan
+- Profile README: updated to "Week 1 — Linear Regression from Scratch" ✅
 
 ## Time commitment (locked)
 
@@ -37,27 +40,36 @@
 - Sat + Sun: **6hr each**
 - Weekly target: **19hr**
 
+## Week 1 progress (live)
+
+- **Mon Apr 27 ✅** — 3B1B Ep 1 + numpy refresher + 5 Anki cards (incl. dot product bug fix)
+- **Tue Apr 28** — 3B1B Ep 2 + linreg scratch part 1 (data + loss) ← TODAY
+- **Wed Apr 29** — 3B1B Ep 3 + linreg scratch part 2 (gradient descent)
+- **Thu Apr 30** — Bias-variance video + sklearn LinearRegression
+- **Fri May 1** — Linreg main video + California housing + MLflow
+- **Sat May 2** — Diagnostics + Ridge/Lasso comparison + Twitter draft
+- **Sun May 3** — Teach-back essay + retro + mentor session
+
 ## Week 0 results (final)
 
-- Hours logged: 17 / 22 target (slightly under, acceptable for setup week)
-- Baseline EDA: **6.5/10** (bugs in Q3, Q4; missing plot polish)
-- Baseline essay: **4/10** (4 conceptual errors, preserved as Week 4 rewrite reference)
-- Mood: 7/10 | Confidence Dec 2026: 7/10
-- **Verdict:** Week 1 starts at full curriculum. No skipping.
+- Hours logged: 17 / 22 target
+- Baseline EDA: **6.5/10** | Baseline essay: **4/10**
+- Mood 7/10 | Confidence Dec 2026: 7/10
+- **Verdict:** Full curriculum, no skipping
 
-## Top gaps to address in Week 1
+## Top gaps being addressed in Week 1
 
-1. Pandas/numpy idioms (active practice, not video watching)
+1. Pandas/numpy idioms (active practice — 1/6 notebooks done)
 2. Core ML vocabulary (loss, gradient, generalization, bias, variance)
 3. Plot hygiene (figsize, labels, comparable axes, narration)
 
-## NN status (start of Week 1)
+## NN status (Week 1 — live)
 
-- NN1 GitHub commits: 🔥 4-day streak (carry into Week 1 daily)
-- NN2 Twitter: 2 posts done (Tweet #1 + thread #2 if shipped)
-- NN3 Teach-back: ✅ baseline essay shipped; next teach-back due Sun May 3
-- NN4 Anki: 7 cards in `00-Setup`; new deck `01-Math-Foundations` opens Monday
-- NN5 Sunday retro: ✅ Week 0 done
+- **NN1 GitHub commits:** 🔥 5-day streak
+- **NN2 Twitter:** thread #3 due Saturday
+- **NN3 Teach-back:** linreg essay due Sunday May 3
+- **NN4 Anki:** 7 cards in `00-Setup` + 5 cards in `01-Math-Foundations` (12 total); daily reviews on track
+- **NN5 Sunday retro:** due May 3
 
 ## Decisions locked
 
@@ -70,10 +82,11 @@
 
 ## Last shipped
 
-- **Apr 23:** PyTorch + CUDA, first commit, Anki seeded
-- **Apr 24:** Public repo polish, Tweet #1, all accounts
-- **Apr 25:** CONTEXT system, baseline Part 1+2 (graded)
-- **Apr 26:** Baseline fixes, MLflow hello-world, Week 1 pre-reading prep, Week 0 retro, Week 1 sprint plan locked
+- **Apr 23–24:** Setup, accounts, public repo, Tweet #1
+- **Apr 25:** CONTEXT system + baseline test (graded 6.5 + 4)
+- **Apr 26:** Baseline fixes, MLflow hello-world, Week 0 retro, Week 1 plan locked
+- **Apr 27:** Numpy refresher notebook + 3B1B Ep 1 notes + 5 Anki cards + dot product bug fix
+- **Apr 28:** _(today — pending)_
 
 ## Blockers
 
@@ -81,9 +94,10 @@
 
 ## Mood / Energy
 
-- Apr 26: Mood 7/10, Confidence 7/10 (honest, post-mentor recalibration)
+- Apr 26: Mood 7/10, Confidence 7/10
+- Apr 28: _(self-rate tonight after session)_
 
-## Active rules (added Week 0 retro)
+## Active rules
 
 - No 10/10 self-scores
 - 9:00–10:30 PM weekday slot is sacred
@@ -91,4 +105,5 @@
 - Anki review = daily, before commit
 - Every video paired with artifact (≥ 5 sentences or code)
 - Videos ≤ 15 min each (no 90-min marathons)
-- **Profile sync rule:** Every Monday morning, update `MastanSV/MastanSV/README.md` with current week number + theme. (Or set up GitHub Actions auto-sync — Saturday curiosity task.)
+- Profile sync rule: every Monday update `MastanSV/MastanSV/README.md`
+- **NEW (Apr 28):** Re-verify code correctness (dot product taught me) — when in doubt, manually compute one example and check

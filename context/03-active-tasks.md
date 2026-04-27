@@ -19,14 +19,13 @@ Master the simplest possible ML model end-to-end. Every concept here scales to G
 
 ## Daily breakdown
 
-### Monday Apr 27 — Linear algebra warmup + numpy refresh
+### Monday Apr 27 — Linear algebra warmup + numpy refresh ✅ DONE
 
-- 🌅 **15 min:** 3B1B Linear Algebra Ep 1 (Vectors) → 5 sentences in `concepts/week-01-prereading.md`
-- 💻 **45 min:** Numpy notebook → `daily-notebooks/week-01/01-numpy-refresher.ipynb`
-  - Create vectors/matrices, reshape, broadcasting, dot product, matrix multiplication
-  - 10 small exercises (no Google for syntax — use docstrings via `?` in Jupyter)
-- 📝 **20 min:** Anki — review yesterday + add 3 cards from today (vector, dot product, broadcasting)
-- 🚀 **10 min:** commit + push
+- [x] 🌅 3B1B Ep 1 (Vectors) → 5 sentences logged
+- [x] 💻 `daily-notebooks/week-01/01-numpy-refresher.ipynb` shipped
+- [x] 📝 Anki: reviewed `00-Setup`, created `01-Math-Foundations`, 5 cards added
+- [x] 🚀 Commits pushed (incl. dot product bug fix)
+- **Mentor notes:** dot product bug caught + fixed. Broadcasting explanation needs sharpening but numerical answer correct. Streak: 5 days alive.
 
 ### Tuesday Apr 28 — Linear regression intuition
 
@@ -102,8 +101,8 @@ Master the simplest possible ML model end-to-end. Every concept here scales to G
 
 ## ✅ Definition of Done — Week 1
 
-- [ ] 5 weekday warmup videos watched + 5 sentences each
-- [ ] Notebooks 01–06 committed in `daily-notebooks/week-01/`
+- [ ] 5 weekday warmup videos watched + 5 sentences each ← 1/5 done (Ep 1)
+- [ ] Notebooks 01–06 committed in `daily-notebooks/week-01/` ← 1/6 done
 - [ ] Linear regression implemented from scratch (gradient descent, no sklearn)
 - [ ] Same problem solved with sklearn — results match
 - [ ] California housing trained, R² and MSE in MLflow
