@@ -38,7 +38,7 @@ What is a basis (and why are î and ĵ called basis vectors)?
 
 Where will I use span/basis in AI engineering?
 
--
+- Embeddings live in a vector space; every embedding is a linear combination of the basis dimensions. PCA picks a new basis.
 
 One question I still have
 
