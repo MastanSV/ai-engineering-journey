@@ -95,7 +95,7 @@
 ## Mood / Energy
 
 - Apr 26: Mood 7/10, Confidence 7/10
-- Apr 28: _(self-rate tonight after session)_
+- Apr 28: Mood 5/10, Confidence 7/10
 
 ## Active rules
 
