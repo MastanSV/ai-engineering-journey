@@ -1,12 +1,12 @@
 # Current State — Snapshot
 
-> **Updated:** 2026-04-28 (Tuesday — Week 1 Day 2)
+> **Updated:** 2026-04-29 (Wednesday — Week 1 Day 3)
 > _Update this file at the end of every working session._
 
 ## Calendar
 
-- **Current date:** April 28, 2026
-- **Current week:** **1 of 32** (Day 2 of 7)
+- **Current date:** April 29, 2026
+- **Current week:** **1 of 32** (Day 3 of 7)
 - **Current phase:** Phase 1 — Math + ML Foundations (Weeks 1–4)
 - **Theme this week:** _From line to model_
 - **Target offer date:** December 2026
@@ -43,8 +43,8 @@
 ## Week 1 progress (live)
 
 - **Mon Apr 27 ✅** — 3B1B Ep 1 + numpy refresher + 5 Anki cards (incl. dot product bug fix)
-- **Tue Apr 28** — 3B1B Ep 2 + linreg scratch part 1 (data + loss) ← TODAY
-- **Wed Apr 29** — 3B1B Ep 3 + linreg scratch part 2 (gradient descent)
+- **Tue Apr 28 ✅** — 3B1B Ep 2 (linear combinations / span / basis) + linreg scratch part 1 (data + MSE + eyeball fit) + 2 Anki cards (MSE, residual)
+- **Wed Apr 29** — 3B1B Ep 3 + linreg scratch part 2 (gradient descent) ← TODAY
 - **Thu Apr 30** — Bias-variance video + sklearn LinearRegression
 - **Fri May 1** — Linreg main video + California housing + MLflow
 - **Sat May 2** — Diagnostics + Ridge/Lasso comparison + Twitter draft
@@ -59,16 +59,16 @@
 
 ## Top gaps being addressed in Week 1
 
-1. Pandas/numpy idioms (active practice — 1/6 notebooks done)
+1. Pandas/numpy idioms (active practice — 2/6 notebooks done)
 2. Core ML vocabulary (loss, gradient, generalization, bias, variance)
 3. Plot hygiene (figsize, labels, comparable axes, narration)
 
 ## NN status (Week 1 — live)
 
-- **NN1 GitHub commits:** 🔥 5-day streak
+- **NN1 GitHub commits:** 🔥 6-day streak
 - **NN2 Twitter:** thread #3 due Saturday
 - **NN3 Teach-back:** linreg essay due Sunday May 3
-- **NN4 Anki:** 7 cards in `00-Setup` + 5 cards in `01-Math-Foundations` (12 total); daily reviews on track
+- **NN4 Anki:** 7 cards in `00-Setup` + 7 cards in math/numpy refresher (14 total); daily reviews on track
 - **NN5 Sunday retro:** due May 3
 
 ## Decisions locked
@@ -86,7 +86,8 @@
 - **Apr 25:** CONTEXT system + baseline test (graded 6.5 + 4)
 - **Apr 26:** Baseline fixes, MLflow hello-world, Week 0 retro, Week 1 plan locked
 - **Apr 27:** Numpy refresher notebook + 3B1B Ep 1 notes + 5 Anki cards + dot product bug fix
-- **Apr 28:** _(today — pending)_
+- **Apr 28:** 3B1B Ep 2 (span/basis) notes + linreg scratch part 1 notebook (data gen + MSE + eyeball fit + 3-guess comparison) + 2 Anki cards (MSE, residual)
+- **Apr 29:** _(today — pending)_
 
 ## Blockers
 
@@ -95,7 +96,7 @@
 ## Mood / Energy
 
 - Apr 26: Mood 7/10, Confidence 7/10
-- Apr 28: Mood 5/10, Confidence 7/10
+- Apr 28: Mood 8/10, Confidence 7/10
 
 ## Active rules
 
@@ -106,4 +107,5 @@
 - Every video paired with artifact (≥ 5 sentences or code)
 - Videos ≤ 15 min each (no 90-min marathons)
 - Profile sync rule: every Monday update `MastanSV/MastanSV/README.md`
-- **NEW (Apr 28):** Re-verify code correctness (dot product taught me) — when in doubt, manually compute one example and check
+- **(Apr 28):** Re-verify code correctness (dot product taught me) — when in doubt, manually compute one example and check
+- **NEW (Apr 29):** Layered learning method — for every new ML topic, go through L1 (intuition) → L2 (math + symbol cheat sheet) → L3 (tiny code) → L4 (reflection). Don't skip layers.
