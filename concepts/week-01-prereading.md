@@ -43,3 +43,25 @@ Where will I use span/basis in AI engineering?
 One question I still have
 
 - The application of using span/basis in AI engineering.
+
+## Ep 3: Linear transformations & metrices
+
+What is a linear transformation?
+
+- movement of vectory from one position to another linearly i.e., by keeping the origin fixed and all lines remains lines
+
+How does a 2x2 matrix represent one?
+
+- once you transform the vector what are the co-ordinate points basis vector i-hat and j-hat, first column will co-ordiante points i-hat and second column will be co-ordinate point of j-hat
+
+What does the determinant tell you geometrically?
+
+-
+
+Where will I use this in AI engineering? (Hint: every neural net layer is Wx + b)
+
+- In nural networks, every layer can be transformed in multiple times to get the best result
+
+One question I still have
+
+- The thing which im missing out is how do you represent this in geometrically which i need to answer this question. and practical usage in real-world.
