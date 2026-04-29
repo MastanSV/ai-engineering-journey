@@ -40,15 +40,28 @@
 - Sat + Sun: **6hr each**
 - Weekly target: **19hr**
 
+## Day-state tracking legend
+
+- ✅ **Shipped** — completed within the planned day
+- 🔄 **Carried** — partial; remainder rolled to next day (note why)
+- ⏭️ **Deferred** — explicitly skipped, logged with reason
+- ❌ **Skipped** — missed entirely, no recovery (rare; triggers re-plan)
+
 ## Week 1 progress (live)
 
 - **Mon Apr 27 ✅** — 3B1B Ep 1 + numpy refresher + 5 Anki cards (incl. dot product bug fix)
-- **Tue Apr 28 ✅** — 3B1B Ep 2 (linear combinations / span / basis) + linreg scratch part 1 (data + MSE + eyeball fit) + 2 Anki cards (MSE, residual)
-- **Wed Apr 29** — 3B1B Ep 3 + linreg scratch part 2 (gradient descent) ← TODAY
+- **Tue Apr 28 🔄** — 3B1B Ep 2 done (span/basis); linreg part 1 partial: data gen + plot done. MSE function + eyeball fit + 2 Anki cards + commit **carried to Wed**. _Slip reason: first-time deep L1/L2 work on linreg intuition took longer than 75 min budget. Calibration data, not failure._
+- **Wed Apr 29** — Tue carryover ✅ (MSE + eyeball fit + Anki + commit) + 3B1B Ep 3 + linreg part 2 (gradient descent) ← TODAY
 - **Thu Apr 30** — Bias-variance video + sklearn LinearRegression
 - **Fri May 1** — Linreg main video + California housing + MLflow
 - **Sat May 2** — Diagnostics + Ridge/Lasso comparison + Twitter draft
 - **Sun May 3** — Teach-back essay + retro + mentor session
+
+## Slip ledger (Week 1)
+
+| Day        | State | Slipped item                           | Reason                                                | Recovered     |
+| ---------- | ----- | -------------------------------------- | ----------------------------------------------------- | ------------- |
+| Tue Apr 28 | 🔄    | MSE func + eyeball fit + Anki + commit | Underestimated time for L1/L2 depth on first ML topic | Wed Apr 29 ✅ |
 
 ## Week 0 results (final)
 
@@ -62,10 +75,11 @@
 1. Pandas/numpy idioms (active practice — 2/6 notebooks done)
 2. Core ML vocabulary (loss, gradient, generalization, bias, variance)
 3. Plot hygiene (figsize, labels, comparable axes, narration)
+4. **Time estimation calibration** (NEW — surfaced by Tue 🔄)
 
 ## NN status (Week 1 — live)
 
-- **NN1 GitHub commits:** 🔥 6-day streak
+- **NN1 GitHub commits:** 🔥 streak alive (commit pending tonight)
 - **NN2 Twitter:** thread #3 due Saturday
 - **NN3 Teach-back:** linreg essay due Sunday May 3
 - **NN4 Anki:** 7 cards in `00-Setup` + 7 cards in math/numpy refresher (14 total); daily reviews on track
@@ -75,7 +89,7 @@
 
 - Capstone: Compliance Document QA System
 - Learn-in-public: Twitter/X
-- Mode: Brutal accountability
+- Mode: Brutal accountability (= honest data, not self-flagellation)
 - DSA parallel: Week 9
 - Networking: Week 5
 - Applications: Week 16
@@ -86,8 +100,8 @@
 - **Apr 25:** CONTEXT system + baseline test (graded 6.5 + 4)
 - **Apr 26:** Baseline fixes, MLflow hello-world, Week 0 retro, Week 1 plan locked
 - **Apr 27:** Numpy refresher notebook + 3B1B Ep 1 notes + 5 Anki cards + dot product bug fix
-- **Apr 28:** 3B1B Ep 2 (span/basis) notes + linreg scratch part 1 notebook (data gen + MSE + eyeball fit + 3-guess comparison) + 2 Anki cards (MSE, residual)
-- **Apr 29:** _(today — pending)_
+- **Apr 28:** 3B1B Ep 2 (span/basis) notes + linreg scratch part 1 partial (data gen + plot)
+- **Apr 29:** _(today — pending: Tue carryover + Day 3 work)_
 
 ## Blockers
 
@@ -96,7 +110,8 @@
 ## Mood / Energy
 
 - Apr 26: Mood 7/10, Confidence 7/10
-- Apr 28: Mood 8/10, Confidence 7/10
+- Apr 28: _(self-rate tonight — pending)_
+- Apr 29: _(self-rate tonight — pending)_
 
 ## Active rules
 
@@ -107,5 +122,7 @@
 - Every video paired with artifact (≥ 5 sentences or code)
 - Videos ≤ 15 min each (no 90-min marathons)
 - Profile sync rule: every Monday update `MastanSV/MastanSV/README.md`
-- **(Apr 28):** Re-verify code correctness (dot product taught me) — when in doubt, manually compute one example and check
-- **NEW (Apr 29):** Layered learning method — for every new ML topic, go through L1 (intuition) → L2 (math + symbol cheat sheet) → L3 (tiny code) → L4 (reflection). Don't skip layers.
+- **(Apr 28):** Re-verify code correctness — when in doubt, manually compute one tiny example and check
+- **(Apr 29):** **Layered learning method** — for every ML topic: L1 (intuition, 5 sentences) → L2 (math + symbol cheat sheet) → L3 (tiny code, sanity-tested) → L4 (reflection, bridge to next topic). Don't skip layers.
+- **(Apr 29):** **3-state day tracking** — use ✅ / 🔄 / ⏭️ instead of binary done/not-done. Log slip reasons.
+- **(Apr 29):** **Velocity check rule** — if ≥3 days/week show 🔄 OR total carryover > 1 hour → trigger re-plan on Saturday (cut scope, use buffer, or accept smaller week). Never fake-finish.

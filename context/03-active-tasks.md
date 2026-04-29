@@ -17,6 +17,44 @@ Master the simplest possible ML model end-to-end. Every concept here scales to G
 
 ---
 
+## Day-state tracking system
+
+Each task in the daily breakdown is marked at end-of-day with one of:
+
+| Symbol | Meaning                                                                    |
+| ------ | -------------------------------------------------------------------------- |
+| ✅     | **Shipped** — completed within the planned day                             |
+| 🔄     | **Carried** — partially done, remainder rolled to next day (must note WHY) |
+| ⏭️     | **Deferred** — explicitly chose to skip; logged with reason                |
+| ❌     | **Skipped** — missed with no recovery (rare; triggers re-plan)             |
+
+**Why this matters:**
+
+- Honest 🔄 logging gives calibration data → time estimates sharpen by Week 4
+- Sunday retro reads patterns (which days slip? which task types?)
+- Brutal accountability ≠ self-blame. It means honest data.
+
+**Slip rules:**
+
+1. When a task carries to next day → add it to next day's plan AS THE FIRST item, with `(carryover)` tag
+2. Log the reason in the day's entry — _underestimated time_ / _got stuck on X_ / _energy low_
+3. Note recovery in the slip ledger in `01-current-state.md`
+
+**Velocity check (Saturday review):**
+
+- ≥3 days with 🔄 in a week, OR
+- total carryover > 1 hour
+
+→ trigger re-plan: (a) cut scope, (b) use Sat/Sun buffer, or (c) accept smaller week. **Never fake-finish.**
+
+**Recovery patterns that work:**
+
+- Carryover from weekday → fold into next weekday's first 30 min
+- Carryover from Friday → use Saturday's 6hr block
+- Carryover from Saturday → defer to Week 2's buffer (or cut)
+
+---
+
 ## Daily breakdown
 
 ### Monday Apr 27 — Linear algebra warmup + numpy refresh ✅ DONE
@@ -27,25 +65,37 @@ Master the simplest possible ML model end-to-end. Every concept here scales to G
 - [x] 🚀 Commits pushed (incl. dot product bug fix)
 - **Mentor notes:** dot product bug caught + fixed. Broadcasting explanation needs sharpening but numerical answer correct. Streak: 5 days alive.
 
-### Tuesday Apr 28 — Linear regression intuition
+### Tuesday Apr 28 — Linreg intuition 🔄 PARTIAL
 
-- 🌅 **15 min:** 3B1B Linear Algebra Ep 2 (Linear combinations & basis) → 5 sentences
-- 💻 **45 min:** Notebook → `daily-notebooks/week-01/02-linreg-from-scratch-part1.ipynb`
-  - Generate fake data: y = 2x + 1 + noise (use `np.random.randn`)
-  - Plot it. Eyeball-fit a line. Compute MSE manually.
-  - Define the loss function as a Python function: `def mse(y_true, y_pred): ...`
-- 📝 **20 min:** Anki review + 2 new cards (MSE, residual)
-- 🚀 **10 min:** commit + push
+- [x] ✅ 🌅 3B1B Ep 2 (Linear combinations / span / basis) → 5 sentences in `concepts/week-01-prereading.md`
+- [🔄] 💻 Notebook `02-linreg-from-scratch-part1.ipynb` — completed mini-topics 1–3 (intuition, equation, data gen). Mini-topics 4–5 (MSE function + eyeball fit) **carried to Wed Apr 29**.
+- [🔄] 📝 Anki: 2 new cards (MSE, residual) **carried to Wed**
+- [🔄] 🚀 Commit + push **carried to Wed** (single commit will cover full notebook)
 
-### Wednesday Apr 29 — Gradient descent from scratch
+**Slip reason:** First-time deep L1/L2 work on linreg intuition. Took extra time to build the symbol cheat sheet, sanity checks, and "why fake data" rationale. The depth was the right call — _calibration data, not failure_.
+
+**Recovery:** Wed Apr 29 first 30 min before regular Wed agenda.
+
+### Wednesday Apr 29 — Carryover + Gradient descent
+
+**🔄 Carryover from Tue (do FIRST, ~30 min):**
+
+- [ ] Mini-topic 4: MSE function + 4 sanity tests
+- [ ] Mini-topic 5: 3 eyeball guesses + plot + reflection
+- [ ] 2 Anki cards (MSE, residual)
+- [ ] Commit + push notebook 02
+
+**Today's planned block (Wednesday, 9:00–10:30 PM):**
 
 - 🌅 **15 min:** 3B1B Linear Algebra Ep 3 (Linear transformations & matrices) → 5 sentences
 - 💻 **45 min:** Notebook → `daily-notebooks/week-01/03-linreg-from-scratch-part2.ipynb`
-  - Implement gradient descent in pure numpy (no sklearn): w, b updated by computed gradients
+  - Implement gradient descent in pure numpy (no sklearn): `w`, `b` updated by computed gradients
   - Run for 1000 iterations, plot loss curve
-  - Compare your final w, b to true (2.0, 1.0)
+  - Compare your final `w`, `b` to true `(2.0, 1.0)`
 - 📝 **20 min:** Anki review + 3 new cards (gradient, learning rate, gradient descent)
 - 🚀 **10 min:** commit + push
+
+**⚠️ Total realistic load tonight: ~120 min** (carryover 30 + planned 90). If energy is low → defer one Anki card or shorten gradient descent iterations to 500. Note in slip ledger if so.
 
 ### Thursday Apr 30 — Bias-Variance + sklearn
 
