@@ -56,7 +56,11 @@ How does a 2x2 matrix represent one?
 
 What does the determinant tell you geometrically?
 
--
+- The factor by which the transformation scales area (2D) or volume (3D).
+  - |det| = 2 → areas double
+  - |det| = 1 → areas preserved (rotation, shear)
+  - |det| = 0 → space squished onto a line/point; transformation destroys information (no inverse)
+  - det < 0 → orientation flipped (mirrored)
 
 Where will I use this in AI engineering? (Hint: every neural net layer is Wx + b)
 

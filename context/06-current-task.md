@@ -1,4 +1,4 @@
-# Current Task — Week 1 Day 3 (Wednesday April 29, 2026)
+# Current Task — Week 1 Day 4 (Thursday April 30, 2026)
 
 > **Replace this file at the start of every new chat session/topic.**
 
@@ -6,58 +6,67 @@
 
 **Master linear regression end-to-end.** From numpy scratch → sklearn → real California housing dataset, all logged in MLflow. By Sunday I can teach linreg to a non-technical friend in 800 words.
 
-## Carryover from Tue Apr 28 🔄
+## Carryover from Wed Apr 29 🔄
 
-Do FIRST tonight (~30 min). Already in flight, mostly done — just close the loop:
+Heavy carryover today. Do FIRST.
 
-- [x] Mini-topic 4 done: `mse()` function + 4 sanity tests pass
-- [x] Mini-topic 5 done: 3 eyeball guesses + 3-line plot + reflection
-- [x] 2 Anki cards added (MSE, residual)
-- [ ] Commit + push notebook 02 with proper message
+- [ ] Backfill Ep 3 Q3 in `concepts/week-01-prereading.md` — determinant = area scaling factor (det=0 destroys info; negative = mirror)
+- [ ] Notebook `03-linreg-from-scratch-part2.ipynb` — gradient descent from scratch, L1→L4 method
+- [ ] 3 new Anki cards: gradient, learning rate, gradient descent
+- [ ] Commit + push for notebook 03
 
-**Slip lesson:** L1/L2 depth on a _first_ ML topic takes 2x estimated time. Budget accordingly for gradient descent tonight.
+**Slip lesson (Wed):** Stacking carryover + new heavy topic + Anki + commit into one 90-min weekday slot is unrealistic. For Week 2 plan, budget 2 days per "from-scratch" notebook.
 
-## Today's block (Wednesday, 9:00–10:30 PM) — Mini-topic 6: Gradient descent
+## Realistic load decision (pick before starting)
 
-### 🌅 Warmup (15 min)
+Total realistic time tonight = 75 (carryover) + 90 (planned) = 165 min. Budget = 90 min.
 
-- Watch: 3Blue1Brown — Linear Algebra Ep 3 (Linear transformations & matrices) — https://www.youtube.com/watch?v=kYB8IZa5AuE
-- Append to `concepts/week-01-prereading.md` a section `## Ep 3: Linear transformations & matrices`
-- Write **5 sentences in your own words**:
-  1. What is a linear transformation?
-  2. How does a 2x2 matrix represent one?
-  3. What does the determinant tell you geometrically?
-  4. Where will I use this in AI engineering? (Hint: every neural net layer is `Wx + b`)
-  5. One question I still have
+| Option           | What you do tonight                                                 | What slips                                  |
+| ---------------- | ------------------------------------------------------------------- | ------------------------------------------- |
+| A. High energy   | Gradient descent + bias-variance video + sklearn notebook 04 (rush) | Anki/commit possibly to Fri                 |
+| B. **Realistic** | Gradient descent (notebook 03) + 3 Anki cards + commit              | Bias-variance + sklearn notebook 04 → Fri   |
+| C. Low energy    | Notebook 03 first 2 mini-topics only                                | Rest of notebook 03 + everything else → Fri |
 
-### 💻 Gradient descent from scratch (45 min)
+**Recommended: Option B.** Notebook 03 is the foundation for the rest of the week. Quality on this one matters. Bias-variance is conceptual — easier to slot into Fri.
+
+**Logged decision:** _(fill in when starting tonight)_
+
+## Today's planned block (Thursday, 9:00–10:30 PM)
+
+If Option B chosen:
+
+### 🌅 (skip warmup tonight — substitute with Wed carryover backfill)
+
+- [ ] Fix Ep 3 Q3 (determinant) — 5 min
+
+### 💻 Gradient descent from scratch (75 min)
 
 Create: `daily-notebooks/week-01/03-linreg-from-scratch-part2.ipynb`
 
-Layered learning approach (same as Day 2):
+L1→L4 mini-topic structure (will send detailed breakdown when you ping "ready for gradient descent"):
 
-- **L1 — Intuition:** What problem does GD solve? "I have MSE — how do I lower it without guessing?"
-- **L2 — Math:** Gradient of MSE w.r.t. `w` and `b`. Symbol cheat sheet.
-- **L3 — Code:** GD loop in pure numpy. Sanity check: does final `w, b` ≈ `(2.0, 1.0)`?
-- **L4 — Reflection:** What does the loss curve teach me? What if learning rate is too big/small?
+- L1 — Intuition: "I have MSE — how do I lower it without guessing?"
+- L2 — Math: gradient of MSE w.r.t. `w` and `b` (partial derivatives)
+- L3 — Code: GD loop in pure numpy, sanity checked on the fake data from notebook 02
+- L4 — Reflection: loss curve, what learning rate too big/small does
 
-(Detailed mini-topic breakdown comes when you ping "ready for Wed mini-topic 6")
+### 📝 Anki (5 min — quick add only)
 
-### 📝 Anki (20 min)
+Add 3 cards (no review tonight — done Wed):
 
-- Review all due cards (`00-Setup` + math/numpy)
-- Add 3 new cards:
-  - "What is a gradient?" / "Vector of partial derivatives — points in direction of steepest increase"
-  - "What is learning rate?" / "Step size in gradient descent. Too big = diverge; too small = slow"
-  - "What is gradient descent?" / "Iterative algorithm: nudge parameters opposite the gradient to lower the loss"
+- "What is a gradient?" / "Vector of partial derivatives. Points in direction of steepest increase of the loss."
+- "What is learning rate?" / "Step size in gradient descent. Too big = diverge; too small = slow convergence."
+- "What is gradient descent?" / "Iterative algorithm: nudge parameters opposite the gradient to lower the loss."
 
-### 🚀 Commit (10 min)
+### 🚀 Commit (5 min)
 
-Suggested message: `week-01 day3: linreg scratch part 2 (gradient descent) + Tue carryover`
+Suggested message: `week-01 day4: gradient descent from scratch (notebook 03) + Wed carryover`
+
+If Option A or C chosen → adjust accordingly.
 
 ## End-of-session checklist
 
-- [ ] Mark all today's items ✅ / 🔄 / ⏭️ in `03-active-tasks.md`
-- [ ] If anything 🔄 → add reason and recovery plan in `01-current-state.md` slip ledger
-- [ ] Self-rate mood/energy in `01-current-state.md`
-- [ ] Note one thing that surprised you (curiosity bucket if it's a tangent)
+- [ ] Mark today's items ✅ / 🔄 / ⏭️ in `03-active-tasks.md`
+- [ ] If anything 🔄 → update slip ledger in `01-current-state.md`
+- [ ] **Velocity check pre-warning:** if Thu = 🔄, that's 3/3 weekday slips — Sat re-plan is mandatory
+- [ ] Self-rate mood/energy (Wed + Thu) in `01-current-state.md`

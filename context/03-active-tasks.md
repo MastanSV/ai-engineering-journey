@@ -76,36 +76,53 @@ Each task in the daily breakdown is marked at end-of-day with one of:
 
 **Recovery:** Wed Apr 29 first 30 min before regular Wed agenda.
 
-### Wednesday Apr 29 — Carryover + Gradient descent
+### Wednesday Apr 29 — Carryover + Gradient descent 🔄 PARTIAL
 
-**🔄 Carryover from Tue (do FIRST, ~30 min):**
+**🔄 Carryover from Tue (DONE):**
 
-- [ ] Mini-topic 4: MSE function + 4 sanity tests
-- [ ] Mini-topic 5: 3 eyeball guesses + plot + reflection
-- [ ] 2 Anki cards (MSE, residual)
-- [ ] Commit + push notebook 02
+- [x] ✅ Mini-topic 4: MSE function + 4 sanity tests
+- [x] ✅ Mini-topic 5: 3 eyeball guesses + plot + reflection
+- [x] ✅ 2 Anki cards (MSE, residual)
+- [x] ✅ Commit + push notebook 02
 
 **Today's planned block (Wednesday, 9:00–10:30 PM):**
 
-- 🌅 **15 min:** 3B1B Linear Algebra Ep 3 (Linear transformations & matrices) → 5 sentences
-- 💻 **45 min:** Notebook → `daily-notebooks/week-01/03-linreg-from-scratch-part2.ipynb`
-  - Implement gradient descent in pure numpy (no sklearn): `w`, `b` updated by computed gradients
-  - Run for 1000 iterations, plot loss curve
-  - Compare your final `w`, `b` to true `(2.0, 1.0)`
-- 📝 **20 min:** Anki review + 3 new cards (gradient, learning rate, gradient descent)
-- 🚀 **10 min:** commit + push
+- [x] ✅ 🌅 3B1B Linear Algebra Ep 3 (Linear transformations & matrices) → 5 sentences in `concepts/week-01-prereading.md` (Q3 on determinant left blank — backfilled Thu)
+- [⏭️] 💻 Notebook `03-linreg-from-scratch-part2.ipynb` (gradient descent) → **deferred to Thu**
+- [x] ✅ 📝 Anki: reviewed all due cards
+- [⏭️] 📝 Anki: 3 new cards (gradient, learning rate, gradient descent) → **deferred to Thu** (depends on notebook 03)
+- [⏭️] 🚀 Commit + push for notebook 03 → **deferred to Thu**
 
-**⚠️ Total realistic load tonight: ~120 min** (carryover 30 + planned 90). If energy is low → defer one Anki card or shorten gradient descent iterations to 500. Note in slip ledger if so.
+**Slip reason:** Tue carryover (~30 min) + warmup ate the planned slot. Gradient descent is a heavy topic (L1→L4 takes ~75 min on its own); didn't want to rush it just to mark a checkbox. _Quality over speed — the rule is honest data, not fake-finishing._
 
-### Thursday Apr 30 — Bias-Variance + sklearn
+**Recovery:** Thu Apr 30. Carryover load is significant (full notebook 03 + 3 new Anki + commit) — stack it BEFORE the planned Thu sklearn work. May need to defer Thu's sklearn notebook into Fri or trim Sat scope. **Velocity check ticking: 2/2 weekday slips so far this week** — if Thu also slips, trigger Saturday re-plan.
 
-- 🌅 **15 min:** StatQuest Bias-Variance Tradeoff → 5 sentences
-- 💻 **45 min:** Notebook → `daily-notebooks/week-01/04-linreg-sklearn.ipynb`
-  - Same data, now use `sklearn.linear_model.LinearRegression`
-  - Verify w*, intercept* match your scratch implementation (within tolerance)
+### Thursday Apr 30 — Carryover (gradient descent) + Bias-Variance + sklearn
+
+**🔄 Carryover from Wed (do FIRST, ~75 min):**
+
+- [ ] Backfill Ep 3 Q3 (determinant geometry) in `week-01-prereading.md`
+- [ ] Notebook `03-linreg-from-scratch-part2.ipynb` — gradient descent in pure numpy (L1→L4 method)
+- [ ] 3 new Anki cards (gradient, learning rate, gradient descent)
+- [ ] Commit + push notebook 03
+
+**Today's originally planned block (Thursday, 9:00–10:30 PM):**
+
+- [ ] 🌅 **15 min:** StatQuest Bias-Variance Tradeoff → 5 sentences
+- [ ] 💻 **45 min:** Notebook → `daily-notebooks/week-01/04-linreg-sklearn.ipynb`
+  - Same fake data, now use `sklearn.linear_model.LinearRegression`
+  - Verify `w*`, `intercept*` match scratch implementation (within tolerance)
   - Document: "What sklearn does in 3 lines, my scratch code did in 30"
-- 📝 **20 min:** Anki review + 2 new cards (bias, variance)
-- 🚀 **10 min:** commit + push
+- [ ] 📝 **20 min:** Anki review + 2 new cards (bias, variance)
+- [ ] 🚀 **10 min:** commit + push
+
+**⚠️ Realistic load tonight: ~165 min** (carryover 75 + planned 90). Total budget is only 90 min. **Decision tree before starting:**
+
+1. **Best case (high energy):** Do gradient descent carryover tonight → defer bias-variance + sklearn notebook to Fri. Adjust Fri's California housing work to Sat.
+2. **Realistic case:** Do gradient descent (notebook 03) only tonight, mark bias-variance + sklearn notebook 04 as deferred to Fri.
+3. **Low energy:** Do warmup + first 2 mini-topics of gradient descent only. Mark rest 🔄.
+
+**Pick option before starting. Log decision here.**
 
 ### Friday May 1 — Real dataset + MLflow integration
 

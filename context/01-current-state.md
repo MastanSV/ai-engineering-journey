@@ -1,12 +1,12 @@
 # Current State — Snapshot
 
-> **Updated:** 2026-04-29 (Wednesday — Week 1 Day 3)
+> **Updated:** 2026-04-30 (Thursday — Week 1 Day 4)
 > _Update this file at the end of every working session._
 
 ## Calendar
 
-- **Current date:** April 29, 2026
-- **Current week:** **1 of 32** (Day 3 of 7)
+- **Current date:** April 30, 2026
+- **Current week:** **1 of 32** (Day 4 of 7)
 - **Current phase:** Phase 1 — Math + ML Foundations (Weeks 1–4)
 - **Theme this week:** _From line to model_
 - **Target offer date:** December 2026
@@ -50,18 +50,21 @@
 ## Week 1 progress (live)
 
 - **Mon Apr 27 ✅** — 3B1B Ep 1 + numpy refresher + 5 Anki cards (incl. dot product bug fix)
-- **Tue Apr 28 🔄** — 3B1B Ep 2 done (span/basis); linreg part 1 partial: data gen + plot done. MSE function + eyeball fit + 2 Anki cards + commit **carried to Wed**. _Slip reason: first-time deep L1/L2 work on linreg intuition took longer than 75 min budget. Calibration data, not failure._
-- **Wed Apr 29** — Tue carryover ✅ (MSE + eyeball fit + Anki + commit) + 3B1B Ep 3 + linreg part 2 (gradient descent) ← TODAY
-- **Thu Apr 30** — Bias-variance video + sklearn LinearRegression
+- **Tue Apr 28 🔄** — 3B1B Ep 2 done (span/basis); linreg part 1 partial (data + plot done; MSE + eyeball fit + Anki + commit carried to Wed)
+- **Wed Apr 29 🔄** — Tue carryover ✅ + 3B1B Ep 3 (linear transformations) ✅ + Anki review ✅; gradient descent notebook + 3 new Anki cards + commit **carried to Thu**
+- **Thu Apr 30** — Wed carryover (gradient descent) + bias-variance + sklearn ← TODAY
 - **Fri May 1** — Linreg main video + California housing + MLflow
-- **Sat May 2** — Diagnostics + Ridge/Lasso comparison + Twitter draft
+- **Sat May 2** — Diagnostics + Ridge/Lasso comparison + Twitter draft + **velocity check**
 - **Sun May 3** — Teach-back essay + retro + mentor session
 
 ## Slip ledger (Week 1)
 
-| Day        | State | Slipped item                           | Reason                                                | Recovered     |
-| ---------- | ----- | -------------------------------------- | ----------------------------------------------------- | ------------- |
-| Tue Apr 28 | 🔄    | MSE func + eyeball fit + Anki + commit | Underestimated time for L1/L2 depth on first ML topic | Wed Apr 29 ✅ |
+| Day        | State | Slipped item                                                                      | Reason                                                                                            | Recovered            |
+| ---------- | ----- | --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | -------------------- |
+| Tue Apr 28 | 🔄    | MSE func + eyeball fit + Anki + commit                                            | Underestimated time for L1/L2 depth on first ML topic                                             | Wed Apr 29 ✅        |
+| Wed Apr 29 | 🔄    | Gradient descent notebook 03 + 3 Anki cards + commit; Ep 3 Q3 (determinant) blank | Tue carryover + warmup ate the slot; gradient descent needs full L1→L4 cycle, didn't want to rush | Thu Apr 30 (planned) |
+
+**Velocity check status: 2/2 weekday slips (alert).** If Thu also slips, trigger Saturday re-plan: cut Ridge/Lasso scope OR push California housing to Sat.
 
 ## Week 0 results (final)
 
@@ -79,10 +82,10 @@
 
 ## NN status (Week 1 — live)
 
-- **NN1 GitHub commits:** 🔥 streak alive (commit pending tonight)
+- **NN1 GitHub commits:** 🔥 streak alive (Wed commit pending — fold into Thu commit)
 - **NN2 Twitter:** thread #3 due Saturday
 - **NN3 Teach-back:** linreg essay due Sunday May 3
-- **NN4 Anki:** 7 cards in `00-Setup` + 7 cards in math/numpy refresher (14 total); daily reviews on track
+- **NN4 Anki:** 14 cards total; reviews on track; +3 new cards deferred to Thu
 - **NN5 Sunday retro:** due May 3
 
 ## Decisions locked
@@ -100,8 +103,9 @@
 - **Apr 25:** CONTEXT system + baseline test (graded 6.5 + 4)
 - **Apr 26:** Baseline fixes, MLflow hello-world, Week 0 retro, Week 1 plan locked
 - **Apr 27:** Numpy refresher notebook + 3B1B Ep 1 notes + 5 Anki cards + dot product bug fix
-- **Apr 28:** 3B1B Ep 2 (span/basis) notes + linreg scratch part 1 partial (data gen + plot)
-- **Apr 29:** _(today — pending: Tue carryover + Day 3 work)_
+- **Apr 28:** 3B1B Ep 2 (span/basis) notes; linreg part 1 partial (data gen + plot)
+- **Apr 29:** Tue carryover completed (MSE + eyeball fit + 3-guess + 2 Anki cards + notebook 02 commit); 3B1B Ep 3 (linear transformations) notes; Anki reviewed
+- **Apr 30:** _(today — pending)_
 
 ## Blockers
 
@@ -110,8 +114,9 @@
 ## Mood / Energy
 
 - Apr 26: Mood 7/10, Confidence 7/10
-- Apr 28: _(self-rate tonight — pending)_
-- Apr 29: _(self-rate tonight — pending)_
+- Apr 28: Mood 8/10, Confidence 7/10
+- Apr 29: Mood 5/10, Confidence 7/10
+- Apr 30: Mood 5/10, Confidence 7/10
 
 ## Active rules
 
