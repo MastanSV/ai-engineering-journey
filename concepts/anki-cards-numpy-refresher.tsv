@@ -3,3 +3,5 @@
 "What is broadcasting?";"numpy auto-expanding smaller arrays to match larger array shape during ops"
 What's the geometric meaning of dot product?;Measures alignment between two vectors. Large positive = same direction:0 = perpendicular:negative = opposite
 numpy broadcasting rule (one sentence);Smaller array is stretched along axes of size 1 to match the larger array's shape
+What is MSE ?;The average of square of the residuals
+What is residual?;difference of the actual values and predicted values
