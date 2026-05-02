@@ -48,11 +48,14 @@ One question I still have
 
 What is a linear transformation?
 
-- movement of vectory from one position to another linearly i.e., by keeping the origin fixed and all lines remains lines
+- movement of vector from one position to another linearly i.e., by keeping the origin fixed and all lines remains lines
 
 How does a 2x2 matrix represent one?
 
 - once you transform the vector what are the co-ordinate points basis vector i-hat and j-hat, first column will co-ordiante points i-hat and second column will be co-ordinate point of j-hat
+  i j
+  [ 0 2 ]
+  [ -1 3 ]
 
 What does the determinant tell you geometrically?
 
@@ -69,3 +72,23 @@ Where will I use this in AI engineering? (Hint: every neural net layer is Wx + b
 One question I still have
 
 - The thing which im missing out is how do you represent this in geometrically which i need to answer this question. and practical usage in real-world.
+
+## Ep 4: Bias-Variance trade-off
+
+What is Bias?
+
+- In linear regression, consider you have data in which feature is weight and target is height, based on this you have the data, some times what happens is whatever the st. fit line you get it might satisfy all the points i mean it can not connect most of the points it is called Bias.
+
+Variance:
+
+- So when you can not get most lines connected using st. fit line what you have is squiggled line, in squiggled line what happens is it will conntect the all the data points. But it might not connect all the data points on the testing data. in other words , it might overfit on testing data
+- The difference in fit of the data set is called variance.
+- For squiggle line, If the dataset varies you can not tell how accurately your model predicts. In this case, st. fit line works well because it will performs same across all the data sets.
+
+So for st. fit line, bias can be high but variance will be relatively low,
+But for squigle line, bias can be low but variance will be high.
+
+Terminologies here:
+Taining set
+Testing set
+Overfit
