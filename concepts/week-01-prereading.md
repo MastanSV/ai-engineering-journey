@@ -77,18 +77,14 @@ One question I still have
 
 What is Bias?
 
-- In linear regression, consider you have data in which feature is weight and target is height, based on this you have the data, some times what happens is whatever the st. fit line you get it might satisfy all the points i mean it can not connect most of the points it is called Bias.
+- In linear regression, consider you have data in which feature is weight and target is height, based on this you have the data, So generally if you consider the relationship between the weignt and height data is curve, then straight line trying to fit the curve will systematically miss - that gap is called bias.
 
 Variance:
 
-- So when you can not get most lines connected using st. fit line what you have is squiggled line, in squiggled line what happens is it will conntect the all the data points. But it might not connect all the data points on the testing data. in other words , it might overfit on testing data
-- The difference in fit of the data set is called variance.
-- For squiggle line, If the dataset varies you can not tell how accurately your model predicts. In this case, st. fit line works well because it will performs same across all the data sets.
+- So when you can not get most lines connected using st. fit line what you have is squiggled line, in squiggled line what happens is it will conntect the all the data points. But it might not connect all the data points on the testing data.
+  Because it is overfit the training data.
+- The difference in fit when moving from one dataset to another dataset is called variance.
+- For squiggle line, If the dataset varies you can not tell how accurately your model predicts. In this case, straight fit line works well because it will performs same across all the data sets.
 
-So for st. fit line, bias can be high but variance will be relatively low,
+So for staight fit line, bias can be high but variance will be relatively low,
 But for squigle line, bias can be low but variance will be high.
-
-Terminologies here:
-Taining set
-Testing set
-Overfit
