@@ -47,6 +47,23 @@
 - **Alternatives considered:** Single rolling chat, Notion docs (off-repo, less recruiter-visible).
 - **Reversible?** Yes, but unlikely to abandon — this is industry standard.
 
+## 2026-05-02 · Week 1 scope cut: merge sklearn + California housing into one Sunday notebook; drop Ridge/Lasso
+
+- **Why:** 3 weekday slips (Tue 🔄, Wed 🔄, Thu ⏭️, Fri 🔄) triggered the Saturday re-plan rule. Original Week 1 plan had 6 separate notebooks (01–06) plus Ridge/Lasso comparison plus diagnostics; with only Sun May 3 left, full scope is impossible without fake-finishing. Merging sklearn (was notebook 04) + California housing (was notebook 05) + 1 residual plot (was diagnostics notebook 06) into one notebook saves ~90 min of ceremony without losing the "scratch → sklearn → real data" learning arc.
+- **What stays:** notebook 03 (scratch GD ✅ shipped Sat); merged Sun notebook covering sklearn-on-fake-data + California housing + MLflow + 1 residual plot; teach-back essay (≥800 words, no AI); Sun retro; Twitter thread #3.
+- \*\*What drops/moves:
+  - Ridge/Lasso comparison → **Week 2 buffer** (regularization is genuinely Week 2 territory)
+  - Full diagnostics notebook 06 → **Week 2 buffer** (1 residual plot in merged notebook is enough for Week 1 DoD)
+  - Curiosity bucket review (was Sat 30 min) → next week
+  - Optional Kaggle submission → next week if relevant
+  - Bias-variance video → Sun warmup (was Thu)
+- \*\*Alternatives considered:
+  - (a) Push California housing to Mon and teach-back to Tue — rejected, breaks 7-day week boundary and pushes Week 2 plan
+  - (b) Drop teach-back essay — rejected, NN3 violation
+  - (c) Drop Sun retro — rejected, NN5 violation and we lose the slip-pattern analysis
+- **Reversible?** Yes — Ridge/Lasso and full diagnostics return in Week 2 buffer slot or Week 3 regularization deep-dive.
+- **Calibration takeaway:** For Week 2 plan, budget 2 days per "from-scratch" notebook (not 1). First-time ML topics consistently took ~2× my estimate.
+
 ---
 
 ## Template for new entries

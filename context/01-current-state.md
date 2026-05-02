@@ -1,12 +1,12 @@
 # Current State — Snapshot
 
-> **Updated:** 2026-04-30 (Thursday — Week 1 Day 4)
+> **Updated:** 2026-05-02 (Saturday — Week 1 Day 6)
 > _Update this file at the end of every working session._
 
 ## Calendar
 
-- **Current date:** April 30, 2026
-- **Current week:** **1 of 32** (Day 4 of 7)
+- **Current date:** May 2, 2026
+- **Current week:** **1 of 32** (Day 6 of 7)
 - **Current phase:** Phase 1 — Math + ML Foundations (Weeks 1–4)
 - **Theme this week:** _From line to model_
 - **Target offer date:** December 2026
@@ -52,19 +52,23 @@
 - **Mon Apr 27 ✅** — 3B1B Ep 1 + numpy refresher + 5 Anki cards (incl. dot product bug fix)
 - **Tue Apr 28 🔄** — 3B1B Ep 2 done (span/basis); linreg part 1 partial (data + plot done; MSE + eyeball fit + Anki + commit carried to Wed)
 - **Wed Apr 29 🔄** — Tue carryover ✅ + 3B1B Ep 3 (linear transformations) ✅ + Anki review ✅; gradient descent notebook + 3 new Anki cards + commit **carried to Thu**
-- **Thu Apr 30** — Wed carryover (gradient descent) + bias-variance + sklearn ← TODAY
-- **Fri May 1** — Linreg main video + California housing + MLflow
-- **Sat May 2** — Diagnostics + Ridge/Lasso comparison + Twitter draft + **velocity check**
-- **Sun May 3** — Teach-back essay + retro + mentor session
+- **Thu Apr 30 ⏭️** — Slot deferred (low energy); gradient descent rolled forward
+- **Fri May 1 🔄** — Mentor session covered gradient descent **L1 (intuition) + L2 (derivation)**; notebook code + Anki + commit carried to Sat
+- **Sat May 2 ✅** — Notebook 03 (gradient descent from scratch, L3 code + L4 reflection) shipped + 3 Anki cards + Ep 3 Q3 (determinant) backfilled + Week 1 scope cut decided ← TODAY
+- **Sun May 3** — Bias-variance + merged sklearn/California/MLflow notebook + teach-back essay + retro + Twitter thread (post-scope-cut plan)
 
 ## Slip ledger (Week 1)
 
-| Day        | State | Slipped item                                                                      | Reason                                                                                            | Recovered            |
-| ---------- | ----- | --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | -------------------- |
-| Tue Apr 28 | 🔄    | MSE func + eyeball fit + Anki + commit                                            | Underestimated time for L1/L2 depth on first ML topic                                             | Wed Apr 29 ✅        |
-| Wed Apr 29 | 🔄    | Gradient descent notebook 03 + 3 Anki cards + commit; Ep 3 Q3 (determinant) blank | Tue carryover + warmup ate the slot; gradient descent needs full L1→L4 cycle, didn't want to rush | Thu Apr 30 (planned) |
+| Day        | State | Slipped item                                                                      | Reason                                                                                            | Recovered                                                   |
+| ---------- | ----- | --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
+| Tue Apr 28 | 🔄    | MSE func + eyeball fit + Anki + commit                                            | Underestimated time for L1/L2 depth on first ML topic                                             | Wed Apr 29 ✅                                               |
+| Wed Apr 29 | 🔄    | Gradient descent notebook 03 + 3 Anki cards + commit; Ep 3 Q3 (determinant) blank | Tue carryover + warmup ate the slot; gradient descent needs full L1→L4 cycle, didn't want to rush | Sat May 2 ✅                                                |
+| Thu Apr 30 | ⏭️    | Entire Thu slot (GD carryover + bias-variance + sklearn notebook 04)              | Low energy; chose not to rush gradient descent foundation                                         | GD recovered Sat May 2; bias-variance + sklearn → Sun May 3 |
+| Fri May 1  | 🔄    | Notebook 03 code + Anki + commit; California housing + MLflow                     | Mentor session covered L1 (intuition) + L2 (derivation); code/Anki carried to Sat                 | Code recovered Sat May 2; California → Sun May 3            |
 
-**Velocity check status: 2/2 weekday slips (alert).** If Thu also slips, trigger Saturday re-plan: cut Ridge/Lasso scope OR push California housing to Sat.
+**Velocity check status: 3 weekday slips → re-plan triggered Sat May 2.** Scope cut logged in `04-decisions-log.md` (2026-05-02): merge sklearn (notebook 04) + California housing (notebook 05) + lite diagnostics into one Sunday notebook; drop Ridge/Lasso (Week 2); drop full diagnostics notebook 06 (Week 2 buffer); bias-variance video → Sun warmup.
+
+**Calibration lesson:** First-time ML topics need ~2× the time I estimated. For Week 2 plan, budget 2 days per "from-scratch" notebook.
 
 ## Week 0 results (final)
 
@@ -82,10 +86,10 @@
 
 ## NN status (Week 1 — live)
 
-- **NN1 GitHub commits:** 🔥 streak alive (Wed commit pending — fold into Thu commit)
-- **NN2 Twitter:** thread #3 due Saturday
-- **NN3 Teach-back:** linreg essay due Sunday May 3
-- **NN4 Anki:** 14 cards total; reviews on track; +3 new cards deferred to Thu
+- **NN1 GitHub commits:** 🔥 streak alive — Sat commit covers notebook 03 + Q3 backfill + context updates
+- **NN2 Twitter:** thread #3 → Sunday (was Sat — moved due to scope cut)
+- **NN3 Teach-back:** linreg essay due Sun May 3
+- **NN4 Anki:** 17 cards total (14 + 3 new: gradient, learning rate, gradient descent); reviews on track
 - **NN5 Sunday retro:** due May 3
 
 ## Decisions locked
@@ -105,7 +109,9 @@
 - **Apr 27:** Numpy refresher notebook + 3B1B Ep 1 notes + 5 Anki cards + dot product bug fix
 - **Apr 28:** 3B1B Ep 2 (span/basis) notes; linreg part 1 partial (data gen + plot)
 - **Apr 29:** Tue carryover completed (MSE + eyeball fit + 3-guess + 2 Anki cards + notebook 02 commit); 3B1B Ep 3 (linear transformations) notes; Anki reviewed
-- **Apr 30:** _(today — pending)_
+- **Apr 30:** _(deferred — low energy)_
+- **May 1:** Mentor session — gradient descent L1 (intuition: gradient = direction, why descent vs ascent, role of lr) + L2 (derived ∂MSE/∂w and ∂MSE/∂b on paper using chain rule)
+- **May 2:** Notebook 03 shipped — predict/mse/gradients (3 sanity tests pass) + GD loop converges to w≈3.0, b≈5.0 + loss curve + L4 experiments (lr=0.1 diverges, lr=0.0001 crawls); 3 Anki cards rewritten with mentor review; Ep 3 Q3 backfilled; Week 1 scope cut logged
 
 ## Blockers
 
@@ -117,6 +123,7 @@
 - Apr 28: Mood 8/10, Confidence 7/10
 - Apr 29: Mood 5/10, Confidence 7/10
 - Apr 30: Mood 5/10, Confidence 7/10
+- May 2: Mood 5/10, Confidence 7/10
 
 ## Active rules
 

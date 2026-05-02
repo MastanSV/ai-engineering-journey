@@ -97,88 +97,81 @@ Each task in the daily breakdown is marked at end-of-day with one of:
 
 **Recovery:** Thu Apr 30. Carryover load is significant (full notebook 03 + 3 new Anki + commit) — stack it BEFORE the planned Thu sklearn work. May need to defer Thu's sklearn notebook into Fri or trim Sat scope. **Velocity check ticking: 2/2 weekday slips so far this week** — if Thu also slips, trigger Saturday re-plan.
 
-### Thursday Apr 30 — Carryover (gradient descent) + Bias-Variance + sklearn
+### Thursday Apr 30 — ⏭️ DEFERRED
 
-**🔄 Carryover from Wed (do FIRST, ~75 min):**
+- [⏭️] Entire slot deferred — low energy. Chose not to rush gradient descent foundation. All carryover items (Wed GD notebook + Thu bias-variance + Thu sklearn notebook 04) rolled forward to Fri/Sat/Sun.
 
-- [ ] Backfill Ep 3 Q3 (determinant geometry) in `week-01-prereading.md`
-- [ ] Notebook `03-linreg-from-scratch-part2.ipynb` — gradient descent in pure numpy (L1→L4 method)
-- [ ] 3 new Anki cards (gradient, learning rate, gradient descent)
-- [ ] Commit + push notebook 03
+### Friday May 1 — 🔄 PARTIAL (mentor session, no notebook code)
 
-**Today's originally planned block (Thursday, 9:00–10:30 PM):**
+- [x] ✅ 🌅 Gradient descent **L1 (intuition)** in mentor session — answered the 5 questions in own words (gradient = direction of steepest uphill, why descent vs ascent, role of learning rate, blindfolded-on-bowl analogy)
+- [x] ✅ 🌅 Gradient descent **L2 (math)** in mentor session — derived ∂MSE/∂w and ∂MSE/∂b step-by-step using chain rule + power rule + partial derivatives; sign sanity check on n=1 example passed
+- [🔄] 💻 Notebook 03 code (L3) + 3 Anki cards + commit **carried to Sat May 2**
+- [🔄] 💻 California housing notebook + MLflow → carried to Sun
 
-- [ ] 🌅 **15 min:** StatQuest Bias-Variance Tradeoff → 5 sentences
-- [ ] 💻 **45 min:** Notebook → `daily-notebooks/week-01/04-linreg-sklearn.ipynb`
-  - Same fake data, now use `sklearn.linear_model.LinearRegression`
-  - Verify `w*`, `intercept*` match scratch implementation (within tolerance)
-  - Document: "What sklearn does in 3 lines, my scratch code did in 30"
-- [ ] 📝 **20 min:** Anki review + 2 new cards (bias, variance)
-- [ ] 🚀 **10 min:** commit + push
+**Slip reason:** Mentor walkthrough on intuition + derivation took the full slot. Foundation work — math is now in head, not just notes. _Worth the time._
 
-**⚠️ Realistic load tonight: ~165 min** (carryover 75 + planned 90). Total budget is only 90 min. **Decision tree before starting:**
+**Recovery:** Sat May 2 — notebook code + Anki + commit (done ✅).
 
-1. **Best case (high energy):** Do gradient descent carryover tonight → defer bias-variance + sklearn notebook to Fri. Adjust Fri's California housing work to Sat.
-2. **Realistic case:** Do gradient descent (notebook 03) only tonight, mark bias-variance + sklearn notebook 04 as deferred to Fri.
-3. **Low energy:** Do warmup + first 2 mini-topics of gradient descent only. Mark rest 🔄.
+### Saturday May 2 — ✅ SHIPPED (gradient descent + scope cut)
 
-**Pick option before starting. Log decision here.**
+- [x] ✅ Backfill Ep 3 Q3 (determinant geometry) in `week-01-prereading.md`
+- [x] ✅ Notebook `03-linreg-from-scratch-part2.ipynb` — gradient descent from scratch (L3 code + L4 reflection)
+  - 5 cells: imports + reuse data from notebook 02; predict + mse helpers; gradients function with 3 sanity tests; GD loop; loss curve plot
+  - All sanity tests passed: gradient ≈ 0 at truth, negative at (0,0), positive at (10,10)
+  - Final w_hat ≈ 3.0, b_hat ≈ 5.0, MSE near noise floor (~4)
+  - L4 experiments: lr=0.1 diverged (NaN), lr=0.0001 crawled (didn't converge in 1000 epochs); reflection on convex bowl vs neural net non-convex surface
+- [x] ✅ 3 Anki cards rewritten with mentor review (gradient = rate of change of loss w.r.t. each param; learning rate = step size; gradient descent = iterative w ← w − lr·dw)
+- [x] ✅ **Velocity check + scope cut decision** logged in `04-decisions-log.md` (2026-05-02): merge sklearn + California into one Sun notebook, drop Ridge/Lasso to Week 2
+- [x] ✅ Commit + push (`week-01: gradient descent from scratch (notebook 03) + Wed carryover cleared + scope cut`)
+- [⏭️] Diagnostics notebook 06 (full) → dropped, replaced with 1 residual plot in Sun merged notebook
+- [⏭️] Ridge/Lasso comparison → moved to Week 2 buffer
+- [⏭️] Curiosity bucket review → next week
+- [⏭️] Twitter thread #3 draft → moved to Sun
 
-### Friday May 1 — Real dataset + MLflow integration
+### Sunday May 3 — Bias-variance + merged sklearn/California/MLflow + teach-back + retro (~6.5hr) — POST-SCOPE-CUT PLAN
 
-- 🌅 **15 min:** StatQuest Linear Regression (main video) → 5 sentences
-- 💻 **45 min:** Notebook → `daily-notebooks/week-01/05-real-dataset.ipynb`
-  - Load `sklearn.datasets.fetch_california_housing()` (8 features, 20k rows)
-  - 80/20 train/test split, fit LinearRegression, compute R², MSE
-  - Log to MLflow with experiment name `week-01-california-housing`
-- 📝 **20 min:** Anki review + 1 new card (R-squared)
-- 🚀 **10 min:** commit + push
-
-### Saturday May 2 — Diagnostics + portfolio polish (6hr)
-
-- 🌅 **30 min:** Anki review (all Week 1 cards)
-- 💻 **2hr:** Notebook → `daily-notebooks/week-01/06-diagnostics.ipynb`
-  - Residual plots (predicted vs actual, residuals vs predicted)
-  - Identify which features matter (coefficient magnitudes)
-  - Try removing a feature, re-train, compare MSE
-  - Markdown narration throughout — recruiter-readable
-- 💻 **2hr:** Try TWO different models on California housing (still Week 1 territory)
-  - `Ridge` (regularized linreg)
-  - `Lasso` (sparsity-inducing)
-  - Log both runs to MLflow → compare in UI side-by-side
-- 📝 **30 min:** Curiosity bucket review — pick 1 item, explore for 30 min
-- 🐦 **30 min:** Draft Twitter thread #3 in `twitter-posts/week-01-thread.md`
-  - Hook idea: "Built linear regression from scratch in numpy this week. Here's what every gradient descent line actually does 🧵"
-- 🚀 **30 min:** commit + push, screenshots
-
-### Sunday May 3 — Teach-back + retro (6hr)
-
-- 🌅 **30 min:** Anki review
-- ✍️ **2hr:** **NN3 Teach-back** → `concepts/week-01-teachback-linreg.md`
+- [ ] 🌅 **15 min:** StatQuest **Bias-Variance Tradeoff** → 5 sentences in `concepts/week-01-prereading.md`
+- [ ] 📝 **15 min:** Anki review (all 17 cards)
+- [ ] 💻 **150 min:** **Merged notebook** → `daily-notebooks/week-01/04-sklearn-california-mlflow.ipynb`
+  - **Part A (45 min):** sklearn on **same fake data** from notebook 02 → verify `LinearRegression()` gives w ≈ 3.0, b ≈ 5.0 (matches scratch GD); markdown: "sklearn in 3 lines = my scratch in 30"
+  - **Part B (60 min):** Load `fetch_california_housing()` (8 features, ~20k rows) → 80/20 split → fit LinearRegression → compute R² + MSE on test set
+  - **Part C (45 min):** Wrap A + B in MLflow runs (experiment `week-01-california-housing`); log params, metrics, model; 1 residual plot (predicted vs actual) for Part B
+  - 2 new Anki cards: R-squared, residual plot
+- [ ] ✍️ **120 min: NN3 Teach-back** → `concepts/week-01-teachback-linreg.md`
   - 800 words, "Linear Regression Explained to My Non-Technical Friend"
   - Cover: what problem it solves, gradient descent intuition, bias-variance, when it fails
-  - NO Google, NO ChatGPT (same rule as baseline essay)
-- 💻 **1.5hr:** Optional: try California housing on **Kaggle** — submit to a beginner competition if one fits
-- 📝 **30 min:** Anki — clean up cards, mark mature ones
-- 📖 **1hr:** **Weekly retro** → `weekly-logs/week-01-linreg.md` (use template)
-- 🐦 **30 min:** Post Twitter thread #3
-- 🎤 **30 min:** Sunday mentor session — paste retro in chat
+  - **NO Google, NO ChatGPT** (same rule as baseline essay)
+- [ ] 📖 **45 min: NN5 Weekly retro** → `weekly-logs/week-01-linreg.md` (use template)
+  - **Required:** slip pattern analysis (3 weekday slips → calibration lesson for Week 2)
+  - Score self on the 5 NN dimensions
+- [ ] 🐦 **30 min: NN2 Twitter thread #3** in `twitter-posts/week-01-thread.md` then post
+  - Reuse teach-back content; 5–7 tweets
+  - Hook: "Built linear regression from scratch in numpy this week. Here's what every gradient descent line actually does 🧵"
+- [ ] 🚀 **15 min:** commit + push (single commit covering all Sun artifacts)
+- [ ] 🎤 **30 min (optional):** Sunday mentor session — paste retro in chat
 
 ---
 
-## ✅ Definition of Done — Week 1
+## ✅ Definition of Done — Week 1 (post-scope-cut May 2)
 
-- [ ] 5 weekday warmup videos watched + 5 sentences each ← 1/5 done (Ep 1)
-- [ ] Notebooks 01–06 committed in `daily-notebooks/week-01/` ← 1/6 done
-- [ ] Linear regression implemented from scratch (gradient descent, no sklearn)
-- [ ] Same problem solved with sklearn — results match
-- [ ] California housing trained, R² and MSE in MLflow
-- [ ] Ridge + Lasso comparison logged in MLflow (3 runs minimum)
-- [ ] Diagnostic plots committed (residuals)
-- [ ] Teach-back essay written (≥ 800 words, no AI assist)
-- [ ] Twitter thread #3 posted
-- [ ] Week 1 retro complete
-- [ ] All 5 NN dimensions hit (commits, Twitter, teach-back, Anki daily, Sunday retro)
+- [x] 3B1B Eps 1, 2, 3 watched + notes (Ep 3 Q3 backfilled May 2)
+- [x] Notebook 01 (numpy refresher) shipped
+- [x] Notebook 02 (linreg part 1: data + MSE + eyeball fit) shipped
+- [x] Notebook 03 (gradient descent from scratch) shipped — **no sklearn used** ✅
+- [ ] StatQuest Bias-Variance video + 5 sentences (Sun)
+- [ ] Merged notebook 04 (sklearn on fake data + California housing + MLflow + 1 residual plot) (Sun)
+- [ ] sklearn results match scratch GD within tolerance (Sun, in notebook 04 Part A)
+- [ ] California housing R² + MSE logged in MLflow (Sun, in notebook 04 Part C)
+- [ ] Teach-back essay ≥800 words, no AI assist (Sun)
+- [ ] Twitter thread #3 posted (Sun)
+- [ ] Week 1 retro complete with slip pattern analysis (Sun)
+- [ ] All 5 NN dimensions hit (NN1 commits ✅, NN2 Twitter Sun, NN3 teach-back Sun, NN4 Anki ✅ 17 cards, NN5 retro Sun)
+
+**Dropped from original DoD (moved to Week 2 buffer or later):**
+
+- ~~Notebooks 05 + 06 as separate files~~ → merged into notebook 04
+- ~~Ridge + Lasso comparison (3 MLflow runs)~~ → Week 2 (regularization deep-dive)
+- ~~Full diagnostics notebook with feature-importance experiments~~ → Week 2 buffer
 
 ## 🚫 Out of scope (resist the rabbit hole)
 
