@@ -8,3 +8,5 @@ What is residual?;difference of the actual values and predicted values
 What is Gradinat?;The rate of change of the loss w.r.t. each parameter. It tells me: "if I nudge w by a tiny amount, MSE changes by ∂MSE/∂w; if I nudge b, MSE changes by ∂MSE/∂b." Sign matters — positive gradient = loss goes up if I increase the param.
 What is learning rate?; Step size in gradient descent — how far we move along the downhill direction each epoch. Too small → converges glacially (or never finishes in budget). Too big → overshoots the minimum and can diverge (loss explodes).
 What is Gradinat descent?;An iterative algorithm to minimize a loss function. Each epoch:Compute the gradient at current params: dw, db = ∂Loss/∂w, ∂Loss/∂b, Step against the gradient: w ← w − lr·dw, b ← b − lr·db, Repeat until loss stops dropping., The minus sign is the trick — gradient points uphill, we want downhill.
+What is R2 ?; At what percent of variance in target variable is explained by the model is R2 score.
+MLflow run/experiment distinction?; The MLflow set experiment is like heading for experiment and runs will be listed under experiment so that you compare the all the runs under experiment
