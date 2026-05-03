@@ -1,3 +1,4 @@
 - How is vector add/mul applied in real-world decisions?
 - Why always add and multiply, nothing else?
 - Whatever i have done in scratch pad in 30lines, slearn did it in 3lines --- That is awesome.But one key point to be noted and learn is that what the sklearn is doing underthe hood needs to be learn.
+- Standardize features before comparing coefficient magnitudes — try StandardScaler in Week 2.
