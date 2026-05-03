@@ -2,3 +2,4 @@
 - Why always add and multiply, nothing else?
 - Whatever i have done in scratch pad in 30lines, slearn did it in 3lines --- That is awesome.But one key point to be noted and learn is that what the sklearn is doing underthe hood needs to be learn.
 - Standardize features before comparing coefficient magnitudes — try StandardScaler in Week 2.
+- Multicollinearity — when correlated features get nonsensical coefficients. Variance Inflation Factor (VIF) is the diagnostic. Week 2."
