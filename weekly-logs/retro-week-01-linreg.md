@@ -36,7 +36,7 @@
 - [✅] Notebook 04 — sklearn + California + MLflow
 - [✅] StatQuest: linreg fundamentals
 - [✅] StatQuest: bias-variance tradeoff
-- [✅] Anki cards added (count: \_\_ )
+- [✅] Anki cards added (count: 12 )
 - [❌] Twitter thread #2
 - [❌] Twitter thread #3
 - [✅] Teach-back essay (1170 words, no-Google)
@@ -57,7 +57,7 @@
 - **Day & what was scheduled:** Wednesday [ Linreg intuition ]
 - **What actually happened:**I have opened the note book, did somepart of the scheduled work and felt burnout so scheduled to next day
 - **Surface reason:** First-time deep L1/L2 work on linreg intuition. Took extra time to build the symbol cheat sheet, sanity checks, and "why fake data" rationale. The depth was the right call — _calibration data, not failure_.
-- **Real reason (the one I don't want to admit):**
+- **Real reason (the one I don't want to admit):** I dont want to sit with the discomfort of not understanding L2yet
 - **What it cost:** It carried to the next day i.e., Thursday
 - **Pattern this maps to:** CarryOver
 
@@ -68,7 +68,7 @@
 - **Surface reason:** Energy was okay but carryover felt burden and not able to move forward as i was having carryover thought on back of my head
 - **Real reason:**Anxiety about the next deliverable
 - **What it cost:** Carry over compounded
-- **Pattern:**
+- **Pattern:**AvoidanceCascade
 
 ### Slip 3
 
@@ -77,7 +77,7 @@
 - **Surface reason:** Clearing the carryovers
 - **Real reason:** Energy was good so clearing of the carryovers and friday schedules
 - **What it cost:** Not able to cpmplete the scheduled task.
-- **Pattern:**
+- **Pattern:** Doing cascade work and on that day scheduled work
 
 ### Slip pattern summary (1 sentence)
 
@@ -92,20 +92,20 @@
 ### NN1 — GitHub commits: 9 / 10
 
 - Daily commits: 04 / 7 days
-- Commit message quality (concrete or lazy?):
-- Justification: concreate
+- Commit message quality (concrete or lazy?): concrete
+- Justification: Each and everyday commits are present in the git log which is good sign
 
 ### NN2 — Twitter: 0 / 10
 
 - Threads posted: 0 / 2 target
-- Engagement (if tracked):
+- Engagement (if tracked):nothing posted
 - Justification: Carryover affected hugely here
 
 ### NN3 — Teach-back: 7.5 / 10
 
 - Essay: ✅ shipped, ~1170 words, no-Google
-- Vs Week-0 baseline (4/10):
-- Honest grade + why:
+- Vs Week-0 baseline (4/10): This time the essay cameup with good quality interms of explanation and making understanding to non-technical friend with the real world examples.
+- Honest grade + why: The essay is well-written with taking up the real world examples.
 
 ### NN4 — Anki: 8/ 10
 
@@ -155,7 +155,7 @@
 **Confidence I'll hit Dec 2026 offer (1–10): 07**
 
 - Why this number (1 sentence): This current energy from the experience of week 0 and week 1
-- What would have to happen for this number to go up by 1?
+- What would have to happen for this number to go up by 1? If the confidence has to go up by 1, i would have completed the work without cascading it to weekends.
 
 ---
 
