@@ -45,7 +45,17 @@
 - **Gradient** — Vector of partial derivatives `∂L/∂params`. Points in direction of steepest **increase** of the loss.
 - **Learning rate (lr)** — Step size multiplier on the gradient update `w ← w − lr·∂L/∂w`. Too high → diverge (saw lr=0.1 produce NaN); too low → crawl (saw lr=0.0001 not converge in 1000 epochs).
 - **Gradient descent** — Iteratively move params **opposite** the gradient to minimize loss. Convex losses (like MSE for linreg) reach the global minimum; neural-net losses don't.
-- **Cross-validation** — _to add Week 2_
+- **Cross-validation (k-fold)** — _to fill Week 2._ Split train into k folds; rotate which fold is held out; average score across k runs. Reduces dependence on a single 80/20 split.
+- **Standardization** — _to fill Week 2._ Subtract mean, divide by std per feature. Mandatory before Ridge/Lasso so the L1/L2 penalty treats features fairly.
+- **Regularization** — _to fill Week 2._ Add a penalty on weight magnitudes to the loss; trades a small amount of train fit for big gains in generalization.
+- **L2 regularization (Ridge)** — _to fill Week 2._ Adds `λ·Σwⱼ²` to the loss; shrinks all weights toward zero, never exactly zero.
+- **L1 regularization (Lasso)** — _to fill Week 2._ Adds `λ·Σ|wⱼ|` to the loss; can drive weights _exactly_ to zero → built-in feature selection.
+- **alpha / λ** — _to fill Week 2._ Strength of the regularization penalty. α=0 → vanilla regression; α→∞ → all weights = 0.
+- **Logistic regression** — _to fill Week 2._ Linear model + sigmoid → probability for binary classification. Loss = log-loss (cross-entropy), not MSE.
+- **Sigmoid** — _to fill Week 2._ `σ(z) = 1/(1+e^-z)`. Squashes any real number into (0, 1) so it can be read as a probability.
+- **Log-loss / cross-entropy** — _to fill Week 2._ `-[y·log(p) + (1-y)·log(1-p)]`. Convex in logistic regression's parameters (so GD finds the global min).
+- **Decision boundary** — _to fill Week 2._ Surface in feature space where `p = 0.5` — the line/curve that separates the two predicted classes.
+- **ROC / AUC** — _to fill Week 2._ ROC plots TPR vs FPR across thresholds; AUC = area under it. AUC = 0.5 random, 1.0 perfect.
 
 ## DL / Transformers (Week 5+)
 

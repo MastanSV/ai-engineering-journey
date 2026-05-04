@@ -1,14 +1,14 @@
 # Current State — Snapshot
 
-> **Updated:** 2026-05-03 (Sunday — Week 1 closed)
-> _Update this file at the end of every working session._
+> > **Updated:** 2026-05-04 (Monday — Week 2 Day 1)
+> > _Update this file at the end of every working session._
 
 ## Calendar
 
 - **Current date:** May 4, 2026
 - **Current week:** **2 of 32** (Day 1 of 7) — Week 1 closed
 - **Current phase:** Phase 1 — Math + ML Foundations (Weeks 1–4)
-- **Theme this week:** _(Week 2 — to lock in Mon Mentor session)_
+- **Theme this week:** _When the line isn't enough_ (regularization + classification)
 - **Target offer date:** December 2026
 
 ## Hardware
@@ -47,28 +47,23 @@
 - ⏭️ **Deferred** — explicitly skipped, logged with reason
 - ❌ **Skipped** — missed entirely, no recovery (rare; triggers re-plan)
 
-## Week 1 progress (live)
+## Week 2 progress (live)
 
-- **Mon Apr 27 ✅** — 3B1B Ep 1 + numpy refresher + 5 Anki cards (incl. dot product bug fix)
-- **Tue Apr 28 🔄** — 3B1B Ep 2 done (span/basis); linreg part 1 partial (data + plot done; MSE + eyeball fit + Anki + commit carried to Wed)
-- **Wed Apr 29 🔄** — Tue carryover ✅ + 3B1B Ep 3 (linear transformations) ✅ + Anki review ✅; gradient descent notebook + 3 new Anki cards + commit **carried to Thu**
-- **Thu Apr 30 ⏭️** — Slot deferred (low energy); gradient descent rolled forward
-- **Fri May 1 🔄** — Mentor session covered gradient descent **L1 (intuition) + L2 (derivation)**; notebook code + Anki + commit carried to Sat
-- **Sat May 2 ✅** — Notebook 03 (gradient descent from scratch, L3 code + L4 reflection) shipped + 3 Anki cards + Ep 3 Q3 (determinant) backfilled + Week 1 scope cut decided ← TODAY
-- **Sun May 3 ✅** — Notebook 04 (sklearn + California + MLflow) shipped + teach-back essay (1170 words, no-Google) + retro shipped; Twitter thread #3 ⏭️ deferred to Week 2
+- **Mon May 4** — Mentor session + Twitter thread #3 (Week 1 carryover) + Ridge intuition warmup
+- **Tue May 5** — Ridge L1+L2 (intuition + math)
+- **Wed May 6** — Notebook 05 Part A (standardize + Ridge + MLflow)
+- **Thu May 7** — Notebook 05 Part B (Lasso + 3-way MLflow comparison)
+- **Fri May 8** — Mentor: logistic L1+L2 (sigmoid, log-loss, derivation)
+- **Sat May 9** — Notebook 06 (logistic from scratch) + Notebook 07 (k-fold CV, stretch) + Sat velocity check
+- **Sun May 10** — Teach-back essay + Twitter thread #4 + Week 2 retro + Week 3 stub
 
-## Slip ledger (Week 1)
+## Slip ledger (Week 2 — live)
 
-| Day        | State | Slipped item                                                                      | Reason                                                                                            | Recovered                                                   |
-| ---------- | ----- | --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
-| Tue Apr 28 | 🔄    | MSE func + eyeball fit + Anki + commit                                            | Underestimated time for L1/L2 depth on first ML topic                                             | Wed Apr 29 ✅                                               |
-| Wed Apr 29 | 🔄    | Gradient descent notebook 03 + 3 Anki cards + commit; Ep 3 Q3 (determinant) blank | Tue carryover + warmup ate the slot; gradient descent needs full L1→L4 cycle, didn't want to rush | Sat May 2 ✅                                                |
-| Thu Apr 30 | ⏭️    | Entire Thu slot (GD carryover + bias-variance + sklearn notebook 04)              | Low energy; chose not to rush gradient descent foundation                                         | GD recovered Sat May 2; bias-variance + sklearn → Sun May 3 |
-| Fri May 1  | 🔄    | Notebook 03 code + Anki + commit; California housing + MLflow                     | Mentor session covered L1 (intuition) + L2 (derivation); code/Anki carried to Sat                 | Code recovered Sat May 2; California → Sun May 3            |
+| Day          | State | Slipped item | Reason | Remainder (min) | Action |
+| ------------ | ----- | ------------ | ------ | --------------- | ------ |
+| _(none yet)_ |       |              |        |                 |        |
 
-**Velocity check status: 3 weekday slips → re-plan triggered Sat May 2.** Scope cut logged in `04-decisions-log.md` (2026-05-02): merge sklearn (notebook 04) + California housing (notebook 05) + lite diagnostics into one Sunday notebook; drop Ridge/Lasso (Week 2); drop full diagnostics notebook 06 (Week 2 buffer); bias-variance video → Sun warmup.
-
-**Calibration lesson:** First-time ML topics need ~2× the time I estimated. For Week 2 plan, budget 2 days per "from-scratch" notebook.
+**Velocity check status:** _(updated each Saturday)_
 
 ## Week 1 results (final)
 
@@ -88,22 +83,22 @@
 - Mood 7/10 | Confidence Dec 2026: 7/10
 - **Verdict:** Full curriculum, no skipping
 
-## Top gaps going into Week 2
+## Top gaps being addressed in Week 2
 
-1. Bias-variance precise definitions (essay surfaced fuzziness)
-2. Standardize features before comparing coefficients (curiosity bucket)
-3. Normal Equation derivation (curiosity bucket)
-4. Residual plots — when they earn their keep
-5. **Weekday execution fragility** (NEW — 30-min carryover cap is the experiment)
-6. Ridge / Lasso (regularization deep-dive — Week 2 main work)
+1. Regularization (Ridge L2 + Lasso L1) — main work
+2. Standardization before comparing coefficients (Week 1 curiosity carryover)
+3. Logistic regression from scratch (sigmoid + log-loss + GD)
+4. Cross-validation (concept + 1 implementation)
+5. Bias-variance precise definitions (essay gap from Week 1)
+6. **Weekday execution discipline** — 30-min carryover cap is the experiment this week
 
-## NN status (Week 1 — final)
+## NN status (Week 2 — live)
 
-- **NN1 GitHub commits:** 9/10 — 4/7 daily commits, concrete messages
-- **NN2 Twitter:** 0/10 — 0/2 threads posted (cascade casualty)
-- **NN3 Teach-back:** 7.5/10 — 1170-word no-Google essay shipped
-- **NN4 Anki:** 8/10 — 12 new cards, 7/7 daily reviews
-- **NN5 Retro:** 8/10 — slip pattern analysis honest, calibration rule concrete
+- **NN1 GitHub commits:** target daily commits Mon–Sun
+- **NN2 Twitter:** thread #3 (carryover) → Mon · thread #4 (regularization) → Sun · **must hit 2 threads, no zeros**
+- **NN3 Teach-back:** regularization essay ≥800 words, no-Google → Sun May 10
+- **NN4 Anki:** ~12 new cards target (Ridge, Lasso, L1, L2, sigmoid, log-loss, logistic, decision boundary, ROC, AUC, k-fold CV, standardization); 7/7 daily reviews
+- **NN5 Sunday retro:** due Sun May 10 — first retro under 30-min carryover cap
 
 ## Decisions locked
 
