@@ -24,7 +24,7 @@
 
 ## **Diagnostic:** which day(s) were >2hr below target, and the REAL reason (not "busy")?
 
----
+- Wed dropped to 1hr (low energy); Thu dropped to 0hr (carryover dread). Together that's a 5hr hole, which I covered with a 15hr weekend. Trend = weekday execution is fragile, weekend is heroic. This is not sustainable for 25 more weeks.
 
 ## 2. What shipped vs DoD checklist
 
@@ -54,29 +54,29 @@
 
 ### Slip 1
 
-- **Day & what was scheduled:** Wednesday &
-- **What actually happened:**
-- **Surface reason:** The energy was low
+- **Day & what was scheduled:** Wednesday [ Linreg intuition ]
+- **What actually happened:**I have opened the note book, did somepart of the scheduled work and felt burnout so scheduled to next day
+- **Surface reason:** First-time deep L1/L2 work on linreg intuition. Took extra time to build the symbol cheat sheet, sanity checks, and "why fake data" rationale. The depth was the right call — _calibration data, not failure_.
 - **Real reason (the one I don't want to admit):**
 - **What it cost:** It carried to the next day i.e., Thursday
-- **Pattern this maps to:**
+- **Pattern this maps to:** CarryOver
 
 ### Slip 2
 
-- **Day & what was scheduled:** Thursday
-- **What actually happened:**
+- **Day & what was scheduled:** Thursday & bias-variance + Thu sklearn notebook 04
+- **What actually happened:** Because carryover felt burden and not getting liked to back to schedule so did not open notebook at all
 - **Surface reason:** Energy was okay but carryover felt burden and not able to move forward as i was having carryover thought on back of my head
-- **Real reason:**
+- **Real reason:**Anxiety about the next deliverable
 - **What it cost:** Carry over compounded
 - **Pattern:**
 
 ### Slip 3
 
-- **Day & what was scheduled:** Friday
-- **What actually happened:**
+- **Day & what was scheduled:** Friday [(mentor session, no notebook code)]
+- **What actually happened:**Back to schedule and complted the GD L1 intution and GD L2 Math and carryover moved to sat and sun. Mentor walkthrough on intuition + derivation took the full slot. Foundation work — math is now in head, not just notes. _Worth the time._
 - **Surface reason:** Clearing the carryovers
 - **Real reason:** Energy was good so clearing of the carryovers and friday schedules
-- **What it cost:**
+- **What it cost:** Not able to cpmplete the scheduled task.
 - **Pattern:**
 
 ### Slip pattern summary (1 sentence)
@@ -89,7 +89,7 @@
 
 > _Direction: Score honestly. NN3 was 4/10 in Week 0 — what's the honest grade now? Justify in 1 line each._
 
-### NN1 — GitHub commits: 31 / 10
+### NN1 — GitHub commits: 9 / 10
 
 - Daily commits: 04 / 7 days
 - Commit message quality (concrete or lazy?):
@@ -107,7 +107,7 @@
 - Vs Week-0 baseline (4/10):
 - Honest grade + why:
 
-### NN4 — Anki: 12/ 10
+### NN4 — Anki: 8/ 10
 
 - New cards added this week: 12
 - Daily reviews completed: 7 / 7
@@ -126,11 +126,15 @@
 
 **Rule:**
 
-> _One sentence. e.g., "Estimate × 2 for any first-time topic" or "Tue/Wed carryover capped at 30 min — bigger spills push to Sat."_
+> Carryover from any single day is capped at 30 min. Anything bigger than 30 min gets pushed to Saturday — not the next weekday.
 
 ## **Why (which slip pattern this addresses):**
 
+- stops the cascade. Wed slip stays a Wed problem, not a Wed→Thu→Fri problem.
+
 ## **How I'll enforce it (a concrete behavior — not "I'll try harder"):**
+
+- Enforce: at end of each weekday, write the carryover task. If it's >30 min, immediately move it to Saturday in the task file.
 
 ---
 
@@ -158,9 +162,15 @@
 ## 7. What I learned about HOW I learn (meta)
 
 > _Direction: 1–3 bullets. Examples:_
-> _- "No-Google essay surfaced gaps I wouldn't have noticed otherwise"_
-> _- "Building from scratch before sklearn made the abstractions feel earned"_
-> _- "Mentor 'figure it out' style works for me — I retained more from struggling than from being shown"_
+>
+> - "No-Google essay surfaced gaps I wouldn't have noticed otherwise" :
+>   > - Yes it enabled me to look at the correction of bian&variance definition.
+> - "Building from scratch before sklearn made the abstractions feel earned"
+>   > - It felt different because all in work inherently the sklearn took, it gave me the calculations. which is good.
+> - "Mentor 'figure it out' style works for me — I retained more from struggling than from being shown"
+>   > - 'figure it out', the style which i like, because it will be in my head and sticks more than just copy pasting.
+> - "MLflow experience"
+>   > - Iam very much impressed with the MLflow experience because it enables me to look at the input params and the metrics and tracing and so on, which is very helpful.
 
 ## 8. Carryover into Week 2
 
@@ -169,6 +179,6 @@
 - [✅] Ridge / Lasso (already logged — confirm)
 - [❌] Bias-variance precise definitions (essay gap surfaced)
 - [❌] Standardize features before comparing coefficients (curiosity bucket)
-- [❌] Multicollinearity / VIF — diagnostic for correlated features
+- [✅] Multicollinearity / VIF — diagnostic for correlated features
 - [❌] Normal Equation derivation (curiosity bucket)
 - [❌] Residual plots — when they earn their keep
