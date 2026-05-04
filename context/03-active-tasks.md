@@ -1,5 +1,7 @@
 # Active Tasks — Week 1 Sprint (Apr 27 – May 3, 2026)
 
+> **STATUS: Week 1 closed May 3, 2026.** This file is now read-only history. See `06-current-task.md` for Week 2 sprint.
+
 ## Sprint goal
 
 By Sunday May 3, I have built linear regression FROM SCRATCH in numpy (gradient descent, my own loss function), re-implemented it with sklearn, trained on a real dataset, logged every run in MLflow, and can explain the bias-variance tradeoff in my own words. No magic. No black boxes.
@@ -130,42 +132,42 @@ Each task in the daily breakdown is marked at end-of-day with one of:
 
 ### Sunday May 3 — Bias-variance + merged sklearn/California/MLflow + teach-back + retro (~6.5hr) — POST-SCOPE-CUT PLAN
 
-- [ ] 🌅 **15 min:** StatQuest **Bias-Variance Tradeoff** → 5 sentences in `concepts/week-01-prereading.md`
-- [ ] 📝 **15 min:** Anki review (all 17 cards)
-- [ ] 💻 **150 min:** **Merged notebook** → `daily-notebooks/week-01/04-sklearn-california-mlflow.ipynb`
+- [✅] 🌅 **15 min:** StatQuest **Bias-Variance Tradeoff** → 5 sentences in `concepts/week-01-prereading.md`
+- [✅] 📝 **15 min:** Anki review (all 17 cards)
+- [✅] 💻 **150 min:** **Merged notebook** → `daily-notebooks/week-01/04-sklearn-california-mlflow.ipynb`
   - **Part A (45 min):** sklearn on **same fake data** from notebook 02 → verify `LinearRegression()` gives w ≈ 3.0, b ≈ 5.0 (matches scratch GD); markdown: "sklearn in 3 lines = my scratch in 30"
   - **Part B (60 min):** Load `fetch_california_housing()` (8 features, ~20k rows) → 80/20 split → fit LinearRegression → compute R² + MSE on test set
   - **Part C (45 min):** Wrap A + B in MLflow runs (experiment `week-01-california-housing`); log params, metrics, model; 1 residual plot (predicted vs actual) for Part B
   - 2 new Anki cards: R-squared, residual plot
-- [ ] ✍️ **120 min: NN3 Teach-back** → `concepts/week-01-teachback-linreg.md`
+- [✅] ✍️ **120 min: NN3 Teach-back** → `concepts/week-01-teachback-linreg.md`
   - 800 words, "Linear Regression Explained to My Non-Technical Friend"
   - Cover: what problem it solves, gradient descent intuition, bias-variance, when it fails
   - **NO Google, NO ChatGPT** (same rule as baseline essay)
-- [ ] 📖 **45 min: NN5 Weekly retro** → `weekly-logs/week-01-linreg.md` (use template)
+- [✅] 📖 **45 min: NN5 Weekly retro** → `weekly-logs/week-01-linreg.md` (use template)
   - **Required:** slip pattern analysis (3 weekday slips → calibration lesson for Week 2)
   - Score self on the 5 NN dimensions
-- [ ] 🐦 **30 min: NN2 Twitter thread #3** in `twitter-posts/week-01-thread.md` then post
+- [⏩] 🐦 **30 min: NN2 Twitter thread #3** in `twitter-posts/week-01-thread.md` then post
   - Reuse teach-back content; 5–7 tweets
   - Hook: "Built linear regression from scratch in numpy this week. Here's what every gradient descent line actually does 🧵"
-- [ ] 🚀 **15 min:** commit + push (single commit covering all Sun artifacts)
-- [ ] 🎤 **30 min (optional):** Sunday mentor session — paste retro in chat
+- [✅] 🚀 **15 min:** commit + push (single commit covering all Sun artifacts)
+- [✅] 🎤 **30 min (optional):** Sunday mentor session — paste retro in chat
 
 ---
 
 ## ✅ Definition of Done — Week 1 (post-scope-cut May 2)
 
-- [x] 3B1B Eps 1, 2, 3 watched + notes (Ep 3 Q3 backfilled May 2)
-- [x] Notebook 01 (numpy refresher) shipped
-- [x] Notebook 02 (linreg part 1: data + MSE + eyeball fit) shipped
-- [x] Notebook 03 (gradient descent from scratch) shipped — **no sklearn used** ✅
-- [ ] StatQuest Bias-Variance video + 5 sentences (Sun)
-- [ ] Merged notebook 04 (sklearn on fake data + California housing + MLflow + 1 residual plot) (Sun)
-- [ ] sklearn results match scratch GD within tolerance (Sun, in notebook 04 Part A)
-- [ ] California housing R² + MSE logged in MLflow (Sun, in notebook 04 Part C)
-- [ ] Teach-back essay ≥800 words, no AI assist (Sun)
-- [ ] Twitter thread #3 posted (Sun)
-- [ ] Week 1 retro complete with slip pattern analysis (Sun)
-- [ ] All 5 NN dimensions hit (NN1 commits ✅, NN2 Twitter Sun, NN3 teach-back Sun, NN4 Anki ✅ 17 cards, NN5 retro Sun)
+- [✅] 3B1B Eps 1, 2, 3 watched + notes (Ep 3 Q3 backfilled May 2)
+- [✅] Notebook 01 (numpy refresher) shipped
+- [✅] Notebook 02 (linreg part 1: data + MSE + eyeball fit) shipped
+- [✅] Notebook 03 (gradient descent from scratch) shipped — **no sklearn used** ✅
+- [✅] StatQuest Bias-Variance video + 5 sentences (Sun)
+- [✅] Merged notebook 04 (sklearn on fake data + California housing + MLflow + 1 residual plot) (Sun)
+- [✅] sklearn results match scratch GD within tolerance (Sun, in notebook 04 Part A)
+- [✅] California housing R² + MSE logged in MLflow (Sun, in notebook 04 Part C)
+- [✅] Teach-back essay ≥800 words, no AI assist (Sun)
+- [⏩] Twitter thread #3 posted (Sun)
+- [✅] Week 1 retro complete with slip pattern analysis (Sun)
+- [✅] All 5 NN dimensions hit (NN1 commits ✅, NN2 Twitter Sun, NN3 teach-back Sun, NN4 Anki ✅ 17 cards, NN5 retro Sun)
 
 **Dropped from original DoD (moved to Week 2 buffer or later):**
 

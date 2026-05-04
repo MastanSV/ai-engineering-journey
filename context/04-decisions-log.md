@@ -64,6 +64,17 @@
 - **Reversible?** Yes — Ridge/Lasso and full diagnostics return in Week 2 buffer slot or Week 3 regularization deep-dive.
 - **Calibration takeaway:** For Week 2 plan, budget 2 days per "from-scratch" notebook (not 1). First-time ML topics consistently took ~2× my estimate.
 
+## 2026-05-03 · Week 2 calibration rule: 30-min carryover cap
+
+- **Why:** Week 1 retro surfaced a 3-day cascade (Wed low energy → Thu avoidance → Fri's own slot eaten by cleanup). Single-cause: carryover from any one day was unbounded, so a 1-hour deficit on Wed compounded into ~5 hours of lost weekday execution by Friday. The Saturday/Sunday weekend covered the gap (15hr / 24hr total) but that's not sustainable across 25 more weeks.
+- **Rule:** At end of each weekday, write the day's carryover task. If estimated remainder is >30 min, it does NOT go to the next weekday — it goes straight to Saturday in `03-active-tasks.md`. Weekdays absorb only ≤30-min spillover.
+- **Alternatives considered:**
+  - (a) "Try harder on weekdays" — rejected, not enforceable.
+  - (b) Cap weekly hours at 19 to force ruthless cuts — rejected for Week 2; want one more datapoint.
+  - (c) Move all carryover to Saturday regardless of size — rejected, eliminates flexibility for genuine ≤30-min spillovers.
+- **Reversible?** Yes — re-evaluate at end of Week 2 retro. If cascade recurs despite rule, escalate to (b).
+- **Source:** `weekly-logs/retro-week-01-linreg.md` §5.
+
 ---
 
 ## Template for new entries
