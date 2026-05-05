@@ -1,30 +1,33 @@
+### Wed May 6 — Notebook 05 Part A: Standardize + Ridge (1.5hr)
+
 **Slot plan (90 min):**
 
-- [✅] 📚 **60 min — Ridge intuition + math** in `concepts/week-02-prereading.md`
-  - **L1 (intuition, 5 sentences):**
-    1. In your own words, what is regularization trying to prevent?
-    2. Geometric picture: what does adding `λ·Σwⱼ²` to the loss surface look like?
-    3. Why is the penalty applied to weights only, not to the bias `b`?
-    4. What happens at λ=0? At λ→∞?
-    5. Why does Ridge work best when many features each contribute a little?
-  - **L2 (math derivation):**
-    - Write the Ridge loss: `L = mean((y - (w·x + b))²) + λ·Σwⱼ²`
-    - Derive `∂L/∂wⱼ` step by step using chain rule + power rule
-    - Show the update becomes: `wⱼ ← wⱼ - lr·(∂MSE/∂wⱼ + 2λ·wⱼ)`
-    - Sanity check: at λ=0, you recover plain GD. ✅
-- [✅] 📝 **15 min — 3 Anki cards** (add to `concepts/anki-cards-week-02.tsv` — create file with TSV header `Front\tBack\tTags`):
-  - Front: "Ridge regression" | Back: "Linear regression with L2 penalty (λ·Σwⱼ²) added to loss; shrinks all weights toward zero, never to zero." | Tags: week-02 regularization
-  - Front: "L2 regularization" | Back: "Penalty term `λ·Σwⱼ²` added to loss. Discourages large weights. Differentiable everywhere → gradient-friendly." | Tags: week-02 regularization
-  - Front: "Why standardize before Ridge/Lasso?" | Back: "L1/L2 penalty treats all weights equally; if features are on different scales, large-scale features get unfairly penalized for being large." | Tags: week-02 standardization
-- [✅] 🌅 **15 min — StatQuest: Lasso**
-  - **Video:** StatQuest — Regularization Part 2: Lasso (L1) Regression, Clearly Explained!!!
-  - **Link:** https://www.youtube.com/watch?v=NGf0voTMlcs
-  - **Length:** ~8 min
-  - **Output:** append 5 sentences to `concepts/week-02-prereading.md`:
-    1. How does Lasso's penalty differ from Ridge's, mathematically?
-    2. Why can Lasso drive weights _exactly_ to zero (the geometric/diamond intuition)?
-    3. What does that property buy you in practice (think: feature selection)?
-    4. When does Lasso outperform Ridge? When is it worse?
-    5. What is "Elastic Net" in one sentence?
+- [ ] 💻 **75 min — `daily-notebooks/week-02/05-ridge-lasso-california.ipynb`** (create file + folder)
+  - **Cell 1 — imports:**
+    ```python
+    import numpy as np, pandas as pd, matplotlib.pyplot as plt, mlflow
+    from sklearn.datasets import fetch_california_housing
+    from sklearn.model_selection import train_test_split
+    from sklearn.preprocessing import StandardScaler
+    from sklearn.linear_model import LinearRegression, Ridge
+    from sklearn.metrics import mean_squared_error, r2_score
+    ```
+  - **Cell 2 — load + split + standardize:**
+    ```python
+    data = fetch_california_housing(as_frame=True)
+    X, y = data.data, data.target
+    X_tr, X_te, y_tr, y_te = train_test_split(X, y, test_size=0.2, random_state=42)
+    scaler = StandardScaler().fit(X_tr)
+    X_tr_s = scaler.transform(X_tr); X_te_s = scaler.transform(X_te)
+    ```
+  - **Cell 3 — MLflow setup:**
+    ```python
+    mlflow.set_experiment("week-02-ridge-lasso")
+    ```
+  - **Cell 4 — baseline LinearRegression run** (log params: model_type, n_features; metrics: train_mse, test_mse, train_r2, test_r2; log model)
+  - **Cell 5 — Ridge run** (try `alpha=1.0`); same logging pattern
+  - **Cell 6 — markdown narration:** "Did Ridge improve test MSE? By how much? Did the coefficient magnitudes shrink? Show before/after."
+  - **🚨 Sanity check:** baseline test R² should match Week 1 notebook 04 (~0.58). If not, you mis-split.
+- [ ] 🚀 **15 min — commit + push:** `week-02 day-3: notebook 05 part A (standardize + ridge + mlflow)`
 
-**End-of-day:** commit + push (`week-02 day-2: ridge math + lasso intuition + 3 anki`); update state file; carryover audit.
+**End-of-day:** update state file; carryover audit.

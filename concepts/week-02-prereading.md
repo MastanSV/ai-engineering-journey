@@ -63,8 +63,8 @@ Bias note: b is not penalized, so ∂L/∂b is only the MSE derivative.
 2. Why can Lasso drive weights _exactly_ to zero (the geometric/diamond intuition)?
    > In Lasso regression the weights for different features (or) variables can be cancelled out so it leaves only line where the slope can becomes zero
 3. What does that property buy you in practice (think: feature selection)?
-   > The question framing can be better, to answer practically
+   > If im choosing the feature selected, then im deleting the feature i dont want which suits for Lasso Regression
 4. When does Lasso outperform Ridge? When is it worse?
-   > Lasso will outperform Ridge where we can remove lot of un-useful features weights, Lasso can perform worse where are lot of un-neccessary variables are present.
+   > Lasso will outperform Ridge where we can remove lot of un-useful features weights, Lasso can perform worse where are lot of features but each feature has value added, when each feature value-added, if you delete Lasso can perform worse
 5. What is "Elastic Net" in one sentence?
-   > Still i dont know about Elastic Net, in which terms/context it will be.
+   > Elastic Net is nothing but it can do both Ridge regression as well as the Lasso Regression.

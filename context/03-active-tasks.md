@@ -26,10 +26,10 @@ Week 1 proved a line can fit. Week 2 proves a line can fit _too well_ (regulariz
 
 **Slot plan (90 min):**
 
-- [x] ✅ 🎤 **30 min — Mentor session (9:00–9:30):** Week 2 plan + DoD confirmed. No scope concerns from Week 1 retro.
-- [x] ✅ 🐦 **30 min — Twitter thread #3 (9:30–10:00):** posted → https://x.com/mastan_ai/status/2051248494036517362
-- [x] ✅ 📝 **15 min — Anki review (10:00–10:15):** all Week 1 cards reviewed.
-- [ ] 🌅 **15 min — StatQuest: Ridge (10:15–10:30)**
+- [✅] ✅ 🎤 **30 min — Mentor session (9:00–9:30):** Week 2 plan + DoD confirmed. No scope concerns from Week 1 retro.
+- [✅] ✅ 🐦 **30 min — Twitter thread #3 (9:30–10:00):** posted → https://x.com/mastan_ai/status/2051248494036517362
+- [✅] ✅ 📝 **15 min — Anki review (10:00–10:15):** all Week 1 cards reviewed.
+- [✅] 🌅 **15 min — StatQuest: Ridge (10:15–10:30)**
   - **Video:** StatQuest — Regularization Part 1: Ridge (L2) Regression, Clearly Explained!!!
   - **Link:** https://www.youtube.com/watch?v=Q81RR3yKn30
   - **Length:** ~16 min (slightly over the 15-min rule — acceptable, canonical video)
@@ -43,9 +43,9 @@ Week 1 proved a line can fit. Week 2 proves a line can fit _too well_ (regulariz
 
 **End-of-day required (≤5 min):**
 
-- [ ] 🚀 Commit + push: `week-02 day-1: thread #3 posted, ridge intuition notes, anki reviewed`
-- [ ] 📋 Update `01-current-state.md` Week 2 progress row for Mon (✅ / 🔄 / ⏭️)
-- [ ] 🧮 Carryover audit: if anything 🔄, write remainder in min. **>30 min → push to Sat block, NOT Tue.**
+- [✅] 🚀 Commit + push: `week-02 day-1: thread #3 posted, ridge intuition notes, anki reviewed`
+- [✅] 📋 Update `01-current-state.md` Week 2 progress row for Mon (✅ / 🔄 / ⏭️)
+- [✅] 🧮 Carryover audit: if anything 🔄, write remainder in min. **>30 min → push to Sat block, NOT Tue.**
 
 ---
 
@@ -69,7 +69,7 @@ Week 1 proved a line can fit. Week 2 proves a line can fit _too well_ (regulariz
   - Front: "Ridge regression" | Back: "Linear regression with L2 penalty (λ·Σwⱼ²) added to loss; shrinks all weights toward zero, never to zero." | Tags: week-02 regularization
   - Front: "L2 regularization" | Back: "Penalty term `λ·Σwⱼ²` added to loss. Discourages large weights. Differentiable everywhere → gradient-friendly." | Tags: week-02 regularization
   - Front: "Why standardize before Ridge/Lasso?" | Back: "L1/L2 penalty treats all weights equally; if features are on different scales, large-scale features get unfairly penalized for being large." | Tags: week-02 standardization
-- [ ] 🌅 **15 min — StatQuest: Lasso**
+- [✅] 🌅 **15 min — StatQuest: Lasso**
   - **Video:** StatQuest — Regularization Part 2: Lasso (L1) Regression, Clearly Explained!!!
   - **Link:** https://www.youtube.com/watch?v=NGf0voTMlcs
   - **Length:** ~8 min

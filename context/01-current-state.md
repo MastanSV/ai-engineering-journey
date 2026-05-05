@@ -1,11 +1,11 @@
 # Current State — Snapshot
 
-> > **Updated:** 2026-05-04 (Monday — Week 2 Day 1)
+> > **Updated:** 2026-05-06 (Wednesday — Week 2 Day 3)
 > > _Update this file at the end of every working session._
 
 ## Calendar
 
-- **Current date:** May 4, 2026
+- **Current date:** May 6, 2026
 - **Current week:** **2 of 32** (Day 1 of 7) — Week 1 closed
 - **Current phase:** Phase 1 — Math + ML Foundations (Weeks 1–4)
 - **Theme this week:** _When the line isn't enough_ (regularization + classification)
@@ -49,8 +49,8 @@
 
 ## Week 2 progress (live)
 
-- **Mon May 4** — Mentor session + Twitter thread #3 (Week 1 carryover) + Ridge intuition warmup
-- **Tue May 5** — Ridge L1+L2 (intuition + math)
+- **Mon May 4 ✅** — Mentor session + Twitter thread #3 (Week 1 carryover) + Ridge intuition warmup
+- **Tue May 5 ✅** — Ridge L1+L2 (intuition + math)
 - **Wed May 6** — Notebook 05 Part A (standardize + Ridge + MLflow)
 - **Thu May 7** — Notebook 05 Part B (Lasso + 3-way MLflow comparison)
 - **Fri May 8** — Mentor: logistic L1+L2 (sigmoid, log-loss, derivation)
@@ -121,6 +121,8 @@
 - **May 1:** Mentor session — gradient descent L1 (intuition: gradient = direction, why descent vs ascent, role of lr) + L2 (derived ∂MSE/∂w and ∂MSE/∂b on paper using chain rule)
 - **May 2:** Notebook 03 shipped — predict/mse/gradients (3 sanity tests pass) + GD loop converges to w≈3.0, b≈5.0 + loss curve + L4 experiments (lr=0.1 diverges, lr=0.0001 crawls); 3 Anki cards rewritten with mentor review; Ep 3 Q3 backfilled; Week 1 scope cut logged
 - **May 3:** Notebook 04 (sklearn on fake data + California housing + MLflow + residual plot) shipped; teach-back essay (1170 words, no-Google) shipped; Week 1 retro shipped with slip-pattern analysis + 30-min carryover cap rule
+- **May 4:** Mentor + Week 1 carryover
+- **May 5:** — Ridge L1 + L2
 
 ## Blockers
 
