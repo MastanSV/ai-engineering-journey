@@ -23,3 +23,35 @@
    > -If the λ=0, then it just becomes the normal fit line i.e. linear regression line, at λ=∞, the fit line just becomes parallel the x-axis and slope of the fit line becomes very nearer to zero but not zero.
 5. Why does Ridge work best when many features each contribute a little?
    > When the many features contribute to a little, the predictions becomes accurate because the ridge regression line will align in proper way to get the accurate predictions
+
+### Ridge L2 — derivation
+
+Ridge loss:
+
+L = mean((y - ŷ)²) + λΣwⱼ²
+
+For one prediction:
+
+ŷᵢ = w·xᵢ + b
+
+I used eᵢ = ŷᵢ - yᵢ to make the derivative cleaner.
+
+MSE part:
+
+∂MSE/∂wⱼ = (2/n)Σ(ŷᵢ - yᵢ)xᵢⱼ
+
+Penalty part:
+
+∂/∂wⱼ[λΣwⱼ²] = 2λwⱼ
+
+So the full Ridge gradient is:
+
+∂L/∂wⱼ = ∂MSE/∂wⱼ + 2λwⱼ
+
+Gradient descent update:
+
+wⱼ ← wⱼ - lr · (∂MSE/∂wⱼ + 2λwⱼ)
+
+Sanity check: if λ = 0, the penalty disappears and this becomes normal linear regression gradient descent.
+
+Bias note: b is not penalized, so ∂L/∂b is only the MSE derivative.
