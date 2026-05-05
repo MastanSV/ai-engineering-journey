@@ -55,3 +55,16 @@ wⱼ ← wⱼ - lr · (∂MSE/∂wⱼ + 2λwⱼ)
 Sanity check: if λ = 0, the penalty disappears and this becomes normal linear regression gradient descent.
 
 Bias note: b is not penalized, so ∂L/∂b is only the MSE derivative.
+
+### Lasso Regression pre-reading video notes:
+
+1. How does Lasso's penalty differ from Ridge's, mathematically?
+   > Ridge penalty will square the weight `w` with λ, while Lasso's penalty will take absolute value `w`.
+2. Why can Lasso drive weights _exactly_ to zero (the geometric/diamond intuition)?
+   > In Lasso regression the weights for different features (or) variables can be cancelled out so it leaves only line where the slope can becomes zero
+3. What does that property buy you in practice (think: feature selection)?
+   > The question framing can be better, to answer practically
+4. When does Lasso outperform Ridge? When is it worse?
+   > Lasso will outperform Ridge where we can remove lot of un-useful features weights, Lasso can perform worse where are lot of un-neccessary variables are present.
+5. What is "Elastic Net" in one sentence?
+   > Still i dont know about Elastic Net, in which terms/context it will be.
