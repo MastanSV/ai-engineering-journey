@@ -88,7 +88,7 @@ Week 1 proved a line can fit. Week 2 proves a line can fit _too well_ (regulariz
 
 **Slot plan (90 min):**
 
-- [ ] 💻 **75 min — `daily-notebooks/week-02/05-ridge-lasso-california.ipynb`** (create file + folder)
+- [✅] 💻 **75 min — `daily-notebooks/week-02/05-ridge-lasso-california.ipynb`** (create file + folder)
   - **Cell 1 — imports:**
     ```python
     import numpy as np, pandas as pd, matplotlib.pyplot as plt, mlflow
@@ -114,7 +114,7 @@ Week 1 proved a line can fit. Week 2 proves a line can fit _too well_ (regulariz
   - **Cell 5 — Ridge run** (try `alpha=1.0`); same logging pattern
   - **Cell 6 — markdown narration:** "Did Ridge improve test MSE? By how much? Did the coefficient magnitudes shrink? Show before/after."
   - **🚨 Sanity check:** baseline test R² should match Week 1 notebook 04 (~0.58). If not, you mis-split.
-- [ ] 🚀 **15 min — commit + push:** `week-02 day-3: notebook 05 part A (standardize + ridge + mlflow)`
+- [✅] 🚀 **15 min — commit + push:** `week-02 day-3: notebook 05 part A (standardize + ridge + mlflow)`
 
 **End-of-day:** update state file; carryover audit.
 

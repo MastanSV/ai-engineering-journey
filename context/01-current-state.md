@@ -51,7 +51,7 @@
 
 - **Mon May 4 ✅** — Mentor session + Twitter thread #3 (Week 1 carryover) + Ridge intuition warmup
 - **Tue May 5 ✅** — Ridge L1+L2 (intuition + math)
-- **Wed May 6** — Notebook 05 Part A (standardize + Ridge + MLflow)
+- **Wed May 6 ✅** — Notebook 05 Part A (standardize + Ridge + MLflow)
 - **Thu May 7** — Notebook 05 Part B (Lasso + 3-way MLflow comparison)
 - **Fri May 8** — Mentor: logistic L1+L2 (sigmoid, log-loss, derivation)
 - **Sat May 9** — Notebook 06 (logistic from scratch) + Notebook 07 (k-fold CV, stretch) + Sat velocity check
