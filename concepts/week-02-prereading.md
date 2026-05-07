@@ -68,3 +68,16 @@ Bias note: b is not penalized, so ∂L/∂b is only the MSE derivative.
    > Lasso will outperform Ridge where we can remove lot of un-useful features weights, Lasso can perform worse where are lot of features but each feature has value added, when each feature value-added, if you delete Lasso can perform worse
 5. What is "Elastic Net" in one sentence?
    > Elastic Net is nothing but it can do both Ridge regression as well as the Lasso Regression.
+
+### StatQuest: Logistic Regression
+
+1. Why can't we just use linear regression for binary classification (probabilities < 0 or > 1)?
+   > linear regression used to predict the value might be can think of like scalar, but for the classification we need to have values True or False
+2. What does the sigmoid function do, in one sentence?
+   > sigmoid - did not encountered yet so not able to answer
+3. What is "log-loss" (cross-entropy) and why is it used instead of MSE for classification?
+   > log-loss - did not encountered yet so not able to answer
+4. What does the "decision boundary" mean geometrically?
+   > decision boundary in geometrically like, if i take example for data of mice, we can decide the mice is obese or not based on the certain weight range, so this weight range on which we are making the decision of mice is obese or not is called decision boundary
+5. Is logistic regression a "regression" or "classification" algorithm? Defend the name
+   > logistic regression is classification algorithm because it calssifies the data. for example, given the weight and size of mice, logistic regression can only tell whether the given mice obese or not. here obese and not obese are classification groups

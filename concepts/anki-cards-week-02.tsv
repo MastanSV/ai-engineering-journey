@@ -1,3 +1,6 @@
 Ridge regression;Linear-Regression with penalty `λ·Σwⱼ²`, all weights shrinks towards zero, but not to zero
 L2 regularization;Penalty added to loss, discourages large weights, differentiable everywhere, gradient friendly
 Why standardize before Ridge/Lasso?;In L1/L2 all features will represents in different scales, so if we dont standardize large scale features unfairly penalizes for being large
+what is Lasso regression?;Linear regression with penalty λ·Σ|wⱼ|, can drive the some of the wights to exactly zero.
+L1 vs L2 - key behavior difference?; L1 (Lasso regression) can drive some weights to zero, L2 (Ridge regression) can drive weghts to zero but not exactly to zero.
+alpha (λ) parameter?; alpha parameter says how bad the penalty is. if λ=0, it will be linear regression λ->∞ all weights = 0
