@@ -124,17 +124,17 @@ Week 1 proved a line can fit. Week 2 proves a line can fit _too well_ (regulariz
 
 **Slot plan (90 min):**
 
-- [ ] 💻 **60 min — Add Lasso to notebook 05**
+- [✅] 💻 **60 min — Add Lasso to notebook 05**
   - **Cell 7 — imports:** `from sklearn.linear_model import Lasso`
   - **Cell 8 — Lasso run** (try `alpha=0.1`; if all coefs zero, lower alpha); same MLflow logging pattern
   - **Cell 9 — 3-way comparison plot:** bar chart of `|coefficient|` per feature for LinearRegression vs Ridge vs Lasso
   - **Cell 10 — MLflow UI screenshot:** open `mlflow ui` in terminal, screenshot the 3-run comparison table; save as `daily-notebooks/week-02/mlflow-comparison.png`
   - **Cell 11 — markdown:** "Which features did Lasso zero out? Does that make domain sense for housing prices?"
-- [ ] 📝 **15 min — 3 Anki cards** (append to `anki-cards-week-02.tsv`):
+- [✅] 📝 **15 min — 3 Anki cards** (append to `anki-cards-week-02.tsv`):
   - Front: "Lasso regression" | Back: "Linear regression with L1 penalty (λ·Σ|wⱼ|); can drive weights exactly to zero → built-in feature selection." | Tags: week-02 regularization
   - Front: "L1 vs L2 — key behavioral difference" | Back: "L1 produces sparse solutions (some weights = 0). L2 shrinks all weights but keeps them non-zero." | Tags: week-02 regularization
   - Front: "alpha (λ) parameter" | Back: "Strength of the regularization penalty. α=0 → vanilla regression. α→∞ → all weights = 0." | Tags: week-02 regularization
-- [ ] 🌅 **15 min — StatQuest: Logistic Regression**
+- [✅] 🌅 **15 min — StatQuest: Logistic Regression**
   - **Video:** StatQuest — Logistic Regression
   - **Link:** https://www.youtube.com/watch?v=yIYKR4sgzI8
   - **Length:** ~8 min

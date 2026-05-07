@@ -1,6 +1,6 @@
 # Current State — Snapshot
 
-> > **Updated:** 2026-05-06 (Wednesday — Week 2 Day 3)
+> > **Updated:** 2026-05-76 (Thursday — Week 2 Day 4)
 > > _Update this file at the end of every working session._
 
 ## Calendar
@@ -52,7 +52,7 @@
 - **Mon May 4 ✅** — Mentor session + Twitter thread #3 (Week 1 carryover) + Ridge intuition warmup
 - **Tue May 5 ✅** — Ridge L1+L2 (intuition + math)
 - **Wed May 6 ✅** — Notebook 05 Part A (standardize + Ridge + MLflow)
-- **Thu May 7** — Notebook 05 Part B (Lasso + 3-way MLflow comparison)
+- **Thu May 7 ✅** — Notebook 05 Part B (Lasso + 3-way MLflow comparison)
 - **Fri May 8** — Mentor: logistic L1+L2 (sigmoid, log-loss, derivation)
 - **Sat May 9** — Notebook 06 (logistic from scratch) + Notebook 07 (k-fold CV, stretch) + Sat velocity check
 - **Sun May 10** — Teach-back essay + Twitter thread #4 + Week 2 retro + Week 3 stub
