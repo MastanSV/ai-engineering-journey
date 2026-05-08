@@ -28,3 +28,4 @@ I want to ask the LLM as follows,
 you gave the stat quest for logistic regression it is just the introduction part of logistic regression, but you are asking the question what is sigmoid, geometric picture of log-less and asking me to derive the sigmoid from scratch, if you are asking such questions, what i want you to do is carefully analyze what videoes i should go through and blogs if they are worth reading and which is not covered by youtube vidoes and then only ask me question which can answerable by going through the vidoes.
 
 Currently i have gone through, https://www.youtube.com/watch?v=ARfXDSkQf1Y and understood what is odds and why we will use log(odds in logistic regression), need to ask claude which videos should i go through
+a
