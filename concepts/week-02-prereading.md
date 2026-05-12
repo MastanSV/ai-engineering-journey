@@ -72,11 +72,11 @@ Bias note: b is not penalized, so ∂L/∂b is only the MSE derivative.
 ### StatQuest: Logistic Regression
 
 1. Why can't we just use linear regression for binary classification (probabilities < 0 or > 1)?
-   > linear regression used to predict the value might be can think of like scalar, but for the classification we need to have values True or False
+   > linear regression can not be used for binary classification because in linear regression the target values on y-axis can go less than 0 and can go beyond 1, in which for the binary classification it does not make sense. for the binary classification the probability values has to be in between 0 and 1.
 2. What does the sigmoid function do, in one sentence?
-   > sigmoid - did not encountered yet so not able to answer
+   > sigmoid function is very useful function in logistic regression in which it takes the odds of the given target variable and convert it into the probablity range i.e, 0-1 for which classification of the data will be very useful.
 3. What is "log-loss" (cross-entropy) and why is it used instead of MSE for classification?
-   > log-loss - did not encountered yet so not able to answer
+   > log-loss is used find the maximum likelihood in logistic regression, because the data of target variable on y-axis ranges from positive infinity to negative infinity, so inorder to calculate sum of squares it will also become positive infinity and negative infinity which can not be useful. so that is why use Maximum likelihood.
 4. What does the "decision boundary" mean geometrically?
    > decision boundary in geometrically like, if i take example for data of mice, we can decide the mice is obese or not based on the certain weight range, so this weight range on which we are making the decision of mice is obese or not is called decision boundary
 5. Is logistic regression a "regression" or "classification" algorithm? Defend the name
