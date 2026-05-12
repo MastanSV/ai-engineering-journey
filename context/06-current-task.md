@@ -1,31 +1,35 @@
-### Fri May 8 — Mentor: logistic L1 + L2 (1.5hr)
+### Wed May 13 — Notebook 06 Part A: sigmoid + log-loss (1.5hr, 9:00–10:30 PM)
 
 **Slot plan (90 min):**
 
-- [ ] 🎤 **75 min — Mentor session: logistic regression deep-dive**
-  - **L1 (intuition) — 5 questions to answer in own words during mentor:**
-    1. Sigmoid: why this specific shape `1/(1+e^-z)`? What property makes it useful?
-    2. If MSE worked for linreg, why does it fail for classification?
-    3. Geometric picture of log-loss: what does it punish, and how harshly?
-    4. What is the "decision boundary" in 2D? Is it always a straight line in logistic regression?
-    5. Why is the loss surface for logistic regression _convex_ — and why does that matter?
-  - **L2 (math) — derive on paper:**
-    - Sigmoid: `σ(z) = 1/(1+e^-z)`; show that `σ'(z) = σ(z)·(1-σ(z))`
-    - Log-loss for one example: `L = -[y·log(p) + (1-y)·log(1-p)]` where `p = σ(w·x + b)`
-    - Derive `∂L/∂w` using chain rule. Final answer should simplify beautifully to: `(p - y)·x`
-    - Sign sanity check: if `p > y` (overpredicted), gradient is positive → `w` decreases. ✅
-  - **Capture all derivations** in `concepts/week-02-prereading.md` under heading "Logistic L2 — derivation"
-- [ ] 🚀 **15 min — mid-week velocity check + carryover audit**
-  - Open `01-current-state.md` Week 2 progress + slip ledger
-  - Count weekday slips so far this week
-  - If ≥2 slips OR any single carryover >30 min not yet pushed to Sat → flag in retro draft
-
-**End-of-day:** commit (`week-02 day-5: logistic regression L1+L2 mentor notes`).
-
-Things to add in master prompt,
-
-I want to ask the LLM as follows,
-you gave the stat quest for logistic regression it is just the introduction part of logistic regression, but you are asking the question what is sigmoid, geometric picture of log-less and asking me to derive the sigmoid from scratch, if you are asking such questions, what i want you to do is carefully analyze what videoes i should go through and blogs if they are worth reading and which is not covered by youtube vidoes and then only ask me question which can answerable by going through the vidoes.
-
-Currently i have gone through, https://www.youtube.com/watch?v=ARfXDSkQf1Y and understood what is odds and why we will use log(odds in logistic regression), need to ask claude which videos should i go through
-a
+- [ ] 💻 **75 min — `daily-notebooks/week-02/06-logistic-from-scratch.ipynb`** (create file; no sklearn for the model)
+  - **Cell 1 — imports:**
+    ```python
+    import numpy as np
+    import matplotlib.pyplot as plt
+    from sklearn.datasets import make_classification
+    ```
+  - **Cell 2 — fake binary data:**
+    ```python
+    X, y = make_classification(n_samples=200, n_features=2, n_redundant=0,
+                               n_clusters_per_class=1, random_state=42)
+    ```
+    Scatter plot colored by class.
+  - **Cell 3 — sigmoid function + sanity tests:**
+    ```python
+    def sigmoid(z): return 1 / (1 + np.exp(-z))
+    # Test: sigmoid(0) ≈ 0.5, sigmoid(10) ≈ 1.0, sigmoid(-10) ≈ 0.0
+    ```
+  - **Cell 4 — log-loss function + sanity tests:**
+    ```python
+    def log_loss(y, p, eps=1e-15):
+        p = np.clip(p, eps, 1 - eps)
+        return -np.mean(y * np.log(p) + (1 - y) * np.log(1 - p))
+    # Test: perfect → loss ≈ 0; random 0.5 → loss ≈ 0.693 (= ln 2)
+    ```
+  - **Cell 5 — gradient function + 3 sanity tests:**
+    - At truth (should be near zero)
+    - At zero weights (should be non-zero)
+    - At flipped weights (should be large)
+  - **Cell 6 — markdown:** "What does `eps` guard against? What would happen without it?"
+- [ ] 🚀 **15 min — Commit:** `week-03 day-3: notebook 06 part A (sigmoid + log-loss + sanity tests)`
