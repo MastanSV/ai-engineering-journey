@@ -92,11 +92,11 @@
 
 > This is the ONE most important reason the week failed Fri–Sun. Not 3 reasons. ONE.
 
-**Root cause:** Not enough learning videos to answer the follow up questions, videos and followup-questions mismatch.
+**Root cause:** When I can't solve something with the materials in front of me, I freeze instead of switching tactics or asking for help.
 
-**How this connects to Week 1's cascade pattern:** There is no connection between cascade pattern of week1, both are different reasons for not accomplishing the learning
+**How this connects to Week 1's cascade pattern:** Acknowledge the pattern is the same shape — confusion → avoidance → cascade.
 
-## **Proposed fix / rule change for Week 3:** The schedule of week2 is very good on Mon-Thu, only because of lack of sufficient videos to go thorugh and family time takes over the scheduled learning. i want to keep the same scheduled tempo of week2.
+## **Proposed fix / rule change for Week 3:** If stuck >20 min on a derivation/concept, switch to a different resource (blog, different video, ask mentor). Never close laptop without trying 1 alternative.
 
 ## 6. What worked (Mon–Thu)
 
