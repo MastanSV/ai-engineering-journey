@@ -18,8 +18,10 @@
 
 ### After review comments
 
-<p>The regularization will be helpful when there is not enough data, at the same time regularization will not be helpful even if the dataset is huge and having lot of noisy data</p>
+<p>The regularization will be helpful when there is not enough data, at the same time regularization will be helpful even if the dataset is huge and having lot of noisy data.</p>
 
 <p>Penalizing weights, In Ridge regression, the linear regression (sum of the squares of residuals) with λ.w², where each weight is squared when the w is more it will get punished​</p>
 
 <p>The Lasso regression (L1) can makes the weights to zero because λ.|w|, when the weight is 0.1 or something zero it can drive to zero but in the Ridge regression, because of squaring the weights, when w=0.1, w² makes 0.001 which is nearer to zero but not exactly zero that is how the Lasso regression can eliminate the weights but not the Ridge regression.</p>
+
+<p>When there are collinear features in the dataset then ridge regression does not know which collinear feature to punish and which collinear feature to value add. so it ends up picking one feature to adding the value and punishing the other</p>
