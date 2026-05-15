@@ -1,14 +1,15 @@
-### Thu May 14 — Notebook 06 Part B: GD + decision boundary (1.5hr, 9:00–10:30 PM)
-
 **Slot plan (90 min):**
 
-- [ ] 💻 **75 min — Continue `06-logistic-from-scratch.ipynb`**
-  - **Cell 7 — GD loop:** lr=0.1, epochs=1000; track loss every 50 epochs; print final weights + bias
-  - **Cell 8 — loss curve plot** (epochs vs loss — should decrease smoothly)
-  - **Cell 9 — decision boundary plot:** mesh grid over feature space, color regions by predicted class, scatter training points on top
-  - **Cell 10 — accuracy:** compute train accuracy with threshold=0.5
-  - **Cell 11 — markdown reflection:**
-    1. What did you clip/guard against (the `eps`)?
-    2. What if classes were perfectly separable — what happens to the weights?
-    3. What's the analog of the "convex bowl" from linreg?
-- [ ] 🚀 **15 min — Commit:** `week-03 day-4: notebook 06 part B (GD loop + decision boundary + reflection)`
+- [ ] ✍️ **75 min — NN3 teach-back essay** → `concepts/week-02-teachback-regularization.md` (create file)
+  - **Title:** "Regularization Explained to My Non-Technical Friend"
+  - **Length:** ≥800 words
+  - **🚨 Rule:** NO Google, NO ChatGPT, NO mentor. Write from memory only.
+  - **Must cover (1 paragraph each):**
+    1. The overfitting problem — why perfect train fit can be useless
+    2. Bias-variance tradeoff (precise definitions — close the Week 1 gap)
+    3. The shrinkage idea — why penalizing big weights helps
+    4. Ridge (L2) — what it does, when to use it
+    5. Lasso (L1) — what it does differently, feature selection
+    6. Standardization — why you must do it first
+    7. When regularization doesn't help
+- [ ] 🚀 **15 min — Commit:** `week-03 day-5: teach-back essay regularization (NN3)`
