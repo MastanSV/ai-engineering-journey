@@ -13,3 +13,13 @@
 <p>When the data is having the different features in the dataset, and when we are predicting the targeted variable, All the features needs to be standardized because each feature will represent in different unit. so for example, if you have house value prediction based on feature income, no_of_bedRooms, areainsqft, if you see the all the features represent in different unit. when you do not do standardization, let say income represent in lakhs, no_of_bedRooms will be represented in integer which will not move mostly more than 5, and you can not present income lakhs unit for bedrooms, so it has to standardized so that unit for each feature will be presented in standard unit</p>
 
 <p>There are limitations for the regularization or sometimes it does not help. so let say when the data is underfit the model regularization does not help. Sometimes regularization will not be helpful when there are more colinear features in dataset and regularization may become unstable. and regularization will not helpful or work when you do not choose correct λ value. These are some of the scenarios where regularization does not help.</p>
+
+---
+
+### After review comments
+
+<p>The regularization will be helpful when there is not enough data, at the same time regularization will not be helpful even if the dataset is huge and having lot of noisy data</p>
+
+<p>Penalizing weights, In Ridge regression, the linear regression (sum of the squares of residuals) with λ.w², where each weight is squared when the w is more it will get punished​</p>
+
+<p>The Lasso regression (L1) can makes the weights to zero because λ.|w|, when the weight is 0.1 or something zero it can drive to zero but in the Ridge regression, because of squaring the weights, when w=0.1, w² makes 0.001 which is nearer to zero but not exactly zero that is how the Lasso regression can eliminate the weights but not the Ridge regression.</p>
