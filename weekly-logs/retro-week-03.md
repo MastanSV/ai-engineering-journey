@@ -43,7 +43,7 @@
 - **NN2** Twitter: 1 / 1 thread (thread #4 posted? URL: https://x.com/mastan_ai/status/2055971907586105384?s=20)
 - **NN3** Teach-back: self assessed 7.5/10
 - **NN4** Anki: 11 cards added, 7 / 7 daily reviews
-- **NN5** Sunday retro: done ✅ (NEED TO UPDATE ONCE IT IS REVIEWD BY CLAUDE)
+- **NN5** Sunday retro: done ✅ (7/10)
 
 **Red-flag week?** (≥2 NNs missed) → No NN is missed.
 
