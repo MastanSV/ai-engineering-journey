@@ -4,3 +4,6 @@ Why standardize before Ridge/Lasso?;In L1/L2 all features will represents in dif
 what is Lasso regression?;Linear regression with penalty λ·Σ|wⱼ|, can drive the some of the wights to exactly zero.
 L1 vs L2 - key behavior difference?; L1 (Lasso regression) can drive some weights to zero, L2 (Ridge regression) can drive weghts to zero but not exactly to zero.
 alpha (λ) parameter?; alpha parameter says how bad the penalty is. if λ=0, it will be linear regression λ->∞ all weights = 0
+k-fold cross-validation; Split train into k folds; rotate which fold is held out, average score across k runs. Reduces variance of single-split estimate. ; week-03 evaluation
+ROC curve ; Plot of True Positive Rate (y) vs False Positive Rate (x) at every classification threshold. ; week-03 evaluation
+AUC ; Area Under the ROC Curve. 1.0 = perfect, 0.5 = random. Threshold-independent measure of classifier quality. ; week-03 evaluation
