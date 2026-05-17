@@ -25,3 +25,13 @@ When a weekday slips and a task carries:
 4. **Why:** prevents single-day cascades from eating 3 weekdays. Weekday slots stay 1.5hr-shaped; weekend absorbs heavier rework.
 
 Source: `weekly-logs/retro-week-01-linreg.md` §5 → `04-decisions-log.md` 2026-05-03.
+
+## Feynman learning checklist (added 2026-05-17)
+
+Before marking any concept "learned":
+
+1. Write a 3-sentence explanation using zero jargon.
+2. If you can't, identify the gap and re-study that specific piece.
+3. Only then add the Anki card.
+
+Source: `weekly-logs/retro-week-03.md` §9 gap #2.

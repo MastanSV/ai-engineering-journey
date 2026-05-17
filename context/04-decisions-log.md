@@ -85,3 +85,9 @@
 - **Alternatives considered:** ...
 - **Reversible?** Yes/No/Partial — until when?
 ```
+
+## 2026-05-17 · Defer decision trees / random forests / ensembles to Phase 2 buffer
+
+- **Why:** Week 4 is the Phase 1 gate. Shipping P1 to the 6-criterion quality bar + first HF Space deploy is higher value than adding breadth. Trees are not required for P1.
+- **Alternatives considered:** (a) Learn trees Mon–Wed, ship P1 Thu–Sun — rejected, too compressed; (b) Replace P1 with a trees-based project — rejected, no time to learn + build + deploy.
+- **Reversible?** Yes — can learn trees in Week 5–6 buffer if needed for P2.
