@@ -19,7 +19,7 @@
 
 ### Diagnostic: which day(s) were >2hr below target, and the REAL reason?
 
-- There is no other which i have spent more than 2hrs, i have spent mostly 1.45hrs.
+- Monday i have spent 0hrs as i was travelling.
 
 ## 2. What shipped vs DoD checklist
 
@@ -81,13 +81,13 @@
 
 ## 6. Root-cause analysis (if red-flag week)
 
-> ONE most important reason.
+> NA
 
-**Root cause:**
+**Root cause:** NA
 
-**How this connects to Week 1–2 cascade pattern:**
+**How this connects to Week 1–2 cascade pattern:** NA
 
-**Proposed fix / rule change for Week 4:**
+**Proposed fix / rule change for Week 4:** NA
 
 ---
 
@@ -101,7 +101,7 @@
 ## 8. Scores
 
 - Mood (1–10): 6
-- Confidence I'll hit Dec 2026 offer (1–10): 5
+- Confidence I'll hit Dec 2026 offer (1–10): 5 [given 1 below compared to last week because if i follow feynman technique properly, it takes more than scheduled time i felt.]
 - Teach-back score (self-assessed): 7.5 / 10
 
 ---
@@ -110,4 +110,4 @@
 
 1. I feel that logistic regression needs to be understand better.
 2. When iam learning new topic i should follow feynman rule, so that i will understand better. but iam not following enough.
-3. It still can better on how do i make this learning better.
+3. I dont yet have a systamatic approach for learning new topics - need to formalize the Feynman method as a checklist.
