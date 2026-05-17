@@ -2,7 +2,7 @@
 
 1. What does the ROC curve plot on its X and Y axes?
 
-> - ROC curve will have on x-axis -> False Negatives, y-axis -> True Positives, and ROC curve helps us to decide which is best threshold for classification
+> - ROC curve will have on x-axis -> False Positive rate, y-axis -> True Positives rate, and ROC curve helps us to decide which is best threshold for classification
 
 2. What does each point on the ROC curve represent?
 
@@ -14,7 +14,7 @@
 
 4. Why is AUC threshold-independent — and why is that useful?
 
-   > AUC is threshold independent because When the AUC gives us how confident it for particualr sample, it might be positive or negative example. It does not stick to one threshold and give the result instead it gives the prediction based on across all thresholds and gives the prediction.
+   > AUC is threshold-independent, AUC will tell when take the sample of positive or negative it tells only how confident it is. and it will give this based on not considering the threshold because if you consider threshold what happens is that accuracy will change even though it is same model but only change in threshold which is not good. that is why AUC is useful.
 
 5. When would you NOT use AUC (think: heavy class imbalance)?
    > I will not go AUC when the data is having more negative classification instead of positives, because in this case FPR, in denominator you will have TN which is big and your FPR will be very tiny which gives the wrong predictions.
