@@ -30,7 +30,7 @@
 - [✅] Teach-back essay (regularization, ≥800 words, no-Google)
 - [✅] Twitter thread #4 (regularization) — POSTED LIVE
 - [✅] Glossary fill (`05-glossary.md`) — 14 terms in own words
-- [✅] Anki cards added (count: \_\_ / 7 target — 4 logistic + 3 evaluation)
+- [✅] Anki cards added (count: 11 / 7 target — 4 logistic + 3 evaluation)
 - [✅] Saturday velocity check (slip ledger + §5 audit note)
 - [✅] This retro
 - [✅] Week 4 stub / plan
@@ -39,9 +39,9 @@
 
 ## 3. NN scorecard
 
-- **NN1** GitHub commits: 6 / 7 days (streak status: \*\*)
+- **NN1** GitHub commits: 6 / 7 days (streak status: 6 day streak monday broke)
 - **NN2** Twitter: 1 / 1 thread (thread #4 posted? URL: https://x.com/mastan_ai/status/2055971907586105384?s=20)
-- **NN3** Teach-back: ** (7.5 ** /10)
+- **NN3** Teach-back: self assessed 7.5/10
 - **NN4** Anki: 11 cards added, 7 / 7 daily reviews
 - **NN5** Sunday retro: done ✅ (NEED TO UPDATE ONCE IT IS REVIEWD BY CLAUDE)
 
@@ -106,8 +106,7 @@
 
 ---
 
-## 9. Top 3 gaps for Week 4
+## 9. Top 2 gaps for Week 4
 
 1. I feel that logistic regression needs to be understand better.
-2. When iam learning new topic i should follow feynman rule, so that i will understand better. but iam not following enough.
-3. I dont yet have a systamatic approach for learning new topics - need to formalize the Feynman method as a checklist.
+2. I dont yet have a systamatic approach for learning new topics - need to formalize the Feynman method as a checklist.
