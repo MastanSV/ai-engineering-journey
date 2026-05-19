@@ -4,6 +4,8 @@
 
 <p>In this project, from the dataset we will be predicting whether the person has heart disease or not. Classifying the person has heart disease or not from the attributes given is very important because when we train the model properly with this dataset, from the future dataset, we can easily classify whether person has disease or not accurately. this model can be used anywhere in healthcare domain, like hospitals or general health surveys to understand whether the given person has heart disease or not.</p>
 
+<p>It is very important to predict correctly, because if the person is having heart disease, but model classifies he doesn't then this mistake will be cost of patient life.</p>
+
 ### Data set:
 
 This data set dates from 1988 and consists of four databases: Cleveland, Hungary, Switzerland, and Long Beach V. It contains 76 attributes, including the predicted attribute, but all published experiments refer to using a subset of 14 of them. The "target" field refers to the presence of heart disease in the patient. It is integer valued 0 = no disease and 1 = disease.
@@ -34,7 +36,7 @@ Input types, The dataset contains the following columns and iam listing the type
 3. chest pain type (4 values) (0, 1, 2, 3) int
 4. resting blood pressure - int
 5. serum cholestoral in mg/dl - int
-6. fasting blood sugar > 120 mg/dl - iny
+6. fasting blood sugar > 120 mg/dl - int
 7. resting electrocardiographic results (values 0,1,2) - int
 8. maximum heart rate achieved - int
 9. exercise induced angina - int
@@ -45,9 +47,10 @@ Input types, The dataset contains the following columns and iam listing the type
 
 ### Evaluation Plan:
 
-<p>As the classification model, the metrics i will noting are, precision, recall, ROC-AUC score.
-And also i will check whether the data balanced or imbalanced dataset, if it is a imbalanced dataset precision will give wrong picture. </p>
+<p>I need to check whether it is balanced dataset or imbalanced dataset.</p>
+<p>false negative = missing a sick patient, So the metric i will be prioritizing is precision. because whatever my model predict correctly, the model mistake in prediction of heart disease patient is at cost of patient life.</p>
+<p>ROC-AUC is good for overall ranking, Because it tells the confidence that if i pick one negative sample and postivie sample, how confident my model for giving more score for positive sample and less score negative sample. But my primary decision metric will be precision along with ROC-AUC</p>
 
 ### Approach:
 
-<p>I will try Ridge-Lasso regression model and Logistic regression model and will compare both of them.</p>
+<p>I will try Ridge-Lasso with Logistic regression.</p>
