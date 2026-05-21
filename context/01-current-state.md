@@ -1,12 +1,12 @@
 # Current State — Snapshot
 
-> **Updated:** 2026-05-17 (Sunday — Week 4 Day 0, planning)
+> **Updated:** 2026-05-21 (Thursday — Week 4 Day 4)
 > _Update this file at the end of every working session._
 
 ## Calendar
 
-- **Current date:** May 17, 2026
-- **Current week:** **4 of 32** (Day 0 — planning) — Week 3 closed (clean)
+- **Current date:** May 21, 2026
+- **Current week:** **4 of 32** (Day 4 — Thursday) — Week 3 closed (clean)
 - **Current phase:** Phase 1 — Math + ML Foundations (Weeks 1–4)
 - **Theme this week:** _Phase 1 Finish — Ship P1_
 - **Target offer date:** December 2026
@@ -47,18 +47,19 @@
 
 ## Week 4 progress (live)
 
-- **Mon May 18** —
-- **Tue May 19** —
-- **Wed May 20** —
-- **Thu May 21** —
+- **Mon May 18** — ❓ not tracked this session
+- **Tue May 19** — ✅ P1 EDA + preprocessing (`Heart_Disease_Dataset.ipynb` — EDA, null checks, class balance, correlation heatmap, preprocessing pipeline, train/test split)
+- **Wed May 20** — 🔄 P1 model training not started → carried to Thu
+- **Thu May 21** — (today — Wed carryover: model training + CV)
 - **Fri May 22** —
 - **Sat May 23** —
 - **Sun May 24** —
 
 ## Slip ledger (Week 4 — live)
 
-| Day | State | Slipped item | Reason | Remainder (min) | Action |
-| --- | ----- | ------------ | ------ | --------------- | ------ |
+| Day        | State | Slipped item           | Reason    | Remainder (min) | Action                                          |
+| ---------- | ----- | ---------------------- | --------- | --------------- | ----------------------------------------------- |
+| Wed May 20 | 🔄    | P1 model training + CV | _fill in_ | 90              | Carried to Thu May 21; Eval suite pushed to Sat |
 
 **Velocity check status:** _(updated Saturday)_
 
