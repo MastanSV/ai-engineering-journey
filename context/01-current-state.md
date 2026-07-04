@@ -1,15 +1,22 @@
 # Current State — Snapshot
 
-> **Updated:** 2026-05-21 (Thursday — Week 4 Day 4)
+> **Updated:** 2026-07-04 (Week 4 — RESUMED after pause; today = Week 4 · Saturday)
 > _Update this file at the end of every working session._
 
 ## Calendar
 
-- **Current date:** May 21, 2026
-- **Current week:** **4 of 32** (Day 4 — Thursday) — Week 3 closed (clean)
+- **Current date:** July 4, 2026 (treated as **Saturday** — 6hr day)
+- **Current week:** **4 of 32** (resumed mid-sprint after ~6-week pause) — Week 3 closed (clean)
 - **Current phase:** Phase 1 — Math + ML Foundations (Weeks 1–4)
 - **Theme this week:** _Phase 1 Finish — Ship P1_
 - **Target offer date:** December 2026
+
+## Resume note (2026-07-04)
+
+- Journey **paused ~May 20** (mid-Week 4, after Day 2) and **resumed July 4**.
+- Calendar re-anchored: **today = Week 4 · Saturday**. Remaining Week 4 work re-flows across this weekend + next week (Jul 4 → Jul 12).
+- ~6-week gap → today front-loads a **refresher block** (re-read notes, rerun Anki, rerun notebooks 05–07) before resuming P1.
+- Week hours (re-anchored): Sat 6 + Sun 6 + Mon–Fri 7.5 = **19.5hr** (on target).
 
 ## Hardware
 
@@ -19,11 +26,12 @@
 
 ## Environment
 
-- `C:\\Temp\\Learnings\\ai-engineering-journey`
+- `C:\Temp\Learnings\ai-engineering-journey`
 - Python 3.11 via uv, `.venv` active
 - MLflow ✅ (used in Weeks 0–3)
 - numpy + matplotlib ✅
 - Ollama + llama3.2:3b ✅
+- ⚠️ Re-verify env on resume (first task today): confirm imports numpy/pandas/sklearn/matplotlib/mlflow still run.
 
 ## Public presence
 
@@ -45,69 +53,25 @@
 - ⏭️ **Deferred** — explicitly skipped, logged with reason
 - ❌ **Skipped** — missed entirely, no recovery (rare; triggers re-plan)
 
-## Week 4 progress (live)
+## Week 4 progress (live — re-anchored)
 
-- **Mon May 18** — ❓ not tracked this session
-- **Tue May 19** — ✅ P1 EDA + preprocessing (`Heart_Disease_Dataset.ipynb` — EDA, null checks, class balance, correlation heatmap, preprocessing pipeline, train/test split)
-- **Wed May 20** — 🔄 P1 model training not started → carried to Thu
-- **Thu May 21** — (today — Wed carryover: model training + CV)
-- **Fri May 22** —
-- **Sat May 23** —
-- **Sun May 24** —
-
-## Slip ledger (Week 4 — live)
-
-| Day        | State | Slipped item           | Reason    | Remainder (min) | Action                                          |
-| ---------- | ----- | ---------------------- | --------- | --------------- | ----------------------------------------------- |
-| Wed May 20 | 🔄    | P1 model training + CV | _fill in_ | 90              | Carried to Thu May 21; Eval suite pushed to Sat |
-
-**Velocity check status:** _(updated Saturday)_
-
-## Week 3 results (final — clean week)
-
-- Hours logged: **17.15 / 18 target** (95%)
-- Notebooks shipped: 2/2 (notebook 06 logistic ✅; notebook 07 CV ✅)
-- NNs: 5/5 — **first all-clean week**
-- NN1 6/7 commits, NN2 thread #4 ✅, NN3 teach-back 7.5/10, NN4 11 cards + 7/7 reviews, NN5 retro ✅
-- Not a red-flag week
-- Slips: 1 (Mon — travel, no cascade)
-- Rules tested: 20-min stuck rule (not triggered), 30-min carryover (compliant — whole week rescheduled with mentor)
-- Mood 6/10 | Confidence Dec 2026: 5/10
-
-## Week 2 results (final — red-flag week)
-
-- Hours logged: **9.5 / 19 target** (50% — lowest so far)
-- Notebooks shipped: 1/3 (notebook 05 Ridge+Lasso ✅; 06 logistic ❌; 07 CV ❌)
-- NNs: 2/5 (NN1 5/7 ✅, NN2 1/2 ❌, NN3 ❌, NN4 3/7 ❌, NN5 late ✅)
-- **Red-flag week:** YES — 3 NNs missed (NN2, NN3, NN4)
-- Root cause: comprehension wall → freeze → cascade
-- New rule: **20-min stuck rule**
-- Mood 6/10 | Confidence Dec 2026: 6/10
-
-## Week 1 results (final)
-
-- Hours logged: **24 / 19 target**
-- Notebooks shipped: 4/4
-- Teach-back: 7.5/10
-- Slips: 3 weekday → recovered on weekend
-- **Verdict:** Shipped scope (post-cut). Cascade pattern identified.
-
-## Week 0 results (final)
-
-- Hours logged: 17 / 22 target
-- Baseline EDA: 6.5/10 | Baseline essay: 4/10
-- **Verdict:** Full curriculum, no skipping
-
-## Top gaps being addressed in Week 4
-
-1. Logistic regression depth — teach-back will force Feynman-level understanding
-2. Never deployed to HF Space — P1 is the first deploy
-3. No Feynman learning checklist formalized yet — adding to tracking rules
+- **Day 1 (pre-pause)** — ✅ Classification-metrics notebook (`daily-notebooks/week-04/01-classification-metrics.ipynb`) + P1 scoping. **P1 = Heart Disease classification** (README written: precision + ROC-AUC priority)
+- **Day 2 (pre-pause)** — 🔄 P1 notebook started (`projects/05_P1_Tabular_ML/Heart_Disease_Dataset.ipynb`, `heart.csv`) — EDA/preprocessing incomplete
+- **⏸️ PAUSE ~May 20 → ▶️ RESUME July 4**
+- **Sat Jul 4** — refresher + finish EDA/preprocessing + baseline model (today)
+- **Sun Jul 5** — models + 5-fold CV + evaluation suite
+- **Mon Jul 6** — best-model selection + MLflow finalize
+- **Tue Jul 7** — logistic teach-back (part 1)
+- **Wed Jul 8** — finish teach-back + Anki week-04
+- **Thu Jul 9** — Gradio app.py
+- **Fri Jul 10** — HF Space deploy + test
+- **Sat Jul 11** — README quality bar + Loom + Twitter thread #5 + Phase 1 gate check
+- **Sun Jul 12** — Week 4 retro + Phase 2 prereading + Week 5 plan
 
 ## NN status (Week 4 — live)
 
-- **NN1** GitHub commits: \_ / 7 days
-- **NN2** Twitter: \_ / 1 thread
-- **NN3** Teach-back: \_ /10
-- **NN4** Anki: _ cards added, _ / 7 daily reviews
-- **NN5** Sunday retro: \_
+- **NN1** GitHub commits: _ / (count days actually worked) _(verify from git log)\_
+- **NN2** Twitter: 0 / 1 thread — `week-04-thread-p1.md` not created yet
+- **NN3** Teach-back: not done — `week-04-teachback-logistic.md` not created yet
+- **NN4** Anki: 0 week-04 cards (`anki-cards-week-04.tsv` not created); daily reviews resume today
+- **NN5** Sunday retro: not done — `retro-week-04.md` not created yet
