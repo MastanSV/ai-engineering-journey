@@ -35,10 +35,10 @@ Finish and ship P1 (Heart Disease classification, Tabular ML w/ engineering rigo
 
 ### Sat Jul 4 — RESUME: refresh + finish EDA + baseline (6hr) → see `06-current-task.md`
 
-- [ ] Warm-up review (notes + Anki + rerun notebooks 05–07) — 105 min
-- [ ] Finish P1 EDA + preprocessing (class balance, heatmap, encode/scale, stratified 80/20 split) — 120 min
-- [ ] P1 baseline LogisticRegression + precision/recall/F1/confusion matrix + MLflow reference run — 90 min
-- [ ] 🚀 Commit: `week-04 resume: P1 EDA + preprocessing + baseline model`
+- [✅] Warm-up review (notes + Anki + rerun notebooks 05–07) — 105 min
+- [✅] Finish P1 EDA + preprocessing (class balance, heatmap, encode/scale, stratified 80/20 split) — 120 min
+- [✅] P1 baseline LogisticRegression + precision/recall/F1/confusion matrix + MLflow reference run — 90 min
+- [✅] 🚀 Commit: `week-04 resume: P1 EDA + preprocessing + baseline model`
 
 ---
 

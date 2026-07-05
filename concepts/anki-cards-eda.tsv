@@ -1,1 +1,2 @@
 Why does mean() gives rate when values are 0/1 ?;Becaus mean is sum of 1's by sample count
+What is class in dataset?; For given dataset, model is trying to predict the category, the category is called class.
