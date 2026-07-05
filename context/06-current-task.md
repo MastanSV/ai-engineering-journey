@@ -1,43 +1,36 @@
-> **As of 2026-07-04 — Week 4 · Saturday (RESUME day, 6hr / 360 min, flexible blocks).**
-> Journey paused ~May 20, resumed today. Front-load a refresher, then resume P1.
+> **As of 2026-07-05 — Week 4 · Sunday (6hr / 360 min, flexible blocks).**
+> Yesterday: EDA + preprocessing + baseline LogisticRegression logged to MLflow. Today: regularized models + CV + full evaluation.
 
-# Current Task — Refresh + resume P1 (finish EDA → baseline model)
+# Current Task — P1 models + 5-fold CV + evaluation suite
 
-## Block 1 — Env + memory warm-up (45 min)
+## Block 0 — Warm-up (15 min)
 
-- [ ] 10 min — Env check: activate `.venv`, test-import numpy/pandas/sklearn/matplotlib/mlflow. Fix anything broken first.
-- [ ] 35 min — Re-read own notes: `concepts/week-02-prereading.md` (Ridge/Lasso + logistic Q&A) + `concepts/week-02-teachback-regularization.md`.
+- [ ] Anki review (Week 0–2 + any new cards). Note stragglers.
+- [ ] Reopen `Heart_Disease_Dataset.ipynb`; confirm yesterday's split + baseline run still reproduce.
 
-## Block 2 — Reactivate recall (60 min)
+## Block 1 — Regularized models (150 min)
 
-- [ ] 30 min — Anki: run all Week 0–2 decks. Note failed cards → teach-back weak spots for Tue.
-- [ ] 30 min — Rerun notebooks 05 (ridge/lasso), 06 (logistic), 07 (CV) top-to-bottom.
+- [ ] Fit **L2 (Ridge-style)** LogisticRegression — recall the `penalty` + `C` params (remember: `C` is the _inverse_ of λ, so small `C` = strong regularization). Think through what that means before you set it.
+- [ ] Fit **L1 (Lasso-style)** LogisticRegression — needs a solver that supports L1 (`liblinear` or `saga`). After fitting, inspect which coefficients went to (near) zero → tie back to your Lasso "feature selection" note.
+- [ ] **5-fold CV** with `cross_val_score` / `cross_validate`. Score on **precision** and **roc_auc** (per your eval plan), not just accuracy — the class balance you found yesterday tells you why accuracy alone lies.
+- [ ] Log every run to MLflow experiment `p1-tabular-ml`: params (`penalty`, `C`, solver) + CV mean/std of each metric.
 
-## Block 3 — Re-enter P1 (15 min)
-
-- [ ] Re-read `projects/05_P1_Tabular_ML/README.md`; open `Heart_Disease_Dataset.ipynb`; find where you stopped.
+> ⏱️ 20-min stuck rule: if a solver error or convergence warning blocks you >20 min, switch approach (scale check? different solver? `max_iter`?) — don't freeze.
 
 ## ☕ Break (15 min)
 
-## Block 4 — Finish EDA + preprocessing (120 min) [completes Day-2 leftover]
+## Block 2 — Evaluation suite (120 min)
 
-- [ ] Load `heart.csv`; shape, `df.info()`, `df.describe()`, null check
-- [ ] Class balance of `target` (0/1) — decides if accuracy is misleading
-- [ ] Correlation heatmap + distribution plots
-- [ ] Encoding decision (true categoricals vs encoded ints) + `StandardScaler` (recall WHY Ridge/Lasso need it)
-- [ ] Train/test split: 80/20, `random_state=42`, `stratify=y` (think through why)
+- [ ] Confusion matrix for each model on the test set — read it in plain language (how many sick patients missed?).
+- [ ] Precision, recall, F1 (`classification_report`).
+- [ ] ROC curve + AUC (`roc_curve`, `roc_auc_score`); plot the curves together.
+- [ ] **Threshold sweep:** vary the decision threshold, watch precision vs recall trade off. Pick a threshold that matches your "precision-first / missing a sick patient is costly" reasoning — and justify it in a markdown cell.
+- [ ] **Comparison table (markdown):** baseline vs L2 vs L1, side by side on precision / recall / F1 / ROC-AUC.
 
-## Block 5 — Baseline model + MLflow (90 min)
+## Block 3 — Wrap + buffer (45 min)
 
-- [ ] Fit plain `LogisticRegression` baseline; predictions
-- [ ] Compute precision first (+ recall, F1, confusion matrix) — reuse `week-04/01-classification-metrics.ipynb`
-- [ ] MLflow experiment `p1-tabular-ml`: log params + baseline metrics as reference run
+- [ ] Feynman check: in 3 jargon-free sentences, why did the regularized model beat (or not beat) the baseline here? If you can't → re-study before moving on.
+- [ ] 🚀 Commit: `week-04 day: P1 models + CV + evaluation`
+- [ ] End-of-day: update `01-current-state.md` (Sun progress + NN status) and `03-active-tasks.md` (check off Sunday).
 
-## Wrap (15 min)
-
-- [ ] 🚀 Commit: `week-04 resume: P1 EDA + preprocessing + baseline model`
-- [ ] Update `01-current-state.md` + `03-active-tasks.md` end-of-day
-
-**DoD today:** clean stratified split done, one logged MLflow baseline run, precision computed.
-
-> ⏱️ 20-min stuck rule active. Feynman checklist applies before any new Anki card.
+**DoD today:** 3 models logged to MLflow with 5-fold CV precision + ROC-AUC, a comparison table, and a justified decision threshold.
