@@ -6,9 +6,9 @@
 
 ## Block 0 — Warm-up (15 min)
 
-- [ ] 0.1 Run Anki (Week 0–2 + new cards). Note any card you fail.
-- [ ] 0.2 Reopen `Heart_Disease_Dataset.ipynb`; restart kernel + run all cells.
-- [ ] 0.3 Confirm you still have `X_train`, `X_test`, `y_train`, `y_test` (scaled + stratified) and yesterday's baseline run reproduces.
+- [x] 0.1 Run Anki (Week 0–2 + new cards). Note any card you fail.
+- [x] 0.2 Reopen `Heart_Disease_Dataset.ipynb`; restart kernel + run all cells.
+- [x] 0.3 Confirm you still have `X_train`, `X_test`, `y_train`, `y_test` (scaled + stratified) and yesterday's baseline run reproduces.
 
 ---
 
