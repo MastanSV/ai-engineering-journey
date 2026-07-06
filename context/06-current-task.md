@@ -16,24 +16,24 @@
 
 ### Setup
 
-- [ ] 1.1 Import `LogisticRegression` (sklearn.linear_model) and the metric functions you'll use.
+- [x] 1.1 Import `LogisticRegression` (sklearn.linear_model) and the metric functions you'll use.
 
 ### Part A — L2 (Ridge-style)
 
-- [ ] A1 Create `LogisticRegression(penalty='l2', C=1.0)`.
-- [ ] A2 **Checkpoint:** `C` is the inverse of λ. To make regularization _stronger_, do you raise or lower `C`? Write 1 line.
-- [ ] A3 `.fit()` on training data.
-- [ ] A4 `.predict()` on test + `.predict_proba()` (keep the class-1 column).
-- [ ] A5 Print precision + ROC-AUC; jot both numbers in a markdown cell.
+- [x] A1 Create `LogisticRegression(penalty='l2', C=1.0)`.
+- [x] A2 **Checkpoint:** `C` is the inverse of λ. To make regularization _stronger_, do you raise or lower `C`? Write 1 line.
+- [x] A3 `.fit()` on training data.
+- [x] A4 `.predict()` on test + `.predict_proba()` (keep the class-1 column).
+- [x] A5 Print precision + ROC-AUC; jot both numbers in a markdown cell.
 
 ### Part B — L1 (Lasso-style)
 
-- [ ] B1 Create `LogisticRegression(penalty='l1', solver='liblinear')` (or `'saga'`).
-- [ ] B2 **Checkpoint:** why does L1 need a special solver? (One sentence — absolute-value penalty not differentiable at 0.)
-- [ ] B3 `.fit()`, then predict + predict_proba.
-- [ ] B4 Inspect `.coef_`; count how many are ~0.
-- [ ] B5 **Checkpoint:** list features whose coef went to ~0. Match your Lasso "feature selection" note? 1–2 sentences.
-- [ ] B6 Print precision + ROC-AUC; jot numbers.
+- [x] B1 Create `LogisticRegression(penalty='l1', solver='liblinear')` (or `'saga'`).
+- [x] B2 **Checkpoint:** why does L1 need a special solver? (One sentence — absolute-value penalty not differentiable at 0.)
+- [x] B3 `.fit()`, then predict + predict_proba.
+- [x] B4 Inspect `.coef_`; count how many are ~0.
+- [x] B5 **Checkpoint:** list features whose coef went to ~0. Match your Lasso "feature selection" note? 1–2 sentences.
+- [x] B6 Print precision + ROC-AUC; jot numbers.
 
 ### Part C — 5-fold CV
 
