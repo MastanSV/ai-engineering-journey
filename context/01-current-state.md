@@ -1,22 +1,21 @@
 # Current State — Snapshot
 
-> **Updated:** 2026-07-04 (Week 4 — RESUMED after pause; today = Week 4 · Saturday)
+> **Updated:** 2026-07-13 (Week 5 — Sunday planning; revamped schedule Tue Jul 15 → Sun Jul 20)
 > _Update this file at the end of every working session._
 
 ## Calendar
 
-- **Current date:** July 4, 2026 (treated as **Saturday** — 6hr day)
-- **Current week:** **4 of 32** (resumed mid-sprint after ~6-week pause) — Week 3 closed (clean)
-- **Current phase:** Phase 1 — Math + ML Foundations (Weeks 1–4)
-- **Theme this week:** _Phase 1 Finish — Ship P1_
+- **Current date:** July 13, 2026 (Sunday — planning day)
+- **Current week:** **5 of 32**
+- **Current phase:** Phase 1 → Phase 2 transition (finishing P1, then Phase 2 begins)
+- **Theme this week:** _Ship P1 + Close Phase 1 Gate_
 - **Target offer date:** December 2026
 
 ## Resume note (2026-07-04)
 
 - Journey **paused ~May 20** (mid-Week 4, after Day 2) and **resumed July 4**.
-- Calendar re-anchored: **today = Week 4 · Saturday**. Remaining Week 4 work re-flows across this weekend + next week (Jul 4 → Jul 12).
-- ~6-week gap → today front-loads a **refresher block** (re-read notes, rerun Anki, rerun notebooks 05–07) before resuming P1.
-- Week hours (re-anchored): Sat 6 + Sun 6 + Mon–Fri 7.5 = **19.5hr** (on target).
+- Calendar re-anchored: **Jul 4 = Week 4 · Saturday**.
+- ~6-week gap → front-loaded a **refresher block** before resuming P1.
 
 ## Hardware
 
@@ -27,11 +26,10 @@
 ## Environment
 
 - `C:\Temp\Learnings\ai-engineering-journey`
-- Python 3.11 via uv, `.venv` active
-- MLflow ✅ (used in Weeks 0–3)
-- numpy + matplotlib ✅
+- Python 3.11 via uv, `.venv-1` active
+- MLflow ✅ (used in Weeks 0–4)
+- numpy + matplotlib + sklearn + pandas ✅
 - Ollama + llama3.2:3b ✅
-- ⚠️ Re-verify env on resume (first task today): confirm imports numpy/pandas/sklearn/matplotlib/mlflow still run.
 
 ## Public presence
 
@@ -53,25 +51,30 @@
 - ⏭️ **Deferred** — explicitly skipped, logged with reason
 - ❌ **Skipped** — missed entirely, no recovery (rare; triggers re-plan)
 
-## Week 4 progress (live — re-anchored)
+## Week 4 summary (closed)
 
-- **Day 1 (pre-pause)** — ✅ Classification-metrics notebook (`daily-notebooks/week-04/01-classification-metrics.ipynb`) + P1 scoping. **P1 = Heart Disease classification** (README written: precision + ROC-AUC priority)
-- **Day 2 (pre-pause)** — 🔄 P1 notebook started (`projects/05_P1_Tabular_ML/Heart_Disease_Dataset.ipynb`, `heart.csv`) — EDA/preprocessing incomplete
-- **⏸️ PAUSE ~May 20 → ▶️ RESUME July 4**
-- **Sat Jul 4** — refresher + finish EDA/preprocessing + baseline model (today)
-- **Sun Jul 5** — models + 5-fold CV + evaluation suite
-- **Mon Jul 6** — best-model selection + MLflow finalize
-- **Tue Jul 7** — logistic teach-back (part 1)
-- **Wed Jul 8** — finish teach-back + Anki week-04
-- **Thu Jul 9** — Gradio app.py
-- **Fri Jul 10** — HF Space deploy + test
-- **Sat Jul 11** — README quality bar + Loom + Twitter thread #5 + Phase 1 gate check
-- **Sun Jul 12** — Week 4 retro + Phase 2 prereading + Week 5 plan
+- ✅ EDA + preprocessing + baseline model + MLflow
+- ✅ L2 (Ridge) + L1 (Lasso) models trained
+- ✅ 5-fold cross-validation (precision + ROC-AUC)
+- ✅ MLflow experiment logging
+- ✅ Confusion matrix + classification report
+- ✅ Recall-vs-precision reconciliation (switched to recall-first for screening)
+- 🔄 Evaluation suite (ROC curve, threshold sweep, comparison table) → carried to Week 5
 
-## NN status (Week 4 — live)
+## Week 5 progress (live)
 
-- **NN1** GitHub commits: _ / (count days actually worked) _(verify from git log)\_
-- **NN2** Twitter: 0 / 1 thread — `week-04-thread-p1.md` not created yet
-- **NN3** Teach-back: not done — `week-04-teachback-logistic.md` not created yet
-- **NN4** Anki: 0 week-04 cards (`anki-cards-week-04.tsv` not created); daily reviews resume today
-- **NN5** Sunday retro: not done — `retro-week-04.md` not created yet
+- **Mon Jul 14** — ✅ (done / not available)
+- **Tue Jul 15** — Finish evaluation suite (ROC curve, threshold sweep, comparison table)
+- **Wed Jul 16** — Best-model selection + MLflow finalize
+- **Thu Jul 17** — Logistic teach-back part 1
+- **Fri Jul 18** — Finish teach-back + Anki cards
+- **Sat Jul 19** — Gradio app + HF Space deploy
+- **Sun Jul 20** — README polish + Loom + Twitter #5 + Phase 1 gate + retro
+
+## NN status (Week 5 — live)
+
+- **NN1** GitHub commits: 0 / (pending Tue commit)
+- **NN2** Twitter: 0 / 1 thread — `week-05-thread-p1.md` planned for Sun Jul 20
+- **NN3** Teach-back: not done — `week-04-teachback-logistic.md` planned Thu–Fri Jul 17–18
+- **NN4** Anki: 0 week-04 cards (`anki-cards-week-04.tsv` planned Fri Jul 18); daily reviews active
+- **NN5** Sunday retro: not done — `retro-week-05.md` planned Sun Jul 20
