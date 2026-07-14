@@ -6,37 +6,37 @@
 
 ## Block 0 — Warm-up (15 min)
 
-- [ ] 0.1 Run Anki (Week 0–3 + any new cards). Note any card you fail.
-- [ ] 0.2 Reopen `Heart_Disease_Dataset.ipynb`; restart kernel + run all cells to restore state.
-- [ ] 0.3 Confirm `y_pred_l2`, `y_pred_l1`, and `positive_scores` variables are live.
+- [x] 0.1 Run Anki (Week 0–3 + any new cards). Note any card you fail.
+- [x] 0.2 Reopen `Heart_Disease_Dataset.ipynb`; restart kernel + run all cells to restore state.
+- [x] 0.3 Confirm `y_pred_l2`, `y_pred_l1`, and `positive_scores` variables are live.
 
 ---
 
 ## Block 1 — Part G: ROC curve + AUC (30 min)
 
-- [ ] G1 Import `roc_curve` + `roc_auc_score` (already imported — confirm).
-- [ ] G2 Compute ROC (fpr, tpr, thresholds) for both models using the class-1 probabilities.
-- [ ] G3 Plot both ROC curves on one axes; add the diagonal "random" line. Label each curve with its AUC score.
-- [ ] G4 **Checkpoint:** what does a point in the top-left corner mean? What does the diagonal represent? 1 sentence each.
+- [x] G1 Import `roc_curve` + `roc_auc_score` (already imported — confirm).
+- [x] G2 Compute ROC (fpr, tpr, thresholds) for both models using the class-1 probabilities.
+- [x] G3 Plot both ROC curves on one axes; add the diagonal "random" line. Label each curve with its AUC score.
+- [x] G4 **Checkpoint:** what does a point in the top-left corner mean? What does the diagonal represent? 1 sentence each.
 
 ---
 
 ## Block 2 — Part H: Threshold sweep (30 min)
 
-- [ ] H1 Take your best model's class-1 probabilities. Instead of the default 0.5 cutoff, try thresholds from 0.1 to 0.9 (step 0.1).
-- [ ] H2 For each threshold, compute precision + recall.
-- [ ] H3 Plot precision vs recall as the threshold moves (or print a small table).
-- [ ] H4 **Checkpoint:** as you lower the threshold, which goes up and which goes down — precision or recall? Why?
-- [ ] H5 Pick a threshold that fits "don't miss sick patients." Write 2 sentences justifying it in a markdown cell.
+- [x] H1 Take your best model's class-1 probabilities. Instead of the default 0.5 cutoff, try thresholds from 0.1 to 0.9 (step 0.1).
+- [x] H2 For each threshold, compute precision + recall.
+- [x] H3 Plot precision vs recall as the threshold moves (or print a small table).
+- [x] H4 **Checkpoint:** as you lower the threshold, which goes up and which goes down — precision or recall? Why?
+- [x] H5 Pick a threshold that fits "don't miss sick patients." Write 2 sentences justifying it in a markdown cell.
 
 ---
 
 ## Block 3 — Part I: Comparison table + wrap (15 min)
 
-- [ ] I1 Build a markdown table: rows = baseline / L2 / L1; columns = precision, recall, F1, ROC-AUC.
-- [ ] I2 **Checkpoint:** did regularization beat the baseline? By how much? 1 sentence.
-- [ ] W1 🚀 Commit: `week-05: P1 evaluation suite complete`
-- [ ] W2 End-of-day update: `01-current-state.md` (mark Tue done).
+- [x] I1 Build a markdown table: rows = baseline / L2 / L1; columns = precision, recall, F1, ROC-AUC.
+- [⏳] I2 **Checkpoint:** did regularization beat the baseline? By how much? 1 sentence.
+- [x] W1 🚀 Commit: `week-05: P1 evaluation suite complete`
+- [x] W2 End-of-day update: `01-current-state.md` (mark Tue done).
 
 **DoD today:** ROC curves plotted, threshold selected with justification, comparison table complete. Evaluation suite closed.
 

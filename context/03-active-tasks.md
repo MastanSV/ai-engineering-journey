@@ -33,11 +33,11 @@ Finish and ship P1 (Heart Disease classification, Tabular ML w/ engineering rigo
 
 ---
 
-### ✅ Mon Jul 14 — DONE
+### ✅ Mon Jul 13 — DONE
 
 ---
 
-### Tue Jul 15 (1.5hr, 9:00–10:30 PM) — Finish evaluation suite
+### Tue Jul 14 (1.5hr, 9:00–10:30 PM) — Finish evaluation suite
 
 - [ ] 15 min — Anki review
 - [ ] 60 min — Part G (ROC curve + AUC for both models, plot on one axes) + Part H (threshold sweep: precision vs recall at thresholds 0.1–0.9, pick recall-protecting threshold)
@@ -46,7 +46,7 @@ Finish and ship P1 (Heart Disease classification, Tabular ML w/ engineering rigo
 
 ---
 
-### Wed Jul 16 (1.5hr, 9:00–10:30 PM) — Best-model selection + MLflow finalize
+### Wed Jul 15 (1.5hr, 9:00–10:30 PM) — Best-model selection + MLflow finalize
 
 - [ ] 15 min — Anki review
 - [ ] 45 min — Pick best model (justify in markdown: recall-first + ROC-AUC); log final metrics + model artifact (`mlflow.sklearn.log_model`)
@@ -55,7 +55,7 @@ Finish and ship P1 (Heart Disease classification, Tabular ML w/ engineering rigo
 
 ---
 
-### Thu Jul 17 (1.5hr, 9:00–10:30 PM) — Logistic teach-back (part 1)
+### Thu Jul 16 (1.5hr, 9:00–10:30 PM) — Logistic teach-back (part 1)
 
 - [ ] 15 min — Anki review
 - [ ] 75 min — Start `concepts/week-04-teachback-logistic.md` (no-Google, no-AI): sigmoid function, log-loss derivation, gradient update rule
@@ -63,7 +63,7 @@ Finish and ship P1 (Heart Disease classification, Tabular ML w/ engineering rigo
 
 ---
 
-### Fri Jul 18 (1.5hr, 9:00–10:30 PM) — Finish teach-back + Anki cards
+### Fri Jul 17 (1.5hr, 9:00–10:30 PM) — Finish teach-back + Anki cards
 
 - [ ] 60 min — Finish teach-back: decision boundary, when logistic regression works/fails, regularization's role (≥800 words total)
 - [ ] 20 min — Create `concepts/anki-cards-week-04.tsv` (confusion matrix, precision, recall, F1, ROC-AUC, sigmoid, log-loss, threshold) — Feynman check each card
@@ -71,7 +71,7 @@ Finish and ship P1 (Heart Disease classification, Tabular ML w/ engineering rigo
 
 ---
 
-### Sat Jul 19 (6hr) — Gradio app + HF Space deploy
+### Sat Jul 18 (6hr) — Gradio app + HF Space deploy
 
 - [ ] 15 min — Anki review
 - [ ] 120 min — Build `projects/05_P1_Tabular_ML/app.py`: feature inputs → best model pipeline → prediction + probability display
@@ -82,7 +82,7 @@ Finish and ship P1 (Heart Disease classification, Tabular ML w/ engineering rigo
 
 ---
 
-### Sun Jul 20 (6hr) — Polish + ship + gate check + retro
+### Sun Jul 19 (6hr) — Polish + ship + gate check + retro
 
 - [ ] 60 min — README to quality bar: problem statement, approach, results table (real numbers), architecture diagram (Excalidraw), live HF link
 - [ ] 30 min — Loom walkthrough (≤3 min), embed in README
