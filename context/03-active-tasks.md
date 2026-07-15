@@ -37,7 +37,7 @@ Finish and ship P1 (Heart Disease classification, Tabular ML w/ engineering rigo
 
 ---
 
-### Tue Jul 14 (1.5hr, 9:00–10:30 PM) — Finish evaluation suite
+### ✅ Tue Jul 14 (1.5hr, 9:00–10:30 PM) — Finish evaluation suite
 
 - [ ] 15 min — Anki review
 - [ ] 60 min — Part G (ROC curve + AUC for both models, plot on one axes) + Part H (threshold sweep: precision vs recall at thresholds 0.1–0.9, pick recall-protecting threshold)
@@ -48,7 +48,7 @@ Finish and ship P1 (Heart Disease classification, Tabular ML w/ engineering rigo
 
 ### Wed Jul 15 (1.5hr, 9:00–10:30 PM) — Best-model selection + MLflow finalize
 
-- [ ] 15 min — Anki review
+- [x] 15 min — Anki review
 - [ ] 45 min — Pick best model (justify in markdown: recall-first + ROC-AUC); log final metrics + model artifact (`mlflow.sklearn.log_model`)
 - [ ] 20 min — Feynman check: 3 jargon-free sentences (why regularized model did/didn't beat baseline for heart disease)
 - [ ] 10 min — 🚀 Commit: `week-05: P1 best-model selected + MLflow finalized`
