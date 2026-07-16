@@ -39,25 +39,25 @@ Finish and ship P1 (Heart Disease classification, Tabular ML w/ engineering rigo
 
 ### ✅ Tue Jul 14 (1.5hr, 9:00–10:30 PM) — Finish evaluation suite
 
-- [ ] 15 min — Anki review
-- [ ] 60 min — Part G (ROC curve + AUC for both models, plot on one axes) + Part H (threshold sweep: precision vs recall at thresholds 0.1–0.9, pick recall-protecting threshold)
-- [ ] 15 min — Part I (markdown comparison table: baseline / L2 / L1 × precision, recall, F1, ROC-AUC)
-- [ ] 🚀 Commit: `week-05: P1 evaluation suite complete`
+- [x] 15 min — Anki review
+- [x] 60 min — Part G (ROC curve + AUC for both models, plot on one axes) + Part H (threshold sweep: precision vs recall at thresholds 0.1–0.9, pick recall-protecting threshold)
+- [x] 15 min — Part I (markdown comparison table: baseline / L2 / L1 × precision, recall, F1, ROC-AUC)
+- [x] 🚀 Commit: `week-05: P1 evaluation suite complete`
 
 ---
 
 ### Wed Jul 15 (1.5hr, 9:00–10:30 PM) — Best-model selection + MLflow finalize
 
 - [x] 15 min — Anki review
-- [ ] 45 min — Pick best model (justify in markdown: recall-first + ROC-AUC); log final metrics + model artifact (`mlflow.sklearn.log_model`)
-- [ ] 20 min — Feynman check: 3 jargon-free sentences (why regularized model did/didn't beat baseline for heart disease)
-- [ ] 10 min — 🚀 Commit: `week-05: P1 best-model selected + MLflow finalized`
+- [x] 45 min — Pick best model (justify in markdown: recall-first + ROC-AUC); log final metrics + model artifact (`mlflow.sklearn.log_model`)
+- [x] 20 min — Feynman check: 3 jargon-free sentences (why regularized model did/didn't beat baseline for heart disease)
+- [x] 10 min — 🚀 Commit: `week-05: P1 best-model selected + MLflow finalized`
 
 ---
 
 ### Thu Jul 16 (1.5hr, 9:00–10:30 PM) — Logistic teach-back (part 1)
 
-- [ ] 15 min — Anki review
+- [x] 15 min — Anki review
 - [ ] 75 min — Start `concepts/week-04-teachback-logistic.md` (no-Google, no-AI): sigmoid function, log-loss derivation, gradient update rule
 - [ ] 🚀 Commit: `week-05: logistic teach-back part 1`
 
