@@ -112,3 +112,4 @@ Continue in the same file.
 **DoD today:** `concepts/week-04-teachback-logistic.md` exists with 3 sections (sigmoid, log-loss, gradient update rule) written in your own words, no AI, ≥400 words, at least 2 numeric examples in the log-loss section.
 
 > ⏱️ 20-min stuck rule: if you blank on a concept >20 min, open your `06-logistic-from-scratch.ipynb` and trace through ONE code cell. Then close it and write.
+> `
