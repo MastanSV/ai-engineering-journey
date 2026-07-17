@@ -23,10 +23,10 @@ Your Week 3 notebook note said: _"NOT HAPPY WITH THE UNDERSTANDING OF LOGISTIC R
 
 Write in `concepts/week-04-teachback-logistic.md`.
 
-- [ ] 1.1 **Why not plain linear regression for classification?** What goes wrong if you use y = wx + b to predict 0/1? (Hint: outputs can be 5.0 or −3.0 — not probabilities.)
-- [ ] 1.2 **What is the sigmoid function?** Write the formula. Explain what it does to any input number (squashes to 0–1). Walk through: what happens at z = 0? z = +10? z = −10?
-- [ ] 1.3 **Why sigmoid specifically?** What property makes it useful for binary classification? (maps to probability, smooth, differentiable)
-- [ ] 1.4 **Checkpoint:** Without looking at your notebook, can you sketch the sigmoid curve shape in words (S-shape, asymptotes at 0 and 1, crosses 0.5 at z = 0)?
+- [x] 1.1 **Why not plain linear regression for classification?** What goes wrong if you use y = wx + b to predict 0/1? (Hint: outputs can be 5.0 or −3.0 — not probabilities.)
+- [x] 1.2 **What is the sigmoid function?** Write the formula. Explain what it does to any input number (squashes to 0–1). Walk through: what happens at z = 0? z = +10? z = −10?
+- [x] 1.3 **Why sigmoid specifically?** What property makes it useful for binary classification? (maps to probability, smooth, differentiable)
+- [x] 1.4 **Checkpoint:** Without looking at your notebook, can you sketch the sigmoid curve shape in words (S-shape, asymptotes at 0 and 1, crosses 0.5 at z = 0)?
 
 ### 🔍 Lines I'll check on Block 1
 
@@ -47,12 +47,12 @@ Write in `concepts/week-04-teachback-logistic.md`.
 
 Continue in the same file.
 
-- [ ] 2.1 **Why not MSE for classification?** What goes wrong if you use squared error with sigmoid? (Hint: the loss surface becomes non-convex — multiple valleys, gradient descent gets stuck.)
-- [ ] 2.2 **Build log-loss from intuition:** If the true label is 1 and model says p = 0.99, loss should be tiny. If model says p = 0.01, loss should be huge. Which math function does this? → −log(p).
-- [ ] 2.3 **Write the full formula:** L = −(1/N) Σ [y·log(p) + (1−y)·log(1−p)]. Explain each piece: what does the y·log(p) part handle? What does the (1−y)·log(1−p) part handle?
-- [ ] 2.4 **Walk through 2 concrete examples:** (a) y = 1, p = 0.9 → compute the loss. (b) y = 0, p = 0.9 → compute the loss. Show the math step by step.
-- [ ] 2.5 **Why clip p?** What happens to log(0)? How does eps fix it? (You answered this in your notebook — rewrite it more precisely here.)
-- [ ] 2.6 **Checkpoint:** Close your notebook. Can you write the log-loss formula from memory and explain why each term exists?
+- [x] 2.1 **Why not MSE for classification?** What goes wrong if you use squared error with sigmoid? (Hint: the loss surface becomes non-convex — multiple valleys, gradient descent gets stuck.)
+- [x] 2.2 **Build log-loss from intuition:** If the true label is 1 and model says p = 0.99, loss should be tiny. If model says p = 0.01, loss should be huge. Which math function does this? → −log(p).
+- [x] 2.3 **Write the full formula:** L = −(1/N) Σ [y·log(p) + (1−y)·log(1−p)]. Explain each piece: what does the y·log(p) part handle? What does the (1−y)·log(1−p) part handle?
+- [x] 2.4 **Walk through 2 concrete examples:** (a) y = 1, p = 0.9 → compute the loss. (b) y = 0, p = 0.9 → compute the loss. Show the math step by step.
+- [x] 2.5 **Why clip p?** What happens to log(0)? How does eps fix it? (You answered this in your notebook — rewrite it more precisely here.)
+- [x] 2.6 **Checkpoint:** Close your notebook. Can you write the log-loss formula from memory and explain why each term exists?
 
 ### 🔍 Lines I'll check on Block 2
 
@@ -75,14 +75,14 @@ Continue in the same file.
 
 Continue in the same file.
 
-- [ ] 3.1 **What are we trying to minimize?** (log-loss). What knobs do we turn? (w and b, same as linear regression).
-- [ ] 3.2 **Write the gradient formulas:**
+- [x] 3.1 **What are we trying to minimize?** (log-loss). What knobs do we turn? (w and b, same as linear regression).
+- [x] 3.2 **Write the gradient formulas:**
   - dw = (1/N) · Xᵀ · (p − y)
   - db = (1/N) · Σ(p − y)
   - Explain in plain English: (p − y) is the error. We multiply by X to figure out how much each feature contributed to that error.
-- [ ] 3.3 **Write the update step:** w ← w − lr · dw, b ← b − lr · db. Explain what learning rate controls (step size — your mountain-fog analogy from linreg teachback applies here too).
-- [ ] 3.4 **Why does this look almost identical to linear regression's gradient?** Point out the only difference: in linreg, prediction = Xw + b. In logistic, prediction = sigmoid(Xw + b). The gradient formula structure is the same — the sigmoid is what makes it classification.
-- [ ] 3.5 **Checkpoint:** Without looking at code, write the 4-line training loop pseudocode: compute z → compute p → compute gradients → update weights.
+- [x] 3.3 **Write the update step:** w ← w − lr · dw, b ← b − lr · db. Explain what learning rate controls (step size — your mountain-fog analogy from linreg teachback applies here too).
+- [x] 3.4 **Why does this look almost identical to linear regression's gradient?** Point out the only difference: in linreg, prediction = Xw + b. In logistic, prediction = sigmoid(Xw + b). The gradient formula structure is the same — the sigmoid is what makes it classification.
+- [x] 3.5 **Checkpoint:** Without looking at code, write the 4-line training loop pseudocode: compute z → compute p → compute gradients → update weights.
 
 ### 🔍 Lines I'll check on Block 3
 
@@ -102,10 +102,10 @@ Continue in the same file.
 
 ## Block 4 — Wrap-up + Commit (5 min, use remaining buffer)
 
-- [ ] 4.1 Re-read your teach-back top to bottom. Does it flow? Would a friend follow it?
-- [ ] 4.2 Word-count check: aim for ≥400 words tonight (the remaining ≥400 comes Friday).
-- [ ] 4.3 🚀 Commit: `week-05: logistic teach-back part 1`
-- [ ] 4.4 End-of-day update: `01-current-state.md`, `03-active-tasks.md`, `06-current-task.md`.
+- [x] 4.1 Re-read your teach-back top to bottom. Does it flow? Would a friend follow it?
+- [x] 4.2 Word-count check: aim for ≥400 words tonight (the remaining ≥400 comes Friday).
+- [x] 4.3 🚀 Commit: `week-05: logistic teach-back part 1`
+- [x] 4.4 End-of-day update: `01-current-state.md`, `03-active-tasks.md`, `06-current-task.md`.
 
 ---
 
