@@ -58,8 +58,8 @@ Finish and ship P1 (Heart Disease classification, Tabular ML w/ engineering rigo
 ### Thu Jul 16 (1.5hr, 9:00–10:30 PM) — Logistic teach-back (part 1)
 
 - [x] 15 min — Anki review
-- [ ] 75 min — Start `concepts/week-04-teachback-logistic.md` (no-Google, no-AI): sigmoid function, log-loss derivation, gradient update rule
-- [ ] 🚀 Commit: `week-05: logistic teach-back part 1`
+- [x] 75 min — Start `concepts/week-04-teachback-logistic.md` (no-Google, no-AI): sigmoid function, log-loss derivation, gradient update rule
+- [x] 🚀 Commit: `week-05: logistic teach-back part 1`
 
 ---
 
