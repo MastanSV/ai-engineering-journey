@@ -33,3 +33,31 @@ Calculate gardiant descent |
 | |
 \|/ |
 update the weights -------------------------------'
+
+## Decision Boundary
+
+From the logistic regression, when you calculate the probabilities which will be ranging from 0 to 1. so in this range you have decide the point/boundary which will decide the sample is positive and the other side you will get the negative sample. for example, by default 0.5 is considered as decision boundary like anything which falls >= 0.5 will be considered as sample as positive. the moment when you get probability 0.5 as decision boundary, for which z = 0, and for z = 0 considered as decision boundary in features space.
+
+The decision boundary is linear because linear line will clearly distinct the postivie and negative sample. if the decision boundary is curve or multiple vallyes lines then it will become difficult to categorize the dataset.
+
+The default threshold is 0.5, but this can be change from dataset to dataset based on the training. and this will change from the precision and recall based on the type of the dataset we are training. Meaning suppose if we are taking hospital dataset, missing out sick patient will cost the live of patient. so we will decide the threshold based on this line.
+
+## When Logistic Regression Works / Fails
+
+Logistic regression works when the sample is perfectly balanced means the amount of positive sample and negative samples are in balance so that model will read the patterns like when to decide the sample as positive and when to decide the sample as negative. so that it will work nicely on testing data.
+
+Logistic regression works better when the features are rougly linearly separable and features are meaningful. so that we will get the coefficients interpretably.
+
+Logistic regression will fail when the features are colinear, like one two features represent the same thing and model will get confuse which one to score more and which one to hammer.
+
+Having more feature does not make the logistic regression better. it depends on many things like
+
+- how many features are useful
+- how many features are not-useful
+- how many features are co-related
+- if features are more and sample are less then logistic regression might not be useful
+
+## Regularization's Role in Logistic Regression
+
+Regularization plays important role in Logistic regression. Regularization has two algorithms L1 and L2. L2 Regression is default for the Logistic regression. while if we want L1 regression we have to represent it externally.
+Regularization matters because in L2 regression, it will take into consideration of all features even though the feature contribution into the prediction is very less or irrelevant. while in L1 regression we can eliminate the certain features which are not required so if the sample or dataset is having the features which are irrelevant, L1 regression will have edge in logistic regression.
