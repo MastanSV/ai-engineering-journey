@@ -65,9 +65,9 @@ Finish and ship P1 (Heart Disease classification, Tabular ML w/ engineering rigo
 
 ### Fri Jul 17 (1.5hr, 9:00–10:30 PM) — Finish teach-back + Anki cards
 
-- [ ] 60 min — Finish teach-back: decision boundary, when logistic regression works/fails, regularization's role (≥800 words total)
-- [ ] 20 min — Create `concepts/anki-cards-week-04.tsv` (confusion matrix, precision, recall, F1, ROC-AUC, sigmoid, log-loss, threshold) — Feynman check each card
-- [ ] 10 min — 🚀 Commit: `week-05: teach-back complete + anki cards`
+- [x] 60 min — Finish teach-back: decision boundary, when logistic regression works/fails, regularization's role (≥800 words total)
+- [x] 20 min — Create `concepts/anki-cards-week-04.tsv` (confusion matrix, precision, recall, F1, ROC-AUC, sigmoid, log-loss, threshold) — Feynman check each card
+- [x] 10 min — 🚀 Commit: `week-05: teach-back complete + anki cards`
 
 ---
 
