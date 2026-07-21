@@ -1,14 +1,14 @@
 # Current State — Snapshot
 
-> **Updated:** 2026-07-13 (Week 5 — Sunday planning; revamped schedule Tue Jul 15 → Sun Jul 20)
+> **Updated:** 2026-07-21 (Week 6 — Tuesday; planning Wed–Sun sprint)
 > _Update this file at the end of every working session._
 
 ## Calendar
 
-- **Current date:** July 13, 2026 (Sunday — planning day)
-- **Current week:** **5 of 32**
-- **Current phase:** Phase 1 → Phase 2 transition (finishing P1, then Phase 2 begins)
-- **Theme this week:** _Ship P1 + Close Phase 1 Gate_
+- **Current date:** July 21, 2026 (Tuesday — planning day)
+- **Current week:** **6 of 32**
+- **Current phase:** Phase 1 → Phase 2 transition (shipping P1, then Phase 2 begins)
+- **Theme this week:** _Ship & Pivot_
 - **Target offer date:** December 2026
 
 ## Resume note (2026-07-04)
@@ -27,7 +27,7 @@
 
 - `C:\Temp\Learnings\ai-engineering-journey`
 - Python 3.11 via uv, `.venv-1` active
-- MLflow ✅ (used in Weeks 0–4)
+- MLflow ✅ (used in Weeks 0–5)
 - numpy + matplotlib + sklearn + pandas ✅
 - Ollama + llama3.2:3b ✅
 
@@ -61,20 +61,31 @@
 - ✅ Recall-vs-precision reconciliation (switched to recall-first for screening)
 - 🔄 Evaluation suite (ROC curve, threshold sweep, comparison table) → carried to Week 5
 
-## Week 5 progress (live)
+## Week 5 summary (closed)
 
-- **Mon Jul 14** — ✅ (done / not available)
-- **Tue Jul 15** — Finish evaluation suite (ROC curve, threshold sweep, comparison table)
-- **Wed Jul 16** — Best-model selection + MLflow finalize
-- **Thu Jul 17** — Logistic teach-back part 1
-- **Fri Jul 18** — Finish teach-back + Anki cards
-- **Sat Jul 19** — Gradio app + HF Space deploy
-- **Sun Jul 20** — README polish + Loom + Twitter #5 + Phase 1 gate + retro
+- ✅ Evaluation suite complete (ROC curve, threshold sweep, comparison table)
+- ✅ Best-model selection + MLflow finalized (recall-first + ROC-AUC justification)
+- ✅ Feynman check: regularized model vs baseline for heart disease
+- ✅ Logistic teach-back complete: sigmoid, log-loss, gradient, decision boundary, works/fails, regularization (≥800 words)
+- ✅ Anki cards week-04 created (8 cards: confusion matrix, precision, recall, F1, ROC-AUC, sigmoid, log-loss, threshold)
+- 🔄 Gradio app + HF deploy → carried to Week 6
+- 🔄 README polish + Loom + Twitter #5 → carried to Week 6
+- 🔄 Phase 1 gate + retro → carried to Week 6
 
-## NN status (Week 5 — live)
+## Week 6 progress (live)
 
-- **NN1** GitHub commits: 0 / (pending Tue commit)
-- **NN2** Twitter: 0 / 1 thread — `week-05-thread-p1.md` planned for Sun Jul 20
-- **NN3** Teach-back: not done — `week-04-teachback-logistic.md` planned Thu–Fri Jul 17–18
-- **NN4** Anki: 0 week-04 cards (`anki-cards-week-04.tsv` planned Fri Jul 18); daily reviews active
-- **NN5** Sunday retro: not done — `retro-week-05.md` planned Sun Jul 20
+- **Mon Jul 21** — ❌ Skipped (no session)
+- **Tue Jul 22** — Planning day (schedule created)
+- **Wed Jul 23** — Gradio app build
+- **Thu Jul 24** — Gradio app finish + local test
+- **Fri Jul 25** — HF Space deploy
+- **Sat Jul 26** — README + Loom + Twitter + Phase 1 gate + retro
+- **Sun Jul 27** — Phase 2 kickoff (pre-reading + perceptron notebook)
+
+## NN status (Week 6 — live)
+
+- **NN1** GitHub commits: 0 / target ≥4 (Wed, Thu, Fri, Sat)
+- **NN2** Twitter: 0 / 1 thread — `week-05-thread-p1.md` planned for Sat Jul 26
+- **NN3** Teach-back: ✅ done — `week-04-teachback-logistic_regression.md` complete
+- **NN4** Anki: ✅ `anki-cards-week-04.tsv` created; daily reviews active
+- **NN5** Retro: not done — `retro-week-05.md` planned Sat Jul 26

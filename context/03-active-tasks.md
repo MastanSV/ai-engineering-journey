@@ -1,15 +1,15 @@
-# Active Tasks — Week 5 Sprint (Jul 15–20, 2026)
+# Active Tasks — Week 6 Sprint (Jul 22–27, 2026)
 
 ## Sprint goal
 
-Finish and ship P1 (Heart Disease classification, Tabular ML w/ engineering rigor) on HF Spaces, passing all 6 quality-bar criteria and clearing the Phase 1 gate.
+Ship P1 on HF Spaces (all 6 quality-bar criteria), clear Phase 1 gate, and kick off Phase 2 (DL + Transformers).
 
-## Theme: **"Ship P1 + Close Phase 1 Gate"**
+## Theme: **"Ship & Pivot"**
 
 ## Context
 
-- Week 4 completed: EDA, preprocessing, baseline, L2/L1 models, 5-fold CV, MLflow logging, confusion matrix, classification report, recall-vs-precision reconciliation.
-- Week 5 carries the remaining P1 delivery tasks (evaluation finish, teach-back, app, deploy, polish).
+- Week 5 completed: evaluation suite, best-model selection, MLflow finalize, teach-back (6 blocks, ≥800 words), Anki cards week-04.
+- Week 6 carries the remaining P1 delivery tasks (Gradio app, deploy, README, Loom, Twitter, gate, retro) + Phase 2 kickoff.
 
 ## P1 decision (logged Week 4 Day 1)
 
@@ -17,7 +17,7 @@ Finish and ship P1 (Heart Disease classification, Tabular ML w/ engineering rigo
 
 ## Time budget
 
-- Mon (done) | Tue–Fri 1.5hr × 4 = 6hr | Sat–Sun 6hr × 2 = 12hr | **Available: 18hr**
+- Tue (planning only) | Wed–Fri 1.5hr × 3 = 4.5hr | Sat–Sun 6hr × 2 = 12hr | **Available: 16.5hr**
 
 ## Active rules
 
@@ -33,62 +33,133 @@ Finish and ship P1 (Heart Disease classification, Tabular ML w/ engineering rigo
 
 ---
 
-### ✅ Mon Jul 13 — DONE
-
----
-
-### ✅ Tue Jul 14 (1.5hr, 9:00–10:30 PM) — Finish evaluation suite
-
-- [x] 15 min — Anki review
-- [x] 60 min — Part G (ROC curve + AUC for both models, plot on one axes) + Part H (threshold sweep: precision vs recall at thresholds 0.1–0.9, pick recall-protecting threshold)
-- [x] 15 min — Part I (markdown comparison table: baseline / L2 / L1 × precision, recall, F1, ROC-AUC)
-- [x] 🚀 Commit: `week-05: P1 evaluation suite complete`
-
----
-
-### Wed Jul 15 (1.5hr, 9:00–10:30 PM) — Best-model selection + MLflow finalize
-
-- [x] 15 min — Anki review
-- [x] 45 min — Pick best model (justify in markdown: recall-first + ROC-AUC); log final metrics + model artifact (`mlflow.sklearn.log_model`)
-- [x] 20 min — Feynman check: 3 jargon-free sentences (why regularized model did/didn't beat baseline for heart disease)
-- [x] 10 min — 🚀 Commit: `week-05: P1 best-model selected + MLflow finalized`
-
----
-
-### Thu Jul 16 (1.5hr, 9:00–10:30 PM) — Logistic teach-back (part 1)
-
-- [x] 15 min — Anki review
-- [x] 75 min — Start `concepts/week-04-teachback-logistic.md` (no-Google, no-AI): sigmoid function, log-loss derivation, gradient update rule
-- [x] 🚀 Commit: `week-05: logistic teach-back part 1`
-
----
-
-### Fri Jul 17 (1.5hr, 9:00–10:30 PM) — Finish teach-back + Anki cards
-
-- [x] 60 min — Finish teach-back: decision boundary, when logistic regression works/fails, regularization's role (≥800 words total)
-- [x] 20 min — Create `concepts/anki-cards-week-04.tsv` (confusion matrix, precision, recall, F1, ROC-AUC, sigmoid, log-loss, threshold) — Feynman check each card
-- [x] 10 min — 🚀 Commit: `week-05: teach-back complete + anki cards`
-
----
-
-### Sat Jul 18 (6hr) — Gradio app + HF Space deploy
+### Wed Jul 23 (1.5hr, 9:00–10:30 PM) — Gradio app build
 
 - [ ] 15 min — Anki review
-- [ ] 120 min — Build `projects/05_P1_Tabular_ML/app.py`: feature inputs → best model pipeline → prediction + probability display
-- [ ] 30 min — Local test (run `gradio app.py`, test edge cases)
-- [ ] 90 min — Push to HF Space (`mastanai/p1-tabular-ml`); add `requirements.txt`; verify live URL works
-- [ ] 30 min — Buffer / fix deployment issues
-- [ ] 🚀 Commit: `week-05: P1 Gradio app deployed on HF Space`
+- [ ] 60 min — Build `projects/05_P1_Tabular_ML/app.py`:
+  - Load best model pipeline (export from notebook via `joblib.dump` if not already saved)
+  - Gradio interface: 14 feature inputs (sliders/dropdowns) → prediction + probability bar
+  - Add title, description, example inputs
+- [ ] 15 min — Verify model file exists, loads cleanly, returns prediction
+- [ ] 🚀 Commit: `week-06: P1 Gradio app initial build`
+
+**Exit criteria:** `app.py` exists, model loads, returns a prediction on dummy input.
 
 ---
 
-### Sun Jul 19 (6hr) — Polish + ship + gate check + retro
+### Thu Jul 24 (1.5hr, 9:00–10:30 PM) — Gradio app finish + local test
 
-- [ ] 60 min — README to quality bar: problem statement, approach, results table (real numbers), architecture diagram (Excalidraw), live HF link
-- [ ] 30 min — Loom walkthrough (≤3 min), embed in README
-- [ ] 45 min — Twitter thread #5 → `twitter-posts/week-05-thread-p1.md` (hook + app screenshot + eval numbers). POST LIVE, save URL
-- [ ] 30 min — Anki review
-- [ ] 45 min — Phase 1 gate check: all 6 quality-bar criteria vs P1; note gaps
-- [ ] 60 min — Week 5 retro → `weekly-logs/retro-week-05.md`
-- [ ] 30 min — Phase 2 prereading (skim Week 6 plan: DL + Transformers)
-- [ ] 🚀 Commit: `week-05: P1 shipped + thread + Phase 1 gate cleared`
+- [ ] 15 min — Anki review
+- [ ] 45 min — Local end-to-end test: `python app.py`
+  - Test edge cases: all-zero inputs, max-range inputs, typical healthy/sick patient
+  - Fix UI issues (labels, slider ranges, formatting)
+- [ ] 20 min — Prepare deploy files: `requirements.txt` (gradio, scikit-learn, joblib, pandas), verify model file < 50MB
+- [ ] 10 min — 🚀 Commit: `week-06: P1 Gradio app tested + deploy-ready`
+
+**Exit criteria:** App runs clean locally, edge cases pass, deploy files ready.
+
+---
+
+### Fri Jul 25 (1.5hr, 9:00–10:30 PM) — HF Space deploy
+
+- [ ] 15 min — Anki review
+- [ ] 60 min — HF Space deploy:
+  - Create Space `mastanai/p1-tabular-ml` (Gradio SDK)
+  - Push `app.py`, model file, `requirements.txt`
+  - Verify live URL works end-to-end
+- [ ] 15 min — Fix deployment issues (dependency pins, file paths)
+- [ ] 🚀 Commit: `week-06: P1 deployed on HF Space`
+
+**Exit criteria:** Live HF URL returns prediction for test input.
+
+---
+
+### Sat Jul 26 (6hr) — README + Loom + Twitter + gate + retro
+
+#### Morning block (3hr)
+
+- [ ] 15 min — Anki review
+- [ ] 90 min — README polish (`projects/05_P1_Tabular_ML/README.md`):
+  - Problem statement + approach + dataset description
+  - Results table (real eval numbers: precision, recall, F1, ROC-AUC per model)
+  - Architecture diagram (Excalidraw: data → preprocessing → model → threshold → prediction)
+  - Live HF demo link + local setup instructions
+- [ ] 60 min — Loom walkthrough (≤3 min):
+  - Script first: problem → approach → code highlights → results → live demo
+  - Record (max 2 takes), upload, embed link in README
+- [ ] 15 min — Buffer
+
+#### Afternoon block (3hr)
+
+- [ ] 45 min — Twitter thread #5 → `twitter-posts/week-05-thread-p1.md`:
+  - Hook → problem → what I built → key insight → eval results → live link → CTA
+  - POST LIVE, save URL
+- [ ] 30 min — Phase 1 gate check (all 6 must pass):
+  - ✅ Live demo on HF Space
+  - ✅ 3-min Loom in README
+  - ✅ Architecture diagram
+  - ✅ Real eval numbers
+  - ✅ Twitter thread
+  - ✅ Solves a real problem (heart disease screening)
+- [ ] 60 min — Week 5/6 retro → `weekly-logs/retro-week-05.md`:
+  - What shipped, what slipped (Sat/Sun carryover), velocity, root cause, lessons
+- [ ] 30 min — Log Phase 1 gate result in `context/04-decisions-log.md`
+- [ ] 15 min — 🚀 Commits: `week-06: P1 shipped + Phase 1 gate passed` + `week-06: retro + twitter thread`
+
+**Exit criteria:** All 6 quality-bar items pass. Retro written. Twitter posted. Gate logged.
+
+---
+
+### Sun Jul 27 (6hr) — Phase 2 Kickoff: Deep Learning Foundations
+
+#### Morning block (3hr)
+
+- [ ] 15 min — Anki review
+- [ ] 45 min — Phase 2 pre-reading: neural network fundamentals
+  - Topics: perceptron, multi-layer networks, activation functions (ReLU, tanh), forward pass
+  - Source: 3Blue1Brown neural network series (Ch 1–2) OR fast.ai Practical DL Ch 4
+- [ ] 90 min — Phase 2 pre-reading continued:
+  - Backpropagation intuition (chain rule, computational graphs)
+  - PyTorch basics: tensors, autograd, `nn.Module`
+- [ ] 30 min — Notes: `concepts/week-06-prereading.md` (key takeaways, questions)
+
+#### Afternoon block (3hr)
+
+- [ ] 90 min — Create `daily-notebooks/week-06/01-perceptron-from-scratch.ipynb`:
+  - Implement single perceptron (AND/OR gate) with numpy
+  - Forward pass + manual gradient update
+  - Visualize decision boundary
+- [ ] 60 min — Scope P2 (nanoGPT): break into weekly milestones for Weeks 7–9
+- [ ] 30 min — Update context files: `01-current-state.md`, `03-active-tasks.md`, `06-current-task.md`
+- [ ] 🚀 Commit: `week-06: Phase 2 kickoff — perceptron from scratch`
+
+**Exit criteria:** Pre-reading done, perceptron notebook works, P2 milestones drafted, context updated.
+
+---
+
+## Non-negotiables this week
+
+| #   | Rule           | Check                           |
+| --- | -------------- | ------------------------------- |
+| NN1 | GitHub commits | ≥4 commits (Wed, Thu, Fri, Sat) |
+| NN2 | Twitter        | Thread #5 posted by Sat         |
+| NN3 | Teach-back     | ✅ Already complete             |
+| NN4 | Anki           | Daily reviews (no skip)         |
+| NN5 | Retro          | `retro-week-05.md` written Sat  |
+
+## Risk & mitigation
+
+| Risk                                | Mitigation                                               |
+| ----------------------------------- | -------------------------------------------------------- |
+| HF deploy fails (dependency hell)   | 30-min buffer Fri; fallback: fix Sat morning first thing |
+| Loom takes too long (perfectionism) | Script first, max 2 takes, ship imperfect                |
+| Phase 2 pre-reading rabbit hole     | Hard timebox 2.5hr; goal = intuition, not mastery        |
+| Model export missing from notebook  | Wed first 15 min: check if `.pkl` exists, export if not  |
+
+## Phase 1 → Phase 2 transition checklist
+
+- [ ] P1 live on HF Space
+- [ ] All 6 quality-bar items passed
+- [ ] Phase 1 gate logged in `04-decisions-log.md`
+- [ ] Phase 2 pre-reading complete (NN basics + backprop + PyTorch)
+- [ ] P2 scope defined (nanoGPT milestones)
