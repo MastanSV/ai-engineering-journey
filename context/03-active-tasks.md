@@ -33,7 +33,7 @@ Ship P1 on HF Spaces (all 6 quality-bar criteria), clear Phase 1 gate, and kick 
 
 ---
 
-### Wed Jul 23 (1.5hr, 9:00–10:30 PM) — Gradio app build
+### Wed Jul 22 (1.5hr, 9:00–10:30 PM) — Gradio app build
 
 - [ ] 15 min — Anki review
 - [ ] 60 min — Build `projects/05_P1_Tabular_ML/app.py`:
@@ -47,7 +47,7 @@ Ship P1 on HF Spaces (all 6 quality-bar criteria), clear Phase 1 gate, and kick 
 
 ---
 
-### Thu Jul 24 (1.5hr, 9:00–10:30 PM) — Gradio app finish + local test
+### Thu Jul 23 (1.5hr, 9:00–10:30 PM) — Gradio app finish + local test
 
 - [ ] 15 min — Anki review
 - [ ] 45 min — Local end-to-end test: `python app.py`
@@ -60,7 +60,7 @@ Ship P1 on HF Spaces (all 6 quality-bar criteria), clear Phase 1 gate, and kick 
 
 ---
 
-### Fri Jul 25 (1.5hr, 9:00–10:30 PM) — HF Space deploy
+### Fri Jul 24 (1.5hr, 9:00–10:30 PM) — HF Space deploy
 
 - [ ] 15 min — Anki review
 - [ ] 60 min — HF Space deploy:
@@ -74,7 +74,7 @@ Ship P1 on HF Spaces (all 6 quality-bar criteria), clear Phase 1 gate, and kick 
 
 ---
 
-### Sat Jul 26 (6hr) — README + Loom + Twitter + gate + retro
+### Sat Jul 25 (6hr) — README + Loom + Twitter + gate + retro
 
 #### Morning block (3hr)
 
@@ -110,7 +110,7 @@ Ship P1 on HF Spaces (all 6 quality-bar criteria), clear Phase 1 gate, and kick 
 
 ---
 
-### Sun Jul 27 (6hr) — Phase 2 Kickoff: Deep Learning Foundations
+### Sun Jul 26 (6hr) — Phase 2 Kickoff: Deep Learning Foundations
 
 #### Morning block (3hr)
 
