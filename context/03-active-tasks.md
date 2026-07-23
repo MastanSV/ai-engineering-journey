@@ -35,13 +35,13 @@ Ship P1 on HF Spaces (all 6 quality-bar criteria), clear Phase 1 gate, and kick 
 
 ### Wed Jul 22 (1.5hr, 9:00–10:30 PM) — Gradio app build
 
-- [ ] 15 min — Anki review
-- [ ] 60 min — Build `projects/05_P1_Tabular_ML/app.py`:
+- [x] 15 min — Anki review
+- [x] 60 min — Build `projects/05_P1_Tabular_ML/app.py`:
   - Load best model pipeline (export from notebook via `joblib.dump` if not already saved)
   - Gradio interface: 14 feature inputs (sliders/dropdowns) → prediction + probability bar
   - Add title, description, example inputs
-- [ ] 15 min — Verify model file exists, loads cleanly, returns prediction
-- [ ] 🚀 Commit: `week-06: P1 Gradio app initial build`
+- [x] 15 min — Verify model file exists, loads cleanly, returns prediction
+- [x] 🚀 Commit: `week-06: P1 Gradio app initial build`
 
 **Exit criteria:** `app.py` exists, model loads, returns a prediction on dummy input.
 
