@@ -1,6 +1,6 @@
 ### Thu Jul 23 (1.5hr, 9:00–10:30 PM) — Gradio app finish + local test
 
-- [ ] 15 min — Anki review
+- [x] 15 min — Anki review
 - [ ] 45 min — Local end-to-end test: `python app.py`
   - Test edge cases: all-zero inputs, max-range inputs, typical healthy/sick patient
   - Fix UI issues (labels, slider ranges, formatting)

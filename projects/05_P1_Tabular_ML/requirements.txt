@@ -1,1 +1,6 @@
-joblib==
+numpy
+pandas
+sklearn
+matplotlib
+seaborn
+mlflow
