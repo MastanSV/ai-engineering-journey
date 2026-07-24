@@ -11,7 +11,7 @@
 
 ---
 
-#### [ ] 60 min — HF Space deploy
+#### [x] 60 min — HF Space deploy
 
 **Sub-task A — Create Space `mastanai/p1-tabular-ml` (Gradio SDK)**
 
@@ -39,7 +39,7 @@
 
 ---
 
-#### [ ] 15 min — Fix deployment issues (dependency pins, file paths)
+#### [x] 15 min — Fix deployment issues (dependency pins, file paths)
 
 ⚠️ **This is the highest-value learning block. Your current `requirements.txt` has real bugs — find them yourself before reading my hints:**
 
@@ -56,7 +56,7 @@
 
 ---
 
-#### [ ] 🚀 Commit: `week-06: P1 deployed on HF Space`
+#### [x] 🚀 Commit: `week-06: P1 deployed on HF Space`
 
 **Exit criteria (learning-augmented):**
 
