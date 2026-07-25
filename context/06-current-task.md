@@ -6,7 +6,7 @@
 
 #### Morning block (3hr)
 
-- [ ] 15 min — Anki review (focus: classification metrics + when each fails)
+- [x] 15 min — Anki review (focus: classification metrics + when each fails)
 
 - [ ] 90 min — README polish (`projects/05_P1_Tabular_ML/README.md`)
   - Problem statement: frame as a **business/clinical cost** (false negative = missed
