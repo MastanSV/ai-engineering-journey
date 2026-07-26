@@ -18,7 +18,7 @@
   - **Interview outcome:** I can state the problem in one sentence and justify why
     accuracy is the _wrong_ headline metric here.
 
-- [ ] 60 min — Loom walkthrough (≤3 min)
+- [x] 60 min — Loom walkthrough (≤3 min)
   - Script first: problem → approach → code highlights → results → live demo
   - Record (max 2 takes), upload, embed in README
   - **Interview outcome:** the script IS my "walk me through a project you're proud of"
@@ -37,13 +37,13 @@
   - What breaks in production, and how would you monitor it?
   - **Outcome:** a written, reviewable Q&A bank I can quiz myself on later.
 
-- [ ] 30 min — Twitter thread #5 → `twitter-posts/week-05-thread-p1.md`
+- [x] 30 min — Twitter thread #5 → `twitter-posts/week-05-thread-p1.md`
   - Hook → problem → what I built → key insight → eval results → live link → CTA
   - POST LIVE, save URL
   - **Interview outcome:** the "key insight" line forces me to name the ONE thing I
     learned — a reusable answer to "what surprised you / what did you learn?"
 
-- [ ] 30 min — Phase 1 gate check (all 6 must pass)
+- [x] 30 min — Phase 1 gate check (all 6 must pass)
   - ✅ Live demo on HF Space
   - ✅ 3-min Loom in README
   - ✅ Architecture diagram

@@ -139,3 +139,7 @@ Running on local URL: http://127.0.0.1:7860
 Open the URL in your browser to access the Heart Disease Prediction application.
 
 > **Note:** The port may vary if `7860` is already in use.
+
+### Loom Walkthrough
+
+The Demo for Heart Disease prediction can found here: [click here](https://www.loom.com/share/804044ca8e2a4654a8db5f5b8e6c039e)
