@@ -42,11 +42,12 @@ The leackage checks that are been done in this project are:
 
 Model Performance Comparison
 
-| Model                    | Precision |   Recall | F1-Score |  ROC-AUC |
-| :----------------------- | --------: | -------: | -------: | -------: |
-| Baseline                 |      0.79 |     0.78 |     0.78 |     0.88 |
-| Logistic Regression (L2) |      0.79 |     0.78 |     0.78 |     0.88 |
-| Logistic Regression (L1) |  **0.80** | **0.79** | **0.79** | **0.89** |
+| Model                    | Precision |   Recall | F1-Score |
+| :----------------------- | --------: | -------: | -------: |
+| Baseline                 |      0.74 |     0.87 |     0.80 |
+| Logistic Regression (L2) |      0.74 |     0.87 |     0.80 |
+| Logistic Regression (L1) |      0.75 |     0.88 |     0.81 |
+| final_model              |  **0.72** | **0.93** | **0.81** |
 
 ### Architectural Diagram:
 

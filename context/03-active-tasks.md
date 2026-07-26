@@ -78,8 +78,8 @@ Ship P1 on HF Spaces (all 6 quality-bar criteria), clear Phase 1 gate, and kick 
 
 #### Morning block (3hr)
 
-- [ ] 15 min — Anki review
-- [ ] 90 min — README polish (`projects/05_P1_Tabular_ML/README.md`):
+- [x] 15 min — Anki review
+- [x] 90 min — README polish (`projects/05_P1_Tabular_ML/README.md`):
   - Problem statement + approach + dataset description
   - Results table (real eval numbers: precision, recall, F1, ROC-AUC per model)
   - Architecture diagram (Excalidraw: data → preprocessing → model → threshold → prediction)
@@ -87,7 +87,7 @@ Ship P1 on HF Spaces (all 6 quality-bar criteria), clear Phase 1 gate, and kick 
 - [ ] 60 min — Loom walkthrough (≤3 min):
   - Script first: problem → approach → code highlights → results → live demo
   - Record (max 2 takes), upload, embed link in README
-- [ ] 15 min — Buffer
+- [x] 15 min — Buffer
 
 #### Afternoon block (3hr)
 
@@ -114,7 +114,7 @@ Ship P1 on HF Spaces (all 6 quality-bar criteria), clear Phase 1 gate, and kick 
 
 #### Morning block (3hr)
 
-- [ ] 15 min — Anki review
+- [] 15 min — Anki review
 - [ ] 45 min — Phase 2 pre-reading: neural network fundamentals
   - Topics: perceptron, multi-layer networks, activation functions (ReLU, tanh), forward pass
   - Source: 3Blue1Brown neural network series (Ch 1–2) OR fast.ai Practical DL Ch 4

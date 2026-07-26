@@ -24,11 +24,11 @@
   - **Interview outcome:** the script IS my "walk me through a project you're proud of"
     answer — rehearsed, timed, tight.
 
-- [ ] 15 min — Buffer
+- [x] 15 min — Buffer
 
 #### Afternoon block (3hr)
 
-- [ ] 30 min — **Interview Q&A drill** → append to README or `concepts/` note
+- [x] 30 min — **Interview Q&A drill** → append to README or `concepts/` note
       Write my own answers (1-2 sentences each) to the questions THIS project invites:
   - Why did you pick recall/F1 over accuracy for this dataset?
   - How did you choose the classification threshold, and what did you trade off?
