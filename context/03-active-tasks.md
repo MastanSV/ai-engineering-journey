@@ -91,20 +91,20 @@ Ship P1 on HF Spaces (all 6 quality-bar criteria), clear Phase 1 gate, and kick 
 
 #### Afternoon block (3hr)
 
-- [ ] 45 min — Twitter thread #5 → `twitter-posts/week-05-thread-p1.md`:
+- [x] 45 min — Twitter thread #5 → `twitter-posts/week-05-thread-p1.md`:
   - Hook → problem → what I built → key insight → eval results → live link → CTA
   - POST LIVE, save URL
-- [ ] 30 min — Phase 1 gate check (all 6 must pass):
+- [x] 30 min — Phase 1 gate check (all 6 must pass):
   - ✅ Live demo on HF Space
   - ✅ 3-min Loom in README
   - ✅ Architecture diagram
   - ✅ Real eval numbers
   - ✅ Twitter thread
   - ✅ Solves a real problem (heart disease screening)
-- [ ] 60 min — Week 5/6 retro → `weekly-logs/retro-week-05.md`:
+- [x] 60 min — Week 5/6 retro → `weekly-logs/retro-week-05.md`:
   - What shipped, what slipped (Sat/Sun carryover), velocity, root cause, lessons
-- [ ] 30 min — Log Phase 1 gate result in `context/04-decisions-log.md`
-- [ ] 15 min — 🚀 Commits: `week-06: P1 shipped + Phase 1 gate passed` + `week-06: retro + twitter thread`
+- [x] 30 min — Log Phase 1 gate result in `context/04-decisions-log.md`
+- [x] 15 min — 🚀 Commits: `week-06: P1 shipped + Phase 1 gate passed` + `week-06: retro + twitter thread`
 
 **Exit criteria:** All 6 quality-bar items pass. Retro written. Twitter posted. Gate logged.
 
@@ -158,8 +158,8 @@ Ship P1 on HF Spaces (all 6 quality-bar criteria), clear Phase 1 gate, and kick 
 
 ## Phase 1 → Phase 2 transition checklist
 
-- [ ] P1 live on HF Space
-- [ ] All 6 quality-bar items passed
-- [ ] Phase 1 gate logged in `04-decisions-log.md`
+- [x] P1 live on HF Space
+- [x] All 6 quality-bar items passed
+- [x] Phase 1 gate logged in `04-decisions-log.md`
 - [ ] Phase 2 pre-reading complete (NN basics + backprop + PyTorch)
 - [ ] P2 scope defined (nanoGPT milestones)

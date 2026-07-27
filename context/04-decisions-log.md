@@ -91,3 +91,11 @@
 - **Why:** Week 4 is the Phase 1 gate. Shipping P1 to the 6-criterion quality bar + first HF Space deploy is higher value than adding breadth. Trees are not required for P1.
 - **Alternatives considered:** (a) Learn trees Mon–Wed, ship P1 Thu–Sun — rejected, too compressed; (b) Replace P1 with a trees-based project — rejected, no time to learn + build + deploy.
 - **Reversible?** Yes — can learn trees in Week 5–6 buffer if needed for P2.
+
+## 2026-07-27 · Adopt Recognition≠Explanation + Break re-entry rules (Week 6 retro)
+
+- **Why:** Week 6 retro exposed the month-long gap root cause (trip → 3-4 skipped days → slow fade, no tripwire to catch it) AND a recognition-vs-explanation gap (could recognize Anki cards but not explain them in detail — Q2). Both were silently degrading interview-readiness.
+- **Rules adopted:** (1) speak answer aloud before flipping any card; (2) own-words + LLM-rating Anki authoring; (3) 2-missed-days tripwire → 15-min re-entry; (4) post-break Day 1 = review only; (5) weekend home vs hostel split-strategy.
+- **Alternatives considered:** (a) "just try harder / prioritize learning first" — rejected, that was Q3's answer and it's a hope, not an enforceable tripwire; (b) wait for a paid iOS Anki app — rejected, AnkiWeb runs free in any iPhone browser.
+- **Reversible?** Yes — re-evaluate at Week 8 retro. If the month-gap pattern recurs despite the tripwire, escalate.
+- **Source:** `weekly-logs/retro-week-06-p1.md` Q1–Q8.
