@@ -99,3 +99,18 @@
 - **Alternatives considered:** (a) "just try harder / prioritize learning first" — rejected, that was Q3's answer and it's a hope, not an enforceable tripwire; (b) wait for a paid iOS Anki app — rejected, AnkiWeb runs free in any iPhone browser.
 - **Reversible?** Yes — re-evaluate at Week 8 retro. If the month-gap pattern recurs despite the tripwire, escalate.
 - **Source:** `weekly-logs/retro-week-06-p1.md` Q1–Q8.
+
+## 2026-07-28 · Phase 2 learning order = CONCEPT → DERIVE → CODE (concept-first)
+
+- **Why:** The default Phase 2 plan jumped straight into topic + derivation. Deriving
+  before the underlying concept is intuitive produces symbol-pushing I can't defend in
+  an interview. Reordering so every topic runs intuition first, math second, code third —
+  gated by the Feynman check (spoken aloud) before the derivation is opened.
+- **Consequence:** Foundations (neuron → backprop → MLP → PyTorch) occupy Weeks 7–8.
+  **nanoGPT (P2 deliverable) slides to ~Weeks 9–10.** Phase 3 (RAG) compresses accordingly.
+- **Alternatives considered:** (a) Keep derivation-first to "save time" — rejected, that's
+  the exact gap Week 6 retro flagged (recognition ≠ explanation). (b) Skip hand-derivation
+  entirely and trust PyTorch autograd — rejected, hand-deriving backprop once is core
+  interview signal.
+- **Reversible?** Yes — if foundations move faster than budgeted, pull nanoGPT forward.
+- **Source:** user directive 2026-07-28; `weekly-logs/retro-week-06-p1.md` Q2/Q7.

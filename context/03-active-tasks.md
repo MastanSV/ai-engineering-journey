@@ -1,125 +1,110 @@
-# Active Tasks — Week 7 Sprint (Jul 28 – Aug 2, 2026)
+# Active Tasks — Week 7 (Jul 28 – Aug 3, 2026)
 
 ## Sprint goal
 
-Build neural-network foundations from scratch (perceptron → MLP → backprop → PyTorch),
-teach-back backprop, and scope P2 (nanoGPT). First full Phase 2 week.
+Build concept-solid foundations for deep learning: neuron → activation → loss →
+backprop → MLP from scratch. Concept-first, then derive, then code.
 
-## Theme: "Neural Foundations"
+## Theme: **"Concept-first foundations"**
+
+## Context
+
+- Phase 1 CLOSED (P1 shipped, gate passed). Phase 2 begins.
+- New guiding rule adopted this week: every topic runs CONCEPT → DERIVE → CODE.
+  Do NOT open a derivation until the concept passes the Feynman check (said aloud).
 
 ## Active rules
 
-> Full standing rules live in `context/07-tracking-rules.md`. This block pins the
-> highest-risk rules for THIS sprint only.
-
-- **Break tripwire (TOP risk — post-milestone slump):** 2 missed days in a row →
-  next day mandatory 15-min Anki-only re-entry. No new material.
-- **Recognition≠Explanation:** every Anki card answered OUT LOUD before flipping.
-- **Feynman check:** 3-sentence zero-jargon explanation before any concept = "learned".
-- **20-min stuck rule:** switch resource; never close laptop without 1 alternative.
-- **30-min carryover cap:** weekday spillover >30 min → Saturday, not next weekday.
-- **Weekend minimum:** home → 15-min Anki floor; hostel → fixed clock slot.
+- **30-min carryover cap:** weekday carryover >30 min → push to Saturday.
+- **20-min stuck rule:** stuck >20 min → switch resource before quitting.
+- **Feynman check:** 3-sentence zero-jargon explanation before any concept is "learned."
+- **Recognition≠Explanation:** say every Anki answer OUT LOUD before flipping.
+- **Anki own-words loop:** author cards in my words → LLM RATES → store polished version.
+- **Break tripwire:** 2 missed days in a row → 15-min Anki-only re-entry next day.
 
 ## Time budget
 
-Tue–Fri 1.5hr × 4 = 6hr | Sat–Sun 6hr × 2 = 12hr | **Target this week: 18hr**
-
-## Carryover from Mon (if not done)
-
-- Persist Week-6 rules into context (07 → 04 → 03 → 00) + write 3 fuzzy cards.
-  (≤30 min → fold into Tue's first block; else push to Sat morning per carryover cap.)
+- Mon–Fri 1.5hr × 5 = 7.5hr · Sat–Sun 6hr × 2 = 12hr · **Available: 19.5hr**
 
 ---
 
-### Tue Jul 28 (1.5hr, 9:00–10:30 PM) — Perceptron from scratch
+## Daily breakdown
 
-- [ ] 15 min — Anki review (OUT LOUD, no silent passes)
-- [ ] 60 min — `daily-notebooks/week-07/01-perceptron-from-scratch.ipynb`:
-      single perceptron (AND/OR gate) in numpy, forward pass + manual gradient update,
-      visualize decision boundary
-- [ ] 15 min — Notes + Feynman 3-sentence check → Anki card
-- [ ] 🚀 Commit: `week-07: perceptron from scratch`
-      **Exit:** perceptron learns AND/OR, boundary plotted, 1 own-words Anki card added.
+### Mon Jul 28 (1.5hr) — CONCEPT: the neuron
 
-### Wed Jul 29 (1.5hr) — Backprop intuition
+- [ ] 15 min — Anki review (aloud)
+- [ ] 60 min — Concept only: weighted sum + bias + activation (3B1B NN Ch.1). NO math.
+- [ ] 15 min — Feynman note `concepts/week-07-neuron-concept.md` (3 sentences, zero jargon)
+- [ ] 🚀 Commit: `week-07: neuron concept notes`
+      **Exit:** can explain a neuron in 3 plain sentences aloud.
 
-- [ ] 15 min — Anki (out loud)
-- [ ] 60 min — 3B1B Ch 3–4 (backprop + chain rule + computational graph); notes with a
-      hand-worked 2-node gradient example
-- [ ] 15 min — Feynman check: explain backprop in 3 jargon-free sentences → if you can't, re-study
-- [ ] 🚀 Commit: `week-07: backprop intuition + notes`
-      **Exit:** can explain backprop out loud; hand-worked gradient in notes.
+### Tue Jul 29 (1.5hr) — CONCEPT: activations + non-linearity
 
-### Thu Jul 30 (1.5hr) — PyTorch basics
+- [ ] 15 min — Anki
+- [ ] 60 min — sigmoid / tanh / ReLU: what each does, why non-linearity matters
+- [ ] 15 min — Feynman note: "without activation, a deep net collapses to **\_\_**"
+- [ ] 🚀 Commit
+      **Exit:** can state why a net needs non-linearity.
 
-- [ ] 15 min — Anki (out loud)
-- [ ] 60 min — `daily-notebooks/week-07/02-pytorch-basics.ipynb`:
-      tensors, autograd (`.backward()`, `.grad`), `nn.Module`, optimizer step — tiny examples
-- [ ] 15 min — Notes: map each PyTorch piece back to the from-scratch math
-- [ ] 🚀 Commit: `week-07: PyTorch basics (tensors, autograd, nn.Module)`
-      **Exit:** autograd reproduces your hand-worked Wed gradient.
+### Wed Jul 30 (1.5hr) — DERIVE: forward pass + loss
 
-### Fri Jul 31 (1.5hr) — MLP in PyTorch
+- [ ] 15 min — Anki
+- [ ] 60 min — On paper: forward pass for 1 neuron → 2-layer net; MSE + cross-entropy forms
+- [ ] 15 min — Photo of derivation → `concepts/images/`
+- [ ] 🚀 Commit
+      **Exit:** hand-written forward pass + both loss forms.
 
-- [ ] 15 min — Anki (out loud)
-- [ ] 60 min — `daily-notebooks/week-07/03-mlp-pytorch.ipynb`:
-      2-layer MLP on toy data (make_moons or MNIST subset), full train loop, plot loss + accuracy
-- [ ] 15 min — 🚀 Commit: `week-07: MLP in PyTorch (train loop + eval)`
-      **Exit:** MLP trains, loss decreases, >90% on toy set.
+### Thu Jul 31 (1.5hr) — CONCEPT: backprop intuition
 
-### Sat Aug 1 (6hr) — MLP from scratch + teach-back + Twitter
+- [ ] 15 min — Anki
+- [ ] 60 min — 3B1B Ch.3 (backprop) + Ch.4 (calculus). Story-level, no symbols.
+- [ ] 15 min — Feynman note: explain backprop to a 12-year-old
+- [ ] 🚀 Commit
+      **Exit:** can tell the "send the error backward" story without notation.
 
-#### Morning (3hr)
+### Fri Aug 01 (1.5hr) — DERIVE: backprop math
 
-- [ ] 15 min — Anki (out loud)
-- [ ] 150 min — `04-mlp-from-scratch.ipynb`: 2-layer NN in pure numpy with manual backprop;
-      match PyTorch result from Fri (sanity check both directions)
-- [ ] 15 min — Buffer / fold in any Mon carryover
+- [ ] 15 min — Anki
+- [ ] 60 min — On paper: chain-rule gradients for 2-layer net (output → hidden layer)
+- [ ] 15 min — Photo + note where you got stuck
+- [ ] 🚀 Commit
+      **Exit:** dL/dW derived by hand for both layers.
 
-#### Afternoon (3hr)
+### Sat Aug 02 (6hr) — CODE: MLP from scratch (numpy)
 
-- [ ] 90 min — Teach-back essay (backprop + MLP, ≥800 words, no AI) →
-      `concepts/week-07-teachback-backprop.md` [NN3]
-- [ ] 45 min — Twitter thread #6 (from-scratch NN journey) → POST LIVE, save URL [NN2]
-- [ ] 30 min — Networking: 3 replies + 1 DM to a target engineer [Week 5+ track]
-- [ ] 🚀 Commit: `week-07: MLP from scratch + teach-back + thread`
-      **Exit:** scratch-MLP matches PyTorch; teach-back written; thread posted.
+- [ ] 15 min — Anki
+- [ ] 120 min — `daily-notebooks/week-07/01-neuron-from-scratch.ipynb`: single neuron
+      forward pass, plot activation, verify by hand
+- [ ] 150 min — Extend to 2-layer MLP: forward + backward + gradient descent on XOR /
+      make_moons; watch loss decrease
+- [ ] 45 min — Feynman: "my gradients are correct because **\_\_**" (gradient-check idea)
+- [ ] 🚀 Commit(s)
+      **Exit:** MLP trains, loss goes down, gradients sanity-checked.
 
-### Sun Aug 2 (6hr) — Retro + P2 scope + Anki authoring
+### Sun Aug 03 (6hr) — CONNECT + accountability
 
-#### Morning (3hr)
-
-- [ ] 15 min — Anki (out loud)
-- [ ] 90 min — Own-words Anki loop: author this week's concept cards in MY words,
-      LLM rates, store polished versions (perceptron, activations, backprop, autograd)
-- [ ] 75 min — P2 scope: break nanoGPT into Weeks 7–8 milestones (bigram → attention → block → training)
-
-#### Afternoon (3hr)
-
-- [ ] 90 min — Week 7 retro → `weekly-logs/retro-week-07.md`
-      (shipped/slipped, velocity, ONE root cause, can-explain vs fuzzy table, top-3 gaps,
-      ONE fix-rule, + did the tripwire/out-loud rules actually fire this week?) [NN5]
-- [ ] 60 min — Update `01-current-state.md`, `03-active-tasks.md`, `06-current-task.md`
-- [ ] 30 min — 🚀 Commit: `week-07: retro + P2 scope + Anki authoring`
-      **Exit:** retro done, P2 milestones drafted, context updated, rules-fired check written.
+- [ ] 15 min — Anki
+- [ ] 120 min — Author Anki cards (own words → LLM RATES): neuron, activation,
+      non-linearity, forward pass, loss, chain rule, backprop → `anki-cards-week-07.tsv`
+- [ ] 120 min — Teach-back `concepts/week-07-teachback-backprop.md` (≥800 words) [NN3]
+- [ ] 60 min — Twitter thread `twitter-posts/week-07-thread-backprop.md`, POST LIVE [NN2]
+- [ ] 45 min — Retro `weekly-logs/retro-week-07.md`
+- [ ] 30 min — Update `01-current-state.md`, `03-active-tasks.md`, `06-current-task.md`
+- [ ] 🚀 Commit
+      **Exit:** teach-back written, Twitter posted, retro done, context updated.
 
 ---
 
-## Non-negotiables (Week 7)
+## Non-negotiables this week
 
-| #   | Rule           | Check                             |
-| --- | -------------- | --------------------------------- |
-| NN1 | GitHub commits | ≥4 (Tue–Fri)                      |
-| NN2 | Twitter        | Thread #6 posted Sat              |
-| NN3 | Teach-back     | backprop essay ≥800w Sat          |
-| NN4 | Anki           | daily, OUT LOUD, no silent passes |
-| NN5 | Retro          | `retro-week-07.md` Sun            |
+| #   | Rule           | Check                              |
+| --- | -------------- | ---------------------------------- |
+| NN1 | GitHub commits | ≥5 (daily)                         |
+| NN2 | Twitter        | `week-07-thread-backprop.md` (Sun) |
+| NN3 | Teach-back     | `week-07-teachback-backprop.md`    |
+| NN4 | Anki           | Daily, said aloud                  |
+| NN5 | Retro          | `retro-week-07.md` (Sun)           |
 
-## Risk & mitigation
+## Carried from Phase 1
 
-| Risk                            | Mitigation                                                    |
-| ------------------------------- | ------------------------------------------------------------- |
-| Post-Phase-1 slump              | Tripwire armed; Tue restart is light + concrete (perceptron)  |
-| Backprop rabbit hole            | Hard timebox; goal = intuition + 1 worked example, not proofs |
-| Weekend fade (home/energy)      | Apply weekend-minimum rule: 15-min Anki floor non-negotiable  |
-| Anki reverting to silent passes | "out loud" tagged on every day's block                        |
+- [ ] **[CONFIRM] Loom walkthrough** for P1 — do first thing if still open.
