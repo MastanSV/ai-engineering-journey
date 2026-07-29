@@ -1,0 +1,1 @@
+- linear regression concepts - MSE, gradiant, gradiant-descent, residual, learning rate, derivation parts and all missing things to get better clarity.
