@@ -14,3 +14,7 @@ The number ranges from 0-1, is called Activation.
 Suppose if we have 28\*28 pixels, and represent some number ex: 7, these pixels will form the first layer, inorder to get the next layer, for each pixel which is nothing but neuron (contains activation) has to be multiplied with weight, then if we want bias that can be added, which will form the next layer like each new layer will form based on previous untill the final decision made. This network is called Neural Network.
 
 ![Overview diagrams for logistic regression and neural network formula](images/intro_neural_network.png)
+
+### Why do we need activations?
+
+activation function introduces a non-linearity into the neural network. without activation function it just like multiple linear models stacked together making it only linear model. this stacked linear model can not learn any complex non-linearity because of it is just a big stacked model. the activation function introduces non-linearity into the linear model system, making it to learn more complex non-linear relationship thorugh real-world.
