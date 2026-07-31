@@ -21,4 +21,8 @@ activation function introduces a non-linearity into the neural network. without 
 
 ### What is tanh?
 
+The reason tanh to comeup is because, the sigmoid function gives the output values lies between 0 and 1 and these are always positive. only positive values are does not conveying what the exact perspective of feature usefulness. then tanh comes into picture in a way that, it gives ouput between -1 & 1. and it zero-centered as well. so if the values are coming nearer to -1 means that the feature is may not useful of training and if it nearer to 1 then it means that feature is useful for neural network training.
+
+But the problem that stays with tanh is that it is still saturated means that for very large positive and negative values still lies near 1 and -1 making it linear and gradiant vanishes. It lead to discovery of ReLU
+
 ### What is ReLU?
