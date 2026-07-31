@@ -18,3 +18,7 @@ Suppose if we have 28\*28 pixels, and represent some number ex: 7, these pixels 
 ### Why do we need activations?
 
 activation function introduces a non-linearity into the neural network. without activation function it just like multiple linear models stacked together making it only linear model. this stacked linear model can not learn any complex non-linearity because of it is just a big stacked model. the activation function introduces non-linearity into the linear model system, making it to learn more complex non-linear relationship thorugh real-world.
+
+### What is tanh?
+
+### What is ReLU?

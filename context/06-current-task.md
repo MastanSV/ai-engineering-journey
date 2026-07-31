@@ -12,20 +12,20 @@
 - [x] Understand what happens if there is **no activation function**
 - [x] Learn why stacking linear layers still produces a linear model
 - [x] Understand why neural networks need **non-linearity**
-- [] Draw a simple diagram illustrating this
+- [x] Draw a simple diagram illustrating this
 
 ---
 
 #### 2. Learn Sigmoid (15 min)
 
-- [ ] Understand the intuition behind Sigmoid
-- [ ] Learn the mathematical formula
-- [ ] Know the output range (0 to 1)
-- [ ] Understand where Sigmoid is used
-- [ ] Learn its drawbacks:
-  - [ ] Vanishing gradients
-  - [ ] Not zero-centered
-  - [ ] Saturation
+- [x] Understand the intuition behind Sigmoid
+- [x] Learn the mathematical formula
+- [x] Know the output range (0 to 1)
+- [x] Understand where Sigmoid is used
+- [x] Learn its drawbacks:
+  - [x] Vanishing gradients
+  - [x] Not zero-centered
+  - [x] Saturation
 
 ---
 
