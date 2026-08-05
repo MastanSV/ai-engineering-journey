@@ -31,23 +31,23 @@
 
 #### 3. Learn Tanh (10 min)
 
-- [ ] Understand how Tanh differs from Sigmoid
-- [ ] Learn the output range (-1 to 1)
-- [ ] Understand why zero-centered outputs help optimization
-- [ ] Learn its drawbacks (vanishing gradients)
+- [x] Understand how Tanh differs from Sigmoid
+- [x] Learn the output range (-1 to 1)
+- [x] Understand why zero-centered outputs help optimization
+- [x] Learn its drawbacks (vanishing gradients)
 
 ---
 
 #### 4. Learn ReLU (15 min)
 
-- [ ] Understand the intuition behind ReLU
-- [ ] Learn the mathematical formula
-- [ ] Understand why ReLU became the default activation
-- [ ] Learn the "dying ReLU" problem
-- [ ] Know common variants:
-  - [ ] Leaky ReLU
-  - [ ] ELU (high level)
-  - [ ] GELU (high level)
+- [x] Understand the intuition behind ReLU
+- [x] Learn the mathematical formula
+- [x] Understand why ReLU became the default activation
+- [x] Learn the "dying ReLU" problem
+- [x] Know common variants:
+  - [x] Leaky ReLU
+  - [x] ELU (high level)
+  - [x] GELU (high level)
 
 ---
 

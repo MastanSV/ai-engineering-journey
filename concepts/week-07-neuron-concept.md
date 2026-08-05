@@ -25,8 +25,19 @@ The reason tanh to comeup is because, the sigmoid function gives the output valu
 
 But the problem that stays with tanh is that it is still saturated means that for very large positive and negative values still lies near 1 and -1 making it linear and gradiant vanishes. It lead to discovery of ReLU
 
+![Overview for tanh](images/tanh.png)
+
 ### What is ReLU?
 
 ReLU - Rectified Linear Unit is another type of activation function. ReLU solves the problem which tanh has. tanh is having the problem like gradiant gets saturated at -1 and 1.
 
 ReLU will work like if z < 0, the output will be 0, and if z > 0 then z. because of the sharp drop at 0, non-linearity will be introuduced.
+
+### comparision table for Sigmoid, tanh and ReLU
+
+| Property           |  Sigmoid  |   Tanh    |          ReLU          |
+| :----------------- | :-------: | :-------: | :--------------------: |
+| Output Range       |   0 - 1   |  -1 to 1  | 0 to positive infinity |
+| Zero-Centered      |    ❌     |    ✅     |           ❌           |
+| Vanishing Gradient |    ✅     |    ✅     |           ❌           |
+| Computational Cost | very less | very less |  depend type of ReLU   |
