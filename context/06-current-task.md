@@ -53,7 +53,7 @@
 
 #### 5. Compare Activation Functions (10 min)
 
-- [ ] Create a comparison table:
+- [x] Create a comparison table:
 
 | Property           | Sigmoid | Tanh | ReLU |
 | ------------------ | ------- | ---- | ---- |
@@ -67,23 +67,23 @@
 
 #### 6. Coding Exercise (10 min)
 
-- [ ] Plot Sigmoid
-- [ ] Plot Tanh
-- [ ] Plot ReLU
-- [ ] Observe their output ranges
-- [ ] Observe how gradients behave visually
+- [x] Plot Sigmoid
+- [x] Plot Tanh
+- [x] Plot ReLU
+- [x] Observe their output ranges
+- [x] Observe how gradients behave visually
 
 ---
 
 #### 7. Interview Practice (10 min)
 
-- [ ] Explain:
-  - [ ] Why do neural networks need activation functions?
-  - [ ] Why can't we stack only linear layers?
-  - [ ] Why is ReLU preferred over Sigmoid?
-  - [ ] When would you use Sigmoid?
-  - [ ] What is the dying ReLU problem?
-  - [ ] What causes vanishing gradients?
+- [x] Explain:
+  - [] Why do neural networks need activation functions?
+  - [] Why can't we stack only linear layers?
+  - [] Why is ReLU preferred over Sigmoid?
+  - [] When would you use Sigmoid?
+  - [] What is the dying ReLU problem?
+  - [] What causes vanishing gradients?
 
 ---
 
@@ -108,8 +108,8 @@
 
 ### Exit Criteria
 
-- [ ] Explain non-linearity without notes.
-- [ ] Explain Sigmoid, Tanh, and ReLU mathematically and intuitively.
-- [ ] State the advantages and disadvantages of each activation function.
+- [x] Explain non-linearity without notes.
+- [x] Explain Sigmoid, Tanh, and ReLU mathematically and intuitively.
+- [x] State the advantages and disadvantages of each activation function.
 - [ ] Explain why ReLU is the default choice in modern neural networks.
 - [ ] Answer common activation function interview questions confidently.
