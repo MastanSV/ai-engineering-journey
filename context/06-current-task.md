@@ -78,22 +78,22 @@
 #### 7. Interview Practice (10 min)
 
 - [x] Explain:
-  - [] Why do neural networks need activation functions?
-  - [] Why can't we stack only linear layers?
-  - [] Why is ReLU preferred over Sigmoid?
-  - [] When would you use Sigmoid?
-  - [] What is the dying ReLU problem?
-  - [] What causes vanishing gradients?
+  - [x] Why do neural networks need activation functions?
+  - [x] Why can't we stack only linear layers?
+  - [x] Why is ReLU preferred over Sigmoid?
+  - [x] When would you use Sigmoid?
+  - [x] What is the dying ReLU problem?
+  - [x] What causes vanishing gradients?
 
 ---
 
 #### 8. Feynman Notes (5 min)
 
-- [ ] Complete the sentence:
+- [x] Complete the sentence:
 
 > Without activation functions, a deep neural network collapses into a **single linear transformation**, regardless of the number of layers.
 
-- [ ] Write a 5-line explanation in your own words.
+- [x] Write a 5-line explanation in your own words.
 
 ---
 
@@ -111,5 +111,5 @@
 - [x] Explain non-linearity without notes.
 - [x] Explain Sigmoid, Tanh, and ReLU mathematically and intuitively.
 - [x] State the advantages and disadvantages of each activation function.
-- [ ] Explain why ReLU is the default choice in modern neural networks.
-- [ ] Answer common activation function interview questions confidently.
+- [x] Explain why ReLU is the default choice in modern neural networks.
+- [x] Answer common activation function interview questions confidently.
