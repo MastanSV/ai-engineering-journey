@@ -1,115 +1,65 @@
-### Tue Jul 29 (1.5 hr) — CONCEPT: Activation Functions & Non-Linearity
+# Week 7 · Wed — DERIVE: Forward Pass + Loss (mini-tasks)
 
-- [x] **15 min — Anki Review**
-  - [x] Review previous Neural Network cards
-  - [x] Review Logistic Regression vs Neural Networks
-  - [x] Mark weak cards for revision
+**Rule for every step:** end with a "prove it" checkpoint. Don't move on until you
+can say/write the answer without peeking.
 
----
+## 15 min — Anki (aloud)
 
-#### 1. Why do we need activation functions? (15 min)
+- Say the answer OUT LOUD _before_ flipping. If you only _recognize_ it, mark it wrong.
+- Checkpoint: any card you hesitated on → note it, fold it into today's derivation.
 
-- [x] Understand what happens if there is **no activation function**
-- [x] Learn why stacking linear layers still produces a linear model
-- [x] Understand why neural networks need **non-linearity**
-- [x] Draw a simple diagram illustrating this
+## 60 min — On paper (core). 4 mini-tasks:
 
----
+### M1 (10 min) — One neuron, symbols only
 
-#### 2. Learn Sigmoid (15 min)
+- Draw a single neuron with 3 inputs. Label everything: inputs, weights, bias,
+  the weighted sum, the activation.
+- **Prove it:** write the neuron's output as one equation. Name what each symbol
+  _is_ (not just its letter).
+- **Question (aloud):** why is the bias separate from the weights? What breaks if
+  you drop it?
 
-- [x] Understand the intuition behind Sigmoid
-- [x] Learn the mathematical formula
-- [x] Know the output range (0 to 1)
-- [x] Understand where Sigmoid is used
-- [x] Learn its drawbacks:
-  - [x] Vanishing gradients
-  - [x] Not zero-centered
-  - [x] Saturation
+### M2 (15 min) — Vectorize it
 
----
+- Rewrite that same neuron using a dot product instead of a sum of products.
+- **Prove it:** show the sum form and the vector form side by side; convince
+  yourself they're identical.
+- **Question:** if you have 4 neurons in a layer, what shape does the weight object
+  become? (Write the dimensions.)
 
-#### 3. Learn Tanh (10 min)
+### M3 (20 min) — 2-layer net forward pass
 
-- [x] Understand how Tanh differs from Sigmoid
-- [x] Learn the output range (-1 to 1)
-- [x] Understand why zero-centered outputs help optimization
-- [x] Learn its drawbacks (vanishing gradients)
+- Chain it: input → hidden layer (with activation) → output layer.
+- Order: (1) hidden pre-activation, (2) hidden activation, (3) output
+  pre-activation, (4) final output.
+- **Prove it:** pick tiny numbers (2 inputs, 2 hidden units) and push one example
+  all the way through by hand. Get an actual number out.
+- **Question:** what happens to the output if you remove the activation between the
+  layers? (Tie to Tue's non-linearity note.)
 
----
+### M4 (15 min) — Both loss forms
 
-#### 4. Learn ReLU (15 min)
+- Write MSE and cross-entropy as formulas, then annotate each.
+- **Prove it (each loss, one line):** what task is it for (regression vs
+  classification)? What does the prediction look like right before the loss (raw
+  number? probability?)
+- **Sanity check:** plug your M3 output + a fake target into MSE → single loss number.
 
-- [x] Understand the intuition behind ReLU
-- [x] Learn the mathematical formula
-- [x] Understand why ReLU became the default activation
-- [x] Learn the "dying ReLU" problem
-- [x] Know common variants:
-  - [x] Leaky ReLU
-  - [x] ELU (high level)
-  - [x] GELU (high level)
+## 15 min — Photo → `concepts/images/`
 
----
+- Before you snap it, add two margin notes in your own words:
+  - (a) "forward pass = \_\_\_" in one sentence
+  - (b) "the difference between MSE and cross-entropy is \_\_\_"
+- The annotation is what makes the photo a _learning artifact_, not just a picture.
 
-#### 5. Compare Activation Functions (10 min)
+## 🚀 Commit
 
-- [x] Create a comparison table:
-
-| Property           | Sigmoid | Tanh | ReLU |
-| ------------------ | ------- | ---- | ---- |
-| Output Range       |         |      |      |
-| Zero-Centered      |         |      |      |
-| Vanishing Gradient |         |      |      |
-| Computational Cost |         |      |      |
-| Typical Usage      |         |      |      |
+- Suggested message: `week-07: forward pass derivation + MSE/CE loss forms`
 
 ---
 
-#### 6. Coding Exercise (10 min)
+## Feynman exit check (aloud, before "done")
 
-- [x] Plot Sigmoid
-- [x] Plot Tanh
-- [x] Plot ReLU
-- [x] Observe their output ranges
-- [x] Observe how gradients behave visually
-
----
-
-#### 7. Interview Practice (10 min)
-
-- [x] Explain:
-  - [x] Why do neural networks need activation functions?
-  - [x] Why can't we stack only linear layers?
-  - [x] Why is ReLU preferred over Sigmoid?
-  - [x] When would you use Sigmoid?
-  - [x] What is the dying ReLU problem?
-  - [x] What causes vanishing gradients?
-
----
-
-#### 8. Feynman Notes (5 min)
-
-- [x] Complete the sentence:
-
-> Without activation functions, a deep neural network collapses into a **single linear transformation**, regardless of the number of layers.
-
-- [x] Write a 5-line explanation in your own words.
-
----
-
-#### 9. Revision (5 min)
-
-- [ ] Create 5 Anki cards from today's learning
-- [ ] Summarize the key takeaways in one page
-
----
-
-- [ ] 🚀 Commit notes/code to GitHub
-
-### Exit Criteria
-
-- [x] Explain non-linearity without notes.
-- [x] Explain Sigmoid, Tanh, and ReLU mathematically and intuitively.
-- [x] State the advantages and disadvantages of each activation function.
-- [x] Explain why ReLU is the default choice in modern neural networks.
-- [x] Answer common activation function interview questions confidently.
+Explain in 3 plain sentences, zero jargon, how one example travels from input to a
+loss number. If you reach for a symbol you can't name in words → that's your weak
+spot → revisit that mini-task.
