@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🧠 Neural Network Forward Pass Playground</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background: #f5f7fa;
+      margin: 0;
+      padding: 20px;
+      color: #1a1a2e;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    h1 { margin-bottom: 4px; }
+    .subtitle { color: #666; margin-top: 0; font-size: 14px; }
+    .network-diagram {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 24px 0;
+      padding: 16px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+    .layer { text-align: center; }
+    .layer-title { font-weight: bold; margin-bottom: 8px; font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .node {
+      width: 52px; height: 52px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: bold; margin: 8px auto; font-size: 13px;
+      transition: all 0.3s ease;
+    }
+    .node.input { background: #4ecdc4; color: white; box-shadow: 0 2px 8px rgba(78,205,196,0.3); }
+    .node.hidden { background: #ff6b6b; color: white; box-shadow: 0 2px 8px rgba(255,107,107,0.3); }
+    .node.output { background: #ffd93d; color: #1a1a2e; box-shadow: 0 2px 8px rgba(255,217,61,0.3); }
+    .arrow { font-size: 24px; color: #ccc; }
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 20px; }
+    .card { padding: 16px; border-radius: 10px; }
+    .card.inputs { background: #e8f8f5; }
+    .card.activation { background: #fff3e0; }
+    .card.weights { background: #f3e5f5; }
+    .card h4 { margin-top: 0; }
+    label { display: flex; align-items: center; justify-content: space-between; margin: 8px 0; font-size: 14px; }
+    input[type="number"] {
+      width: 80px; padding: 6px; border-radius: 6px; border: 1px solid #ccc;
+      text-align: center; font-size: 15px;
+    }
+    select { padding: 6px; border-radius: 6px; border: 1px solid #ccc; }
+    .steps {
+      background: #1a1a2e; color: #e0e0e0;
+      padding: 20px; border-radius: 12px;
+      font-family: 'Courier New', monospace; font-size: 14px; line-height: 1.8;
+      overflow-x: auto;
+    }
+    .step-title { color: #ff6b6b; font-weight: bold; }
+    .step-value { color: #4ecdc4; font-weight: bold; }
+    .step-final { color: #ffd93d; font-weight: bold; }
+    .final-output {
+      margin-top: 16px; padding: 20px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border-radius: 12px; text-align: center; color: white;
+    }
+    .final-output .label { font-size: 14px; opacity: 0.9; }
+    .final-output .value { font-size: 40px; font-weight: bold; margin-top: 4px; }
+    .tip {
+      margin-top: 20px; padding: 16px;
+      background: #e3f2fd; border-radius: 10px;
+      border-left: 4px solid #2196f3;
+    }
+    .tip h4 { margin-top: 0; color: #1565c0; }
+    .tip p { margin: 4px 0; color: #333; font-size: 14px; }
+    .weight-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+    .weight-grid label { font-size: 13px; }
+    .weight-grid input { width: 60px; }
+    .section-title { font-weight: bold; margin-bottom: 8px; }
+    .muted { color: #888; font-size: 12px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🧠 2-Layer Neural Network: Forward Pass Playground</h1>
+    <p class="subtitle">Tweak the numbers, watch the signal flow, and master the math step-by-step.</p>
+
+    <!-- Network Diagram -->
+    <div class="network-diagram">
+      <div class="layer">
+        <div class="layer-title">Input Layer</div>
+        <div class="node input" id="node-x1">x₁</div>
+        <div class="node input" id="node-x2">x₂</div>
+      </div>
+      <div class="arrow">→</div>
+      <div class="layer">
+        <div class="layer-title">Hidden Layer</div>
+        <div class="node hidden" id="node-h1">h₁</div>
+        <div class="node hidden" id="node-h2">h₂</div>
+      </div>
+      <div class="arrow">→</div>
+      <div class="layer">
+        <div class="layer-title">Output Layer</div>
+        <div class="node output" id="node-y">ŷ</div>
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <div class="grid-2">
+      <div class="card inputs">
+        <h4 style="color:#1a7a6d;">📥 Inputs</h4>
+        <label><span>x₁ =</span><input type="number" id="x1" value="0.5" step="0.1"></label>
+        <label><span>x₂ =</span><input type="number" id="x2" value="-0.3" step="0.1"></label>
+      </div>
+      <div class="card activation">
+        <h4 style="color:#e65100;">⚙️ Activation</h4>
+        <label>
+          <span>Function:</span>
+          <select id="activation">
+            <option value="relu">ReLU (max(0, z))</option>
+            <option value="sigmoid">Sigmoid (σ)</option>
+            <option value="tanh">Tanh</option>
+          </select>
+        </label>
+        <div class="muted">Tip: Start with ReLU — it's the most common default.</div>
+      </div>
+    </div>
+
+    <!-- Weights -->
+    <div class="card weights">
+      <h4 style="color:#6a1b9a;">⚖️ Weights & Biases</h4>
+      <div class="grid-2">
+        <div>
+          <div class="section-title" style="color:#8e24aa;">Hidden Layer (2→2)</div>
+          <div class="weight-grid">
+            <label><span>W₁₁ =</span><input type="number" id="w11" value="0.2" step="0.1"></label>
+            <label><span>W₁₂ =</span><input type="number" id="w12" value="0.8" step="0.1"></label>
+            <label><span>W₂₁ =</span><input type="number" id="w21" value="-0.5" step="0.1"></label>
+            <label><span>W₂₂ =</span><input type="number" id="w22" value="0.3" step="0.1"></label>
+          </div>
+          <div class="weight-grid" style="margin-top:8px;">
+            <label><span>b₁ =</span><input type="number" id="b1" value="0.1" step="0.1"></label>
+            <label><span>b₂ =</span><input type="number" id="b2" value="-0.2" step="0.1"></label>
+          </div>
+        </div>
+        <div>
+          <div class="section-title" style="color:#8e24aa;">Output Layer (2→1)</div>
+          <label><span>V₁ =</span><input type="number" id="v1" value="0.7" step="0.1"></label>
+          <label><span>V₂ =</span><input type="number" id="v2" value="-0.4" step="0.1"></label>
+          <label><span>c =</span><input type="number" id="c" value="0.05" step="0.1"></label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Math Steps -->
+    <div class="steps" id="steps-container"></div>
+
+    <!-- Final Output -->
+    <div class="final-output">
+      <div class="label">FINAL OUTPUT</div>
+      <div class="value" id="final-output">—</div>
+    </div>
+
+    <!-- Interview Tip -->
+    <div class="tip">
+      <h4>💡 Interview Pro-Tip</h4>
+      <p>When explaining forward pass in an interview, always mention the <strong>4-step chain</strong> explicitly. It shows you understand the abstraction layers: linear → non-linear → linear → output. Never skip the activation step — that's where the "neural" magic happens!</p>
+    </div>
+  </div>
+
+  <script>
+    const sigmoid = x => 1 / (1 + Math.exp(-x));
+    const relu = x => Math.max(0, x);
+    const tanh = x => Math.tanh(x);
+    const getVal = id => parseFloat(document.getElementById(id).value) || 0;
+    const fmt = n => {
+      if (Math.abs(n) < 0.001 && n !== 0) return n.toExponential(3);
+      return n.toFixed(4).replace(/\.?0+$/, '');
+    };
+
+    function compute() {
+      const x1 = getVal('x1'), x2 = getVal('x2');
+      const w11 = getVal('w11'), w12 = getVal('w12');
+      const w21 = getVal('w21'), w22 = getVal('w22');
+      const b1 = getVal('b1'), b2 = getVal('b2');
+      const v1 = getVal('v1'), v2 = getVal('v2');
+      const c = getVal('c');
+      const act = document.getElementById('activation').value;
+      const actFn = act === 'sigmoid' ? sigmoid : act === 'tanh' ? tanh : relu;
+      const actName = act === 'sigmoid' ? 'σ' : act === 'tanh' ? 'tanh' : 'ReLU';
+
+      const z1 = w11 * x1 + w21 * x2 + b1;
+      const z2 = w12 * x1 + w22 * x2 + b2;
+      const h1 = actFn(z1);
+      const h2 = actFn(z2);
+      const z_out = v1 * h1 + v2 * h2 + c;
+      const y_hat = z_out;
+
+      document.getElementById('node-x1').textContent = fmt(x1);
+      document.getElementById('node-x2').textContent = fmt(x2);
+      document.getElementById('node-h1').textContent = fmt(h1);
+      document.getElementById('node-h2').textContent = fmt(h2);
+      document.getElementById('node-y').textContent = fmt(y_hat);
+
+      document.getElementById('steps-container').innerHTML = `
+<div style="margin-bottom:12px;color:#ffd93d;font-weight:bold;">📐 STEP-BY-STEP COMPUTATION</div>
+
+<div style="margin-bottom:16px;">
+  <div class="step-title">STEP 1 — Hidden Pre-Activation (Linear)</div>
+  <div style="margin-left:16px;color:#b0b0b0;">
+    z₁ = W₁₁·x₁ + W₂₁·x₂ + b₁ = ${fmt(w11)}·${fmt(x1)} + ${fmt(w21)}·${fmt(x2)} + ${fmt(b1)} = <span class="step-value">${fmt(z1)}</span>
+  </div>
+  <div style="margin-left:16px;color:#b0b0b0;">
+    z₂ = W₁₂·x₁ + W₂₂·x₂ + b₂ = ${fmt(w12)}·${fmt(x1)} + ${fmt(w22)}·${fmt(x2)} + ${fmt(b2)} = <span class="step-value">${fmt(z2)}</span>
+  </div>
+</div>
+
+<div style="margin-bottom:16px;">
+  <div class="step-title">STEP 2 — Hidden Activation (Non-linear: ${actName})</div>
+  <div style="margin-left:16px;color:#b0b0b0;">
+    h₁ = ${actName}(z₁) = ${actName}(${fmt(z1)}) = <span class="step-value">${fmt(h1)}</span>
+  </div>
+  <div style="margin-left:16px;color:#b0b0b0;">
+    h₂ = ${actName}(z₂) = ${actName}(${fmt(z2)}) = <span class="step-value">${fmt(h2)}</span>
+  </div>
+</div>
+
+<div style="margin-bottom:16px;">
+  <div class="step-title">STEP 3 — Output Pre-Activation (Linear)</div>
+  <div style="margin-left:16px;color:#b0b0b0;">
+    z_out = V₁·h₁ + V₂·h₂ + c = ${fmt(v1)}·${fmt(h1)} + ${fmt(v2)}·${fmt(h2)} + ${fmt(c)} = <span class="step-value">${fmt(z_out)}</span>
+  </div>
+</div>
+
+<div>
+  <div class="step-title">STEP 4 — Final Output</div>
+  <div style="margin-left:16px;color:#b0b0b0;">
+    ŷ = z_out = <span class="step-final">${fmt(y_hat)}</span>
+  </div>
+  <div style="margin-left:16px;font-size:12px;color:#888;margin-top:4px;">
+    💡 For binary classification, apply σ(ŷ). For regression, this is your prediction.
+  </div>
+</div>`;
+
+      document.getElementById('final-output').textContent = fmt(y_hat);
+    }
+
+    ['x1','x2','w11','w12','w21','w22','b1','b2','v1','v2','c','activation'].forEach(id => {
+      document.getElementById(id).addEventListener('input', compute);
+    });
+
+    compute();
+  </script>
+</body>
+</html>
