@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Backpropagation — Learn by Playing</title>
+<style>
+:root{
+  --bg:#111315; --panel:#191c20; --panel2:#15181b; --ink:#f2f0e9; --muted:#a8aaa8;
+  --line:#2b3035; --blue:#77a9ff; --orange:#f1a45d; --green:#7fc59a; --pink:#e59ab9;
+  --yellow:#e8c66d; --shadow:0 16px 45px rgba(0,0,0,.24);
+}
+*{box-sizing:border-box}
+body{margin:0;background:
+ radial-gradient(circle at 8% 0%,rgba(119,169,255,.10),transparent 28%),
+ radial-gradient(circle at 92% 12%,rgba(229,154,185,.07),transparent 25%),
+ var(--bg);color:var(--ink);
+ font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+ line-height:1.55}
+button,input{font:inherit}
+.wrap{max-width:1240px;margin:auto;padding:28px 22px 70px}
+.top{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:22px}
+.kicker{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);font-weight:800}
+h1{font-size:clamp(34px,5vw,58px);line-height:1;margin:7px 0 10px;letter-spacing:-.045em;font-weight:750}
+.intro{color:var(--muted);max-width:650px;margin:0;font-size:15px}
+.top-note{max-width:250px;color:#858887;font-size:12px;text-align:right}
+@media(max-width:750px){.top{align-items:start;flex-direction:column}.top-note{text-align:left}}
+
+.tabs{display:flex;gap:6px;padding:7px;background:#171a1d;border:1px solid var(--line);border-radius:13px;margin-bottom:20px;position:sticky;top:8px;z-index:5;box-shadow:0 10px 30px rgba(0,0,0,.18)}
+.tab{border:0;background:transparent;color:#909493;padding:10px 15px;border-radius:9px;cursor:pointer;font-size:13px}
+.tab:hover{color:#eee;background:#202429}
+.tab.active{background:#e9e7df;color:#17191b;font-weight:750}
+.panel{display:none}.panel.active{display:block}
+
+.layout{display:grid;grid-template-columns:300px 1fr;gap:18px}
+@media(max-width:900px){.layout{grid-template-columns:1fr}}
+.card{background:linear-gradient(145deg,var(--panel),var(--panel2));border:1px solid var(--line);border-radius:15px;box-shadow:var(--shadow);padding:19px}
+.card+.card{margin-top:16px}
+.card h2{margin:0 0 5px;font-size:18px;letter-spacing:-.02em}
+.card h3{margin:0 0 6px;font-size:14px}
+.muted{color:var(--muted);font-size:13px}
+
+.inputs{margin-top:16px;display:grid;gap:9px}
+.row{display:grid;grid-template-columns:42px 1fr;align-items:center;gap:9px}
+.row label{font-weight:700;color:#c9cbc8;font-size:13px}
+input[type=number]{width:100%;background:#111417;color:#f2f0e9;border:1px solid #34393e;border-radius:8px;padding:9px 10px;outline:none}
+input[type=number]:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(119,169,255,.10)}
+.actions{display:flex;gap:7px;flex-wrap:wrap;margin-top:14px}
+.action{border:1px solid #363b40;background:#22262a;color:#ddd;padding:8px 11px;border-radius:8px;cursor:pointer;font-size:12px}
+.action:hover{background:#292e33}
+.presets{margin-top:16px;padding-top:13px;border-top:1px solid var(--line)}
+.preset{display:block;width:100%;text-align:left;border:0;border-left:2px solid #363b40;background:transparent;color:#bbbdbb;padding:8px 9px;cursor:pointer;font-size:12px}
+.preset:hover{color:#fff;background:#202428;border-left-color:var(--blue)}
+.question{margin-top:16px;padding:13px;border-radius:10px;background:#202429;border:1px solid #30363b}
+.question b{color:#fff}
+
+.hero{position:relative;overflow:hidden}
+.hero-head{display:flex;justify-content:space-between;gap:20px;align-items:start}
+.hero-head h2{font-size:21px}
+.live{font-size:11px;color:#9a9e9d;white-space:nowrap}
+.live i{display:inline-block;width:7px;height:7px;background:var(--green);border-radius:50%;margin-right:5px;box-shadow:0 0 12px rgba(127,197,154,.8)}
+
+.graph-area{margin:14px 0 4px;border:1px solid #292f34;border-radius:13px;background:#111417;overflow:hidden;position:relative}
+.graph-lines{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:32px 32px}
+.network{position:relative;display:flex;align-items:center;justify-content:center;gap:0;min-height:220px;padding:25px 12px;z-index:1}
+.node{width:112px;min-width:112px;text-align:center;padding:13px 8px;background:#1c2024;border:1px solid #343a40;border-radius:12px;position:relative;box-shadow:0 7px 22px rgba(0,0,0,.22)}
+.node:before{content:"";position:absolute;top:0;left:12px;right:12px;height:2px;background:var(--accent);border-radius:0 0 4px 4px;box-shadow:0 0 12px var(--accent)}
+.node .label{font-size:10px;color:#858a89;text-transform:uppercase;letter-spacing:.08em}
+.node .sym{font-family:Georgia,serif;font-size:22px;margin:2px 0}
+.node .val{font-size:13px;color:var(--accent);font-weight:750}
+.node.input{--accent:var(--blue)}.node.pre{--accent:var(--orange)}.node.act{--accent:var(--green)}.node.out{--accent:var(--pink)}
+.arrow{height:2px;width:44px;background:#4b5156;position:relative;flex:0 0 44px}
+.arrow:after{content:"";position:absolute;right:-1px;top:-4px;border-left:8px solid #777d80;border-top:5px solid transparent;border-bottom:5px solid transparent}
+@media(max-width:650px){.network{justify-content:flex-start;overflow-x:auto}.arrow{width:24px;flex-basis:24px}}
+
+.callout{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start;margin-top:12px;padding:13px;border-radius:10px;background:#20252a;border:1px solid #30363b}
+.callout .mark{font-size:18px}.callout b{color:#f3f1eb}.callout span{color:#a9adab;font-size:13px}
+
+.split{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:16px}
+@media(max-width:760px){.split{grid-template-columns:1fr}}
+.pass{border:1px solid #2c3237;border-radius:12px;background:#171a1d;padding:15px;position:relative;overflow:hidden}
+.pass:before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--accent)}
+.pass.forward{--accent:var(--orange)}.pass.back{--accent:var(--blue)}
+.tag{font-size:10px;color:#888d8c;text-transform:uppercase;letter-spacing:.08em;font-weight:800}
+.eq{font-family:Georgia,serif;font-size:16px;margin:6px 0;color:#e9e6dc}
+.result{font-size:25px;font-weight:750;color:var(--accent)}
+.explain{font-size:12px;color:#8e9391;margin-top:3px}
+
+.sectionline{display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin-bottom:10px}
+.sectionline h2{margin:0}.sectionline small{color:#777c7a}
+
+.mini-graph{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.mini{background:#15181b;border:1px solid #292f34;border-radius:10px;padding:12px}
+.mini-title{font-size:11px;color:#8e9391;text-transform:uppercase;letter-spacing:.07em}
+.mini-value{font-size:21px;font-weight:750;margin-top:2px}
+.bar{height:7px;background:#292e33;border-radius:99px;overflow:hidden;margin-top:9px}
+.bar span{display:block;height:100%;border-radius:99px;background:var(--accent);width:50%;transition:width .3s}
+.mini.forward{--accent:var(--orange)}.mini.gradient{--accent:var(--blue)}
+
+.text-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:760px){.text-grid{grid-template-columns:1fr}}
+.prose{color:#c4c7c4;font-size:14px}.prose strong{color:#f1efe8}
+.big-idea{font-family:Georgia,serif;font-size:24px;line-height:1.25;color:#eee;margin:12px 0}
+.quote{border-left:3px solid var(--blue);padding:4px 0 4px 14px;color:#cdd0ce;font-family:Georgia,serif;font-size:17px}
+
+.steps{counter-reset:step;display:grid;gap:10px;margin-top:15px}
+.step{counter-increment:step;display:grid;grid-template-columns:34px 1fr;gap:12px;padding:13px;border:1px solid #2b3035;border-radius:10px;background:#171a1d}
+.step:before{content:counter(step);display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:#252b31;color:#9dbfff;font-size:12px;font-weight:800}
+.formula{font-family:Georgia,serif;font-size:17px;color:#ebe8df}.calc{color:#929795;font-size:13px;margin-top:2px}.calc b{color:#e7e4dc}
+
+.remember{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+@media(max-width:700px){.remember{grid-template-columns:1fr}}
+.rem-card{padding:15px;border:1px solid #2c3237;border-radius:11px;background:#171a1d}
+.rem-card .num{color:var(--blue);font-size:12px;font-weight:800}.rem-card h3{margin:3px 0;font-size:14px}.rem-card p{margin:0;color:#969b99;font-size:12px}
+
+.quiz{display:grid;gap:12px}.q{padding:16px;border:1px solid #2c3237;border-radius:11px;background:#171a1d}.q p{margin:0 0 10px;font-weight:650}
+.q button{border:1px solid #343a40;background:#202429;color:#c7cac8;padding:8px 10px;border-radius:7px;margin:3px;cursor:pointer;font-size:12px}.q button:hover{background:#2a2f34}
+.feedback{font-size:12px;font-weight:700;margin-top:7px}.ok{color:var(--green)}.no{color:var(--pink)}
+
+.footer{text-align:center;color:#666b69;font-size:11px;margin-top:24px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <div>
+    <div class="kicker">Neural Networks · Hands-on</div>
+    <h1>Backpropagation Playground</h1>
+    <p class="intro">Don't just read the formula. Change the numbers, follow the signal, and see what the gradient is trying to tell you.</p>
+  </div>
+  <div class="top-note">Small network. Real calculations. No black box.</div>
+</header>
+
+<nav class="tabs">
+ <button class="tab active" data-tab="play">Playground</button>
+ <button class="tab" data-tab="intuition">The idea</button>
+ <button class="tab" data-tab="derive">Walk it backward</button>
+ <button class="tab" data-tab="remember">Keep this</button>
+ <button class="tab" data-tab="quiz">Test yourself</button>
+</nav>
+
+<section id="play" class="panel active">
+<div class="layout">
+<aside>
+ <div class="card">
+  <h2>Change the numbers</h2>
+  <div class="muted">Everything on the right updates immediately.</div>
+  <div class="inputs">
+   <div class="row"><label>x</label><input id="x" type="number" step=".1" value="1"></div>
+   <div class="row"><label>w₁</label><input id="w1" type="number" step=".1" value="2"></div>
+   <div class="row"><label>b₁</label><input id="b1" type="number" step=".1" value="0"></div>
+   <div class="row"><label>w₂</label><input id="w2" type="number" step=".1" value="3"></div>
+   <div class="row"><label>b₂</label><input id="b2" type="number" step=".1" value="0"></div>
+   <div class="row"><label>y</label><input id="y" type="number" step=".1" value="5"></div>
+  </div>
+  <div class="actions"><button class="action" onclick="reset()">Reset</button><button class="action" onclick="randomize()">Surprise me</button></div>
+  <div class="presets">
+   <div class="muted" style="margin-bottom:5px">Good experiments</div>
+   <button class="preset" onclick="setVals(1,2,0,3,0,5)">Start here: the simple example</button>
+   <button class="preset" onclick="setVals(1,-2,0,3,0,5)">What if ReLU turns off?</button>
+   <button class="preset" onclick="setVals(1,2,0,-3,0,5)">Flip the second weight</button>
+  </div>
+ </div>
+ <div class="question">
+   <div class="muted">The question behind backpropagation</div>
+   <p style="margin:6px 0 0">“If I nudge <b>w₁</b> a little, does the loss go up or down?”</p>
+ </div>
+</aside>
+
+<main>
+ <div class="card hero">
+  <div class="hero-head"><div><h2>Your network, right now</h2><div class="muted">Forward pass first. Then we turn around.</div></div><div class="live"><i></i>LIVE CALCULATION</div></div>
+
+  <div class="graph-area">
+   <div class="graph-lines"></div>
+   <div class="network">
+    <div class="node input"><div class="label">input</div><div class="sym">x</div><div class="val" id="nx">1</div></div>
+    <div class="arrow"></div>
+    <div class="node pre"><div class="label">pre-activation</div><div class="sym">z₁</div><div class="val" id="nz1">2</div></div>
+    <div class="arrow"></div>
+    <div class="node act"><div class="label">activation</div><div class="sym">a₁</div><div class="val" id="na1">2</div></div>
+    <div class="arrow"></div>
+    <div class="node pre"><div class="label">output</div><div class="sym">z₂</div><div class="val" id="nz2">6</div></div>
+    <div class="arrow"></div>
+    <div class="node out"><div class="label">prediction</div><div class="sym">ŷ</div><div class="val" id="nyh">6</div></div>
+   </div>
+  </div>
+
+  <div class="callout"><div class="mark">↳</div><div><b id="status">ReLU is letting the signal through.</b><br><span id="statusText">z₁ is positive, so the activation is the same as z₁.</span></div></div>
+ </div>
+
+ <div class="card">
+  <div class="sectionline"><h2>Forward pass</h2><small>“What did the network do?”</small></div>
+  <div class="split">
+   <div class="pass forward"><div class="tag">01 · hidden neuron</div><div class="eq">z₁ = w₁x + b₁</div><div class="calc" id="fz1">= 2 × 1 + 0</div><div class="result" id="rz1">2</div><div class="explain">Raw signal before the activation function.</div></div>
+   <div class="pass forward"><div class="tag">02 · ReLU</div><div class="eq">a₁ = max(0, z₁)</div><div class="calc" id="fa1">= max(0, 2)</div><div class="result" id="ra1">2</div><div class="explain">The activation decides what gets passed on.</div></div>
+   <div class="pass forward"><div class="tag">03 · output</div><div class="eq">z₂ = w₂a₁ + b₂</div><div class="calc" id="fz2">= 3 × 2 + 0</div><div class="result" id="rz2">6</div><div class="explain">In this tiny network, this is our prediction.</div></div>
+   <div class="pass forward"><div class="tag">04 · loss</div><div class="eq">L = (ŷ − y)²</div><div class="calc" id="floss">= (6 − 5)²</div><div class="result" id="rloss">1</div><div class="explain">One simple measure of how wrong we were.</div></div>
+  </div>
+ </div>
+
+ <div class="card">
+  <div class="sectionline"><h2>Backward pass</h2><small>“What should change?”</small></div>
+  <div class="split">
+   <div class="pass back"><div class="tag">loss → prediction</div><div class="eq">∂L/∂ŷ = 2(ŷ − y)</div><div class="result" id="gy">2</div><div class="explain" id="ey">Positive: moving the prediction upward makes the loss worse.</div></div>
+   <div class="pass back"><div class="tag">through the output</div><div class="eq">∂L/∂z₂ = ∂L/∂ŷ × 1</div><div class="result" id="gz2">2</div><div class="explain">The prediction is just z₂ here, so the local derivative is 1.</div></div>
+   <div class="pass back"><div class="tag">toward a₁</div><div class="eq">∂L/∂a₁ = ∂L/∂z₂ × w₂</div><div class="result" id="ga1">6</div><div class="explain">The gradient arriving at the hidden activation.</div></div>
+   <div class="pass back"><div class="tag">through ReLU</div><div class="eq">∂L/∂z₁ = ∂L/∂a₁ × ReLU′(z₁)</div><div class="result" id="gz1">6</div><div class="explain" id="erelu">ReLU′ = 1, so the gradient passes through.</div></div>
+   <div class="pass back"><div class="tag">gradient for w₁</div><div class="eq">∂L/∂w₁ = ∂L/∂z₁ × x</div><div class="result" id="gw1">6</div><div class="explain" id="ew1">Positive gradient → gradient descent would decrease w₁.</div></div>
+   <div class="pass back"><div class="tag">gradient for w₂</div><div class="eq">∂L/∂w₂ = ∂L/∂z₂ × a₁</div><div class="result" id="gw2">4</div><div class="explain" id="ew2">Positive gradient → gradient descent would decrease w₂.</div></div>
+  </div>
+ </div>
+
+ <div class="card">
+  <div class="sectionline"><h2>A quick visual check</h2><small>Not a new calculation — just another way to see it.</small></div>
+  <div class="mini-graph">
+   <div class="mini forward"><div class="mini-title">Prediction</div><div class="mini-value" id="mp">6</div><div class="bar"><span id="bp"></span></div></div>
+   <div class="mini gradient"><div class="mini-title">Gradient for w₁</div><div class="mini-value" id="mg">6</div><div class="bar"><span id="bg"></span></div></div>
+  </div>
+ </div>
+</main>
+</div>
+</section>
+
+<section id="intuition" class="panel">
+ <div class="text-grid">
+  <div class="card"><div class="kicker">The problem</div><div class="big-idea">A weight changes the loss indirectly.</div><p class="prose">A weight doesn't reach into the loss and say “change.” It changes a value next to it. That value changes another value, and eventually the prediction changes. The loss notices the prediction.</p><p class="prose">Backpropagation is our way of tracing that chain <strong>backward</strong>.</p></div>
+  <div class="card"><div class="kicker">The useful mental model</div><div class="quote">Follow the dependency path backward, and multiply the local effects as you go.</div><p class="prose">You don't need to memorize a giant formula. At each arrow, ask: <strong>“If this value moves a tiny bit, how much does the next value move?”</strong></p></div>
+ </div>
+ <div class="card" style="margin-top:16px"><div class="kicker">Why the chain rule fits perfectly</div><p class="prose">Imagine A affects B by ×2. B affects C by ×3. C affects D by ×4. A tiny change in A therefore has an overall effect of:</p><div class="big-idea" style="text-align:center">2 × 3 × 4 = 24</div><p class="prose">That is the chain rule. A neural network is just a much bigger chain — usually with branches — and backpropagation applies this idea efficiently.</p></div>
+</section>
+
+<section id="derive" class="panel">
+ <div class="card"><div class="kicker">Use the current numbers</div><h2 style="margin-top:4px">Walk from the loss back to w₁</h2><p class="muted">This is the part worth being able to explain in an interview.</p><div class="steps" id="steps"></div></div>
+</section>
+
+<section id="remember" class="panel">
+ <div class="card"><div class="kicker">Short version</div><h2 style="margin-top:4px">Things I would actually remember</h2><div class="remember" style="margin-top:16px">
+  <div class="rem-card"><div class="num">01</div><h3>Forward pass</h3><p>Use the weights to produce a prediction.</p></div>
+  <div class="rem-card"><div class="num">02</div><h3>Loss</h3><p>Turn “wrong prediction” into a number we can optimize.</p></div>
+  <div class="rem-card"><div class="num">03</div><h3>Backward pass</h3><p>Ask how much each parameter affects the loss.</p></div>
+  <div class="rem-card"><div class="num">04</div><h3>Chain rule</h3><p>Multiply local derivatives along the dependency path.</p></div>
+  <div class="rem-card"><div class="num">05</div><h3>Gradient sign</h3><p>Positive means “increasing this parameter raises loss locally.” Negative means the opposite.</p></div>
+  <div class="rem-card"><div class="num">06</div><h3>Gradient descent</h3><p>Move opposite the gradient because we want the loss to go down.</p></div>
+  <div class="rem-card"><div class="num">07</div><h3>ReLU</h3><p>Positive input → gradient passes. Negative input → gradient is blocked.</p></div>
+  <div class="rem-card"><div class="num">08</div><h3>The one-line explanation</h3><p>“Gradient coming in × local derivative = gradient going backward.”</p></div>
+ </div></div>
+</section>
+
+<section id="quiz" class="panel">
+ <div class="card"><div class="kicker">No peeking</div><h2 style="margin-top:4px">Test yourself</h2><p class="muted">Try answering before clicking.</p>
+ <div class="quiz">
+  <div class="q"><p>1. If ∂L/∂w₁ is +6, what does that mean?</p><button onclick="quiz(this,true)">Increasing w₁ would increase the loss locally.</button><button onclick="quiz(this,false)">Increasing w₁ would decrease the loss locally.</button><div class="feedback"></div></div>
+  <div class="q"><p>2. Why are derivatives multiplied during backpropagation?</p><button onclick="quiz(this,true)">The chain rule.</button><button onclick="quiz(this,false)">Because every neural network uses multiplication.</button><div class="feedback"></div></div>
+  <div class="q"><p>3. If z₁ becomes −2, what happens to ReLU's gradient in this example?</p><button onclick="quiz(this,false)">It becomes 2.</button><button onclick="quiz(this,true)">It becomes 0.</button><div class="feedback"></div></div>
+  <div class="q"><p>4. If a gradient is −5, which way does gradient descent move the parameter?</p><button onclick="quiz(this,true)">It increases the parameter.</button><button onclick="quiz(this,false)">It decreases the parameter.</button><div class="feedback"></div></div>
+ </div></div>
+</section>
+
+<div class="footer">The best way to learn backpropagation is to keep changing the numbers until the arrows start making sense.</div>
+</div>
+
+<script>
+const fields=["x","w1","b1","w2","b2","y"];
+const val=id=>parseFloat(document.getElementById(id).value)||0;
+const f=x=>{let r=Math.round(x*1000)/1000;return Number.isFinite(r)?String(r):"—"};
+const put=(id,x)=>document.getElementById(id).textContent=f(x);
+
+function calc(){
+ const x=val("x"),w1=val("w1"),b1=val("b1"),w2=val("w2"),b2=val("b2"),y=val("y");
+ const z1=w1*x+b1,a1=Math.max(0,z1),z2=w2*a1+b2,yh=z2,L=(yh-y)**2;
+ const gy=2*(yh-y),gz2=gy,ga1=gz2*w2,rp=z1>0?1:0,gz1=ga1*rp,gw1=gz1*x,gw2=gz2*a1;
+
+ put("nx",x);put("nz1",z1);put("na1",a1);put("nz2",z2);put("nyh",yh);
+ document.getElementById("fz1").textContent=`= ${f(w1)} × ${f(x)} + ${f(b1)}`;
+ document.getElementById("fa1").textContent=`= max(0, ${f(z1)})`;
+ document.getElementById("fz2").textContent=`= ${f(w2)} × ${f(a1)} + ${f(b2)}`;
+ document.getElementById("floss").textContent=`= (${f(yh)} − ${f(y)})²`;
+ put("rz1",z1);put("ra1",a1);put("rz2",z2);put("rloss",L);
+ put("gy",gy);put("gz2",gz2);put("ga1",ga1);put("gz1",gz1);put("gw1",gw1);put("gw2",gw2);
+ put("mp",yh);put("mg",gw1);
+
+ const status=document.getElementById("status"),st=document.getElementById("statusText"),er=document.getElementById("erelu");
+ if(z1>0){status.textContent="ReLU is letting the signal through.";st.textContent="z₁ is positive, so the activation is the same as z₁.";er.textContent="ReLU′ = 1, so the gradient passes through."}
+ else if(z1<0){status.textContent="ReLU is switched off.";st.textContent="z₁ is negative, so a₁ becomes 0 and the gradient is blocked here.";er.textContent="ReLU′ = 0, so the gradient stops here."}
+ else{status.textContent="z₁ is exactly zero.";st.textContent="This playground uses ReLU′(0) = 0.";er.textContent="At zero, this playground takes ReLU′ = 0."}
+
+ document.getElementById("ey").textContent=gy>0?"Positive: moving the prediction upward makes the loss worse.":gy<0?"Negative: moving the prediction upward reduces the loss.":"Zero: the prediction already matches the target.";
+ document.getElementById("ew1").textContent=gw1>0?"Positive gradient → gradient descent would decrease w₁.":gw1<0?"Negative gradient → gradient descent would increase w₁.":"Zero gradient → no first-order change.";
+ document.getElementById("ew2").textContent=gw2>0?"Positive gradient → gradient descent would decrease w₂.":gw2<0?"Negative gradient → gradient descent would increase w₂.":"Zero gradient → no first-order change.";
+
+ const p=Math.min(100,Math.abs(yh)*8+5),g=Math.min(100,Math.abs(gw1)*8+5);
+ document.getElementById("bp").style.width=p+"%";document.getElementById("bg").style.width=g+"%";
+ buildSteps({x,w1,b1,w2,b2,y,z1,a1,z2,yh,L,gy,gz2,ga1,rp,gz1,gw1});
+}
+function buildSteps(v){
+ document.getElementById("steps").innerHTML=`
+ <div class="step"><div><div class="formula">Start with L = (ŷ − y)²</div><div class="calc">∂L/∂ŷ = 2(ŷ − y) = 2(${f(v.yh)} − ${f(v.y)}) = <b>${f(v.gy)}</b></div></div></div>
+ <div class="step"><div><div class="formula">ŷ = z₂</div><div class="calc">So ∂ŷ/∂z₂ = 1, therefore ∂L/∂z₂ = ${f(v.gy)} × 1 = <b>${f(v.gz2)}</b></div></div></div>
+ <div class="step"><div><div class="formula">z₂ = w₂a₁ + b₂</div><div class="calc">∂z₂/∂a₁ = w₂ = ${f(v.w2)}, so ∂L/∂a₁ = ${f(v.gz2)} × ${f(v.w2)} = <b>${f(v.ga1)}</b></div></div></div>
+ <div class="step"><div><div class="formula">a₁ = ReLU(z₁)</div><div class="calc">ReLU′(${f(v.z1)}) = ${f(v.rp)}, so ∂L/∂z₁ = ${f(v.ga1)} × ${f(v.rp)} = <b>${f(v.gz1)}</b></div></div></div>
+ <div class="step"><div><div class="formula">z₁ = w₁x + b₁</div><div class="calc">∂z₁/∂w₁ = x = ${f(v.x)}, so ∂L/∂w₁ = ${f(v.gz1)} × ${f(v.x)} = <b>${f(v.gw1)}</b></div></div></div>
+ <div class="step"><div><div class="formula">And that's the pattern.</div><div class="calc"><b>Gradient coming in × local derivative = gradient going backward.</b></div></div></div>`;
+}
+function setVals(x,w1,b1,w2,b2,y){[x,w1,b1,w2,b2,y].forEach((v,i)=>document.getElementById(fields[i]).value=v);calc()}
+function reset(){setVals(1,2,0,3,0,5)}
+function randomize(){const r=()=>Math.round((Math.random()*6-3)*10)/10;setVals(r()||1,r()||1,r(),r()||1,r(),Math.round((Math.random()*8-2)*10)/10)}
+fields.forEach(id=>document.getElementById(id).addEventListener("input",calc));
+document.querySelectorAll(".tab").forEach(t=>t.onclick=()=>{document.querySelectorAll(".tab").forEach(x=>x.classList.remove("active"));document.querySelectorAll(".panel").forEach(x=>x.classList.remove("active"));t.classList.add("active");document.getElementById(t.dataset.tab).classList.add("active")});
+function quiz(btn,ok){const f=btn.parentElement.querySelector(".feedback");f.textContent=ok?"Correct.":"Not quite — think about the direction of the gradient.";f.className="feedback "+(ok?"ok":"no")}
+calc();
+</script>
+</body>
+</html>

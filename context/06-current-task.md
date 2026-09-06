@@ -31,8 +31,8 @@
 
 **✅ Exit Gate:**
 
-- [ ] Can you draw the blame flow on paper with arrows? Alice ← Bob ← Charlie ← Error
-- [ ] Can you explain why Charlie's blame depends on how much he "amplified" Bob's mistake?
+- [x] Can you draw the blame flow on paper with arrows? Alice ← Bob ← Charlie ← Error
+- [x] Can you explain why Charlie's blame depends on how much he "amplified" Bob's mistake?
 
 ---
 
@@ -48,8 +48,8 @@
 
 **✅ Exit Gate:**
 
-- [ ] Can you sketch the network diagram with the "error wave" traveling backward?
-- [ ] Can you explain in one sentence: _"Backprop is just asking — how much did each weight contribute to the final error?"_
+- [x] Can you sketch the network diagram with the "error wave" traveling backward?
+- [x] Can you explain in one sentence: _"Backprop is just asking — how much did each weight contribute to the final error?"_
 
 ---
 
@@ -72,8 +72,8 @@ Imagine a factory with three workers in a row...
 
 **✅ Exit Gate:**
 
-- [ ] Read your note aloud. Does it sound like a story, not a lecture?
-- [ ] Could a 12-year-old nod and say "oh, that makes sense"?
+- [x] Read your note aloud. Does it sound like a story, not a lecture?
+- [x] Could a 12-year-old nod and say "oh, that makes sense"?
 
 ---
 
@@ -90,8 +90,8 @@ Imagine a factory with three workers in a row...
 
 **✅ Exit Gate:**
 
-- [ ] Can you explain: _"The chain rule is just multiplying how sensitive each domino is to the one before it"?_
-- [ ] Can you draw the domino chain for a 3-layer network?
+- [x] Can you explain: _"The chain rule is just multiplying how sensitive each domino is to the one before it"?_
+- [x] Can you draw the domino chain for a 3-layer network?
 
 ---
 
@@ -126,8 +126,8 @@ Imagine a factory with three workers in a row...
 
 **✅ Exit Gate:**
 
-- [ ] Did you compute all 4 values (z, a, L, dL/dw) with real numbers?
-- [ ] Can you point to each piece and say what it means in plain English?
+- [x] Did you compute all 4 values (z, a, L, dL/dw) with real numbers?
+- [x] Can you point to each piece and say what it means in plain English?
 
 ---
 
@@ -150,8 +150,8 @@ Imagine a factory with three workers in a row...
 
 **✅ Exit Gate:**
 
-- [ ] Did you compute `dL/dw₁` and `dL/dw₂` with real numbers?
-- [ ] Can you explain why `dL/dh` "splits" into `w₂`? (Hint: h flows into ŷ through w₂)
+- [x] Did you compute `dL/dw₁` and `dL/dw₂` with real numbers?
+- [x] Can you explain why `dL/dh` "splits" into `w₂`? (Hint: h flows into ŷ through w₂)
 
 ---
 
@@ -242,9 +242,9 @@ Copy this table into your own notes and check off as you go:
 
 | #   | Task                       | Time   | Done | Exit Gate Passed |
 | --- | -------------------------- | ------ | ---- | ---------------- |
-| 1   | The Blame Game             | 10 min | [ ]  | [ ]              |
-| 2   | 3B1B Ch.3                  | 20 min | [ ]  | [ ]              |
-| 3   | Feynman Note               | 15 min | [ ]  | [ ]              |
+| 1   | The Blame Game             | 10 min | [x]  | [x]              |
+| 2   | 3B1B Ch.3                  | 20 min | [x]  | [x]              |
+| 3   | Feynman Note               | 15 min | [x]  | [x]              |
 | 4   | Chain Rule Intuition       | 15 min | [ ]  | [ ]              |
 | 5   | One Weight, One Neuron     | 15 min | [ ]  | [ ]              |
 | 6   | Two Layers, Two Weights    | 20 min | [ ]  | [ ]              |
