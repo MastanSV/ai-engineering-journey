@@ -1,0 +1,11 @@
+flowchart RL
+    L["Error signal"] -->|"× w₂"| H["Signal at h"]
+    H -->|"× ReLU gate = 0<br/>(CLOSED)"| Z["Signal at z = 0"]
+    Z -->|"× w₁"| X["Signal at x = 0"]
+    Z -.-> G1["Blame for w₁ = 0<br/>w₁ does not learn"]
+
+    style L fill:#ff4d4d,color:#fff
+    style H fill:#ff8080
+    style Z fill:#cccccc
+    style X fill:#cccccc
+    style G1 fill:#cccccc
