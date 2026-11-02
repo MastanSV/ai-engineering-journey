@@ -1,19 +1,22 @@
 # Current State — Snapshot
 
-> **Updated:** 2026-07-28 (Week 7 — Monday; Phase 2 foundations begin)
+> **Updated:** 2026-11-02 (Resume week — Monday)
 > _Update this file at the end of every working session._
 
 ## Calendar
 
-- **Current date:** July 28, 2026 (Monday — Week 7 Day 1)
-- **Current week:** **7 of 32**
+- **Current date:** November 2, 2026 (Monday)
+- **Current week:** **7 of 32 (resumed)** — calendar re-anchored after a break
 - **Current phase:** **Phase 2 — Deep Learning foundations → Transformers**
-- **Theme this week:** _Concept-first foundations (neuron → backprop)_
-- **Target offer date:** December 2026
+- **Theme this week:** _Finish backprop → MLP from scratch in numpy_
+- **Target offer date:** December 2026 → **[RE-PLAN NEEDED]** after this week's retro
 
-## Resume note (2026-07-04)
+## Resume note (2026-11-02)
 
-- Journey paused ~May 20 (mid-Week 4), resumed July 4. Calendar re-anchored.
+- Break #1: ~May 20 → July 4 (mid-Week 4).
+- Break #2: ~early Aug → late Oct (~2 months). Week 7 was not completed.
+- Re-entry started Oct 29: backprop Tasks 1–7 done; output-activation concept done.
+- Rule: the 32-week calendar shifts. Do not try to "catch up" by skipping concepts.
 
 ## Hardware
 
@@ -34,7 +37,7 @@
 
 ## Time commitment (locked)
 
-- Mon–Fri: 9:00–10:30 PM (1.5hr × 5 = 7.5hr) · Sat + Sun: 6hr each · **Weekly: 19hr**
+- Mon–Fri: 9:00–10:30 PM (1.5hr × 5 = 7.5hr) · Sat + Sun: 6hr each · **Weekly: 19.5hr**
 
 ## Day-state legend
 
@@ -42,25 +45,26 @@
 
 ## Phase 1 — CLOSED ✅ (Weeks 1–6)
 
-- P1 (Heart Disease classification) shipped on HF Space.
-- Phase 1 gate PASSED — all 6 quality-bar items (logged in `04-decisions-log.md`).
-- Weeks 4–6 retros written; Week 6 retro spawned 5 new tracking rules.
-- **[CONFIRM] Open P1 item:** Loom walkthrough (was unchecked) — done or still outstanding?
+- P1 (Heart Disease classification) shipped on HF Space. Phase 1 gate PASSED.
+- **[CONFIRM] Loom walkthrough** — still open?
 
-## Week 7 plan (live) — Phase 2 foundations, concept-first
+## Phase 2 progress
 
-- **Mon Jul 28** — CONCEPT: the neuron (3B1B Ch.1) + Feynman note
-- **Tue Jul 29** — CONCEPT: activations + why non-linearity
-- **Wed Jul 30** — DERIVE: forward pass + loss (on paper)
-- **Thu Jul 31** — CONCEPT: backprop intuition (3B1B Ch.3–4)
-- **Fri Aug 01** — DERIVE: backprop math (chain rule, 2-layer net)
-- **Sat Aug 02** — CODE: MLP from scratch in numpy (XOR / make_moons)
-- **Sun Aug 03** — Anki + teach-back + Twitter + retro + context update
+| Topic                                                    | State                            |
+| -------------------------------------------------------- | -------------------------------- |
+| Neuron concept                                           | ✅ (`week-07-neuron-concept.md`) |
+| Perceptron                                               | ✅ (`week-07/perceptron.ipynb`)  |
+| Backprop Tasks 1–7 (story → 2-layer math → error signal) | ✅                               |
+| Output activation: when to use / not use                 | ✅ (Nov 1)                       |
+| Backprop Tasks 8–10 (pitch, curveballs, whiteboard)      | 🔄 Mon Nov 2                     |
+| MLP from scratch (numpy)                                 | 🔄 This week                     |
+| PyTorch basics (tensors, autograd)                       | ⏭️ Next week                     |
+| P2: nanoGPT                                              | ⏭️ Later                         |
 
-## NN status (Week 7 — live)
+## NN status (Resume week — live)
 
-- **NN1** GitHub commits: 0 / target ≥5 (daily)
-- **NN2** Twitter: 0 / 1 — `week-07-thread-backprop.md` planned Sun Aug 3
-- **NN3** Teach-back: 0 / 1 — `week-07-teachback-backprop.md` planned Sun
-- **NN4** Anki: daily reviews active (Recognition≠Explanation rule enforced)
-- **NN5** Retro: `retro-week-07.md` planned Sun Aug 3
+- **NN1** GitHub commits: 0 / target ≥5
+- **NN2** Twitter: 0 / 1 — "back after a break" + backprop thread (Sun)
+- **NN3** Teach-back: 0 / 1 — `week-07-teachback-backprop.md` (Sun)
+- **NN4** Anki: daily, said aloud
+- **NN5** Retro: `retro-week-07.md` (Sun)

@@ -114,3 +114,14 @@
   interview signal.
 - **Reversible?** Yes — if foundations move faster than budgeted, pull nanoGPT forward.
 - **Source:** user directive 2026-07-28; `weekly-logs/retro-week-06-p1.md` Q2/Q7.
+
+## 2026-11-02 · Re-anchor calendar after break #2 (~2 months); resume at Week 7
+
+- **Why:** Journey paused ~early Aug → late Oct 2026. Week 7 was not completed. Skipping ahead to "catch up" would break the CONCEPT → DERIVE → CODE rule and leave backprop weak — and every later phase (Transformers, fine-tuning) depends on it.
+- **What changes:**
+  - Calendar: Week 7 restarts Nov 2. All later weeks shift by the gap.
+  - Re-entry done Oct 29 – Nov 1: backprop Tasks 1–7 + output-activation concept.
+  - This week: finish backprop (Tasks 8–10) → MLP from scratch in numpy → PyTorch check.
+- **Open:** The December 2026 offer target is no longer realistic. Decide the new target date in `retro-week-07.md` (Sun Nov 8). Update `02-roadmap-summary.md` after that.
+- **Alternatives considered:** (a) Skip to Week 9 to stay on the old calendar — rejected, because it builds on a weak base. (b) Restart Phase 2 from Week 5 — rejected, because the neuron + perceptron work is already done.
+- **Reversible?** Yes — the target date gets reviewed every Sunday retro.

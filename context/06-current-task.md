@@ -170,8 +170,10 @@ Imagine a factory with three workers in a row...
 
 **✅ Exit Gate:**
 
-- [ ] Can you trace the error signal from output to input without looking at formulas?
-- [ ] Can you explain why a dead ReLU neuron (output = 0) blocks the error signal?
+- [x] Can you trace the error signal from output to input without looking at formulas?
+- [x] Can you explain why a dead ReLU neuron (output = 0) blocks the error signal?
+
+> Done 2026-11-01. Diagrams committed. Also covered: why the output layer has no activation for regression (the output activation translates the answer; hidden activations bend the line).
 
 ---
 
@@ -245,10 +247,10 @@ Copy this table into your own notes and check off as you go:
 | 1   | The Blame Game             | 10 min | [x]  | [x]              |
 | 2   | 3B1B Ch.3                  | 20 min | [x]  | [x]              |
 | 3   | Feynman Note               | 15 min | [x]  | [x]              |
-| 4   | Chain Rule Intuition       | 15 min | [ ]  | [ ]              |
-| 5   | One Weight, One Neuron     | 15 min | [ ]  | [ ]              |
-| 6   | Two Layers, Two Weights    | 20 min | [ ]  | [ ]              |
-| 7   | Error Signal Visualization | 15 min | [ ]  | [ ]              |
+| 4   | Chain Rule Intuition       | 15 min | [x]  | [x]              |
+| 5   | One Weight, One Neuron     | 15 min | [x]  | [x]              |
+| 6   | Two Layers, Two Weights    | 20 min | [x]  | [x]              |
+| 7   | Error Signal Visualization | 15 min | [x]  | [x]              |
 | 8   | The 60-Second Pitch        | 15 min | [ ]  | [ ]              |
 | 9   | Curveball Questions        | 20 min | [ ]  | [ ]              |
 | 10  | Whiteboard Test            | 20 min | [ ]  | [ ]              |
