@@ -29,7 +29,7 @@ Task 8+9    Task 10      matrix shapes  1 neuron        2-layer forward  backwar
 ### Tue Nov 3 (60 min planned) — Main outcome: whiteboard test passed
 
 - [x] 15 min — Anki
-- [ ] 5 min — Task 9 second round: only the 🟡 / ❌ questions from Monday
+- [x] 5 min — Task 9 second round: only the 🟡 / ❌ questions from Monday
 - [ ] 30 min — **Task 10:** timed run (5 min) → score → fix → timed run again → photo
 - [ ] 5 min — Tick the Commit Checklist + Progress Tracker in `06-current-task.md`
 - [ ] 5 min — Loom check: found / not found → one line in `01-current-state.md`
