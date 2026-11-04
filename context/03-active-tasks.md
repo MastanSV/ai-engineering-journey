@@ -37,7 +37,7 @@ Task 8+9    Task 10      matrix shapes  1 neuron        2-layer forward  backwar
 
 ### Wed Nov 4 (60 min planned) — Main outcome: matrix shapes on paper
 
-- [ ] 15 min — Anki
+- [x] 15 min — Anki
 - [ ] 45 min — On paper: 2-layer net with `X (4, 2)`, hidden size 4, output size 1.
   - Shape of `W₁`, `b₁`, `Z₁`, `H`, `W₂`, `b₂`, `ŷ` (forward only)
   - Then `dW₂` and `db₂` only. Stop there.
@@ -46,7 +46,7 @@ Task 8+9    Task 10      matrix shapes  1 neuron        2-layer forward  backwar
 
 ### Thu Nov 5 (60 min planned) — Main outcome: one neuron in numpy
 
-- [ ] 15 min — Anki
+- [] 15 min — Anki
 - [ ] 10 min — Open `week-08/neural-network.ipynb`. List what is already done.
 - [ ] 35 min — `week-08/01-neuron-numpy.ipynb`: forward + backward with Task 5 numbers.
       **Main outcome:** code `dL/dw` = your paper `dL/dw`.
