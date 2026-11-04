@@ -1,11 +1,16 @@
 flowchart RL
-    L["Error signal"] -->|"× w₂"| H["Signal at h"]
-    H -->|"× ReLU gate = 0<br/>(CLOSED)"| Z["Signal at z = 0"]
-    Z -->|"× w₁"| X["Signal at x = 0"]
-    Z -.-> G1["Blame for w₁ = 0<br/>w₁ does not learn"]
+    L["Error<br/>dL/dŷ = 2(ŷ − y)<br/>= 2(0 − 5) = −10"] -->|"× w₂ = 3"| H["Signal at h<br/>= −30"]
+    H -->|"× gate = 0 (CLOSED)<br/>because z₁ = −1 ≤ 0"| Z["Signal at z₁<br/>= 0"]
+
+    L -.->|"× h = 0"| G2["Blame for w₂ = 0<br/>w₂ does not learn"]
+    L -.->|"× 1"| B2["Blame for b₂ = −10<br/>b₂ still learns"]
+    Z -.->|"× x = 1"| G1["Blame for w₁ = 0<br/>w₁ does not learn"]
+    Z -.->|"× 1"| B1["Blame for b₁ = 0<br/>b₁ does not learn"]
 
     style L fill:#ff4d4d,color:#fff
     style H fill:#ff8080
     style Z fill:#cccccc
-    style X fill:#cccccc
+    style G2 fill:#cccccc
     style G1 fill:#cccccc
+    style B1 fill:#cccccc
+    style B2 fill:#d6f5d6

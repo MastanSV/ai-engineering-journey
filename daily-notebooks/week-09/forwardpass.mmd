@@ -1,6 +1,8 @@
 flowchart LR
-    X["x = 1"] -->|"×2"| Z["z = 2"]
-    Z -->|"ReLU: pass"| H["h = 2"]
-    H -->|"×3"| Y["ŷ = 6"]
-    Y --> L["L = 1"]
+    X["x = 1"] -->|"× w₁ = 2<br/>+ b₁ = 0"| Z["z₁ = 2"]
+    Z -->|"ReLU: z₁ > 0 → pass"| H["h = 2"]
+    H -->|"× w₂ = 3<br/>+ b₂ = 0"| Y["ŷ = 6"]
+    Y --> L["L = (ŷ − y)²<br/>= (6 − 5)² = 1"]
+    T["y = 5<br/>(true value)"] --> L
     style L fill:#ffd6d6,stroke:#c00
+    style T fill:#d6e4ff

@@ -19,11 +19,11 @@ For each question: read it → say your answer aloud → mark it.
 
 | #   | Question                                                               | Mark (✅ / 🟡 / ❌) |
 | --- | ---------------------------------------------------------------------- | ------------------- |
-| 1   | Why can't we just randomly change the weights?                         |                     |
-| 2   | What happens if a ReLU neuron dies?                                    |                     |
-| 3   | Why is it called "back" propagation?                                   |                     |
-| 4   | What is the difference between the forward pass and the backward pass? |                     |
-| 5   | Do we backprop through activation functions?                           |                     |
+| 1   | Why can't we just randomly change the weights?                         | ✅                  |
+| 2   | What happens if a ReLU neuron dies?                                    | ✅                  |
+| 3   | Why is it called "back" propagation?                                   | ✅                  |
+| 4   | What is the difference between the forward pass and the backward pass? | ✅                  |
+| 5   | Do we backprop through activation functions?                           | ✅                  |
 
 **Hints, only if you are stuck for more than 30 sec:**
 

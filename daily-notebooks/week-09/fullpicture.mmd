@@ -1,14 +1,16 @@
 flowchart RL
-    L["Error<br/>dL/dŷ = 2"] -->|"× w₂ = 3"| H["Signal at h<br/>= 6"]
-    H -->|"× ReLU gate = 1<br/>(OPEN)"| Z["Signal at z<br/>= 6"]
-    Z -->|"× w₁ = 2"| X["Signal at x<br/>= 12"]
+    L["Error<br/>dL/dŷ = 2(ŷ − y)<br/>= 2(6 − 5) = 2"] -->|"× w₂ = 3"| H["Signal at h<br/>= 6"]
+    H -->|"× gate = 1 (OPEN)<br/>because z₁ = 2 > 0"| Z["Signal at z₁<br/>= 6"]
 
     L -.->|"× h = 2"| G2["Blame for w₂<br/>= 4"]
+    L -.->|"× 1"| B2["Blame for b₂<br/>= 2"]
     Z -.->|"× x = 1"| G1["Blame for w₁<br/>= 6"]
+    Z -.->|"× 1"| B1["Blame for b₁<br/>= 6"]
 
     style L fill:#ff4d4d,color:#fff
     style H fill:#ff8080
     style Z fill:#ff8080
-    style X fill:#ffb3b3
     style G2 fill:#fff3b0
     style G1 fill:#fff3b0
+    style B2 fill:#d6f5d6
+    style B1 fill:#d6f5d6

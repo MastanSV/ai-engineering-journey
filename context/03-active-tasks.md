@@ -23,16 +23,16 @@ Task 8+9    Task 10      matrix shapes  1 neuron        2-layer forward  backwar
 - [x] 15 min — Anki (aloud)
 - [x] 25 min — **Task 8:** skeleton (5 min) → record (2 min) → score (5 min) → fix → record again (5 min) → save
 - [x] 15 min — **Task 9:** curveball questions, cold, aloud. Mark ✅ / 🟡 / ❌ only. No second round today.
-- [x] 5 min — Commit: `week-07: backprop pitch + curveballs`
+- [x] 5 min — Commit: `week-09: backprop pitch + curveballs`
       **Main outcome:** pitch recorded in under 60 sec.
 
 ### Tue Nov 3 (60 min planned) — Main outcome: whiteboard test passed
 
 - [x] 15 min — Anki
 - [x] 5 min — Task 9 second round: only the 🟡 / ❌ questions from Monday
-- [ ] 30 min — **Task 10:** timed run (5 min) → score → fix → timed run again → photo
-- [ ] 5 min — Tick the Commit Checklist + Progress Tracker in `06-current-task.md`
-- [ ] 5 min — Loom check: found / not found → one line in `01-current-state.md`
+- [x] 30 min — **Task 10:** timed run (5 min) → score → fix → timed run again → photo
+- [x] 5 min — Tick the Commit Checklist + Progress Tracker in `06-current-task.md`
+- [x] 5 min — Loom check: found / not found → one line in `01-current-state.md`
       **Main outcome:** whiteboard forward + backward in < 5 min. Backprop is closed.
 
 ### Wed Nov 4 (60 min planned) — Main outcome: matrix shapes on paper
